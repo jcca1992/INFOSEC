@@ -2008,3 +2008,11 @@ user@remotehost$ md5sum shell
 ~~~
 
 Como podemos ver, ambos archivos tienen el mismo hash md5, lo que significa que el archivo se transfirió correctamente. Hay varios otros métodos para transferir archivos. Puede consultar el módulo [Transferencias de archivos](https://academy.hackthebox.com/module/details/24) para obtener un estudio más detallado sobre la transferencia de archivos. 
+
+___
+## EMPEZANDO
+
+Como principiante en seguridad de la información, puede ser extremadamente desalentador saber por dónde empezar. Hemos visto a personas de todos los ámbitos de la vida comenzar con poco o ningún conocimiento y tener éxito en la plataforma HTB y, en consecuencia, comenzar el viaje hacia una carrera técnica. Hay muchos recursos excelentes para principiantes, que incluyen capacitación gratuita y paga, máquinas y laboratorios vulnerables, sitios web de tutoriales, blogs, canales de YouTube, entre otros.
+
+A lo largo de nuestro viaje, veremos continuamente los términos aprendizaje `guided` y `exploratory`.
+
