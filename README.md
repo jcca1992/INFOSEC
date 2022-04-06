@@ -1,2 +1,3 @@
 # INFOSEC
-Apuntes, anotaciones, y practica de estudios en Seguridad informatica, con Hack The Box y Try Hack Me
+Apuntes, anotaciones, traducciones y practica de estudios en Seguridad informatica, con [Hack The Box](https://app.hackthebox.com/) y [Try Hack Me](https://tryhackme.com/)
+
