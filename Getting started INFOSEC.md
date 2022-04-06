@@ -2111,3 +2111,24 @@ El Dante Pro Lab es el laboratorio más amigable para principiantes ofrecido has
 Ahora que hemos cubierto la terminología y las técnicas básicas y el escaneo/enumeración, juntemos las piezas recorriendo paso a paso un cuadro HTB fácil de calificar.
 ___
 
+## **NAVEGANDO POR HTB**
+
+___
+### PERFIL
+___
+### RANQUNGS
+___
+### TRACKS
+___
+### MAQUINAS
+___
+### DESAFIOS
+___
+### FORTRESS
+___
+### ENDGAME
+___
+### PRO LABS
+___
+### BATTLEGROUNDS
+___
