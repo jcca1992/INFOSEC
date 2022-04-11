@@ -6,7 +6,7 @@ Juceco@htb[/htb]$ whatweb 10.129.42.190
 http://10.129.42.190 [200 OK] Apache[2.4.18], Country[RESERVED][ZZ], HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], IP[10.129.42.190]
 ~~~
 
-Esta herramienta no identifica ninguna tecnología web estándar en uso. Navegar hasta el objetivo en `Firefox` nos muestra un simple "¡Hola mundo!" mensaje.
+Esta herramienta no identifica ninguna tecnología web estándar en uso. Navegar hasta el objetivo en `Firefox` nos muestra un simple "¡Hola mundo!".
 
 ![](https://academy.hackthebox.com/storage/modules/77/nibbles_hello2.png)
 
@@ -124,7 +124,7 @@ Volvamos a nuestro directorio de resultados de fuerza bruta. el codigo de estado
 
 ![](https://academy.hackthebox.com/storage/modules/77/nibbles_dir_listing.png)
 
-Navegar `nibbleblog/content` muestra algunos subdirectorios `públicos`, `privados` y `tmp interesantes`. Buscando por un tiempo, encontramos un archivo `users.xml` que al menos parece confirmar que el nombre de usuario es realmente admin. También muestra las direcciones IP en la lista negra. Podemos solicitar este archivo con `cURL` y embellecer la salida `XML` usando [xmllint](https://linux.die.net/man/1/xmllint).
+Navegar `nibbleblog/content` muestra algunos subdirectorios `públicos`, `privados` y `tmp interesantes`. Buscando por un tiempo, encontramos un archivo `users.xml` que al menos parece confirmar que el nombre de usuario es realmente admin. También muestra las direcciones IP en la lista negra. Podemos solicitar este archivo con `cURL` y prettify la salida `XML` usando [xmllint](https://linux.die.net/man/1/xmllint).
 
 ~~~
 Juceco@htb[/htb]$ curl -s http://10.129.42.190/nibbleblog/content/private/users.xml | xmllint  --format -
@@ -147,7 +147,7 @@ Juceco@htb[/htb]$ curl -s http://10.129.42.190/nibbleblog/content/private/users.
 </users>
 ~~~
 
-En este punto, tenemos un nombre de usuario válido pero no una contraseña. Las búsquedas en la documentación relacionada con Nibbleblog muestran que la contraseña se establece durante la instalación y que no existe una contraseña predeterminada conocida. Hasta este punto, tenga las siguientes piezas del rompecabezas:
+En este punto, tenemos un nombre de usuario válido pero no una contraseña. Las búsquedas en la documentación relacionada con Nibbleblog muestran que la contraseña se establece durante la instalación y que no existe una contraseña predeterminada conocida. Hasta este punto, tenemos las siguientes piezas del rompecabezas:
 
 + Una instalación de Nibbleblog potencialmente vulnerable a una vulnerabilidad de carga de archivos autenticados
 
@@ -155,9 +155,9 @@ En este punto, tenemos un nombre de usuario válido pero no una contraseña. Las
 
 + Listado de directorio que confirmó que `admin` es un nombre de usuario válido
 
-+ La protección de fuerza bruta de inicio de sesión incluye nuestra dirección IP en la lista negra después de demasiados intentos de inicio de sesión no válidos. Esto elimina la fuerza bruta de inicio de sesión con una herramienta como [Hydra](https://github.com/vanhauser-thc/thc-hydra) fuera de la mesa
++ La protección de fuerza bruta de inicio de sesión incluye nuestra dirección IP en la lista negra después de demasiados intentos de inicio de sesión no válidos. Esto deja la fuerza bruta de inicio de sesión con una herramienta como [Hydra](https://github.com/vanhauser-thc/thc-hydra) fuera de la mesa
 
-No hay otros puertos abiertos y no encontramos ningún otro directorio. Lo cual podemos confirmar realizando fuerza bruta de directorio adicional contra la raíz de la aplicación web
+No hay otros puertos abiertos y no encontramos ningún otro directorio. Lo cual podemos confirmar realizando fuerza bruta de directorio adicional contra el root de la aplicación web
 
 ~~~
 Juceco@htb[/htb]$ gobuster dir -u http://10.129.42.190/ --wordlist /usr/share/dirb/wordlists/common.txt
@@ -243,17 +243,17 @@ Esto nos muestra cuán crucial es la enumeración minuciosa. Recapitulemos lo qu
 
 + Comenzamos con un escaneo `nmap` simple que muestra dos puertos abiertos
 
-+ Descubrí una instancia de `Nibbleblog`.
++ Descubrimos una instancia de `Nibbleblog`.
 
-+ Analizó las tecnologías en uso usando `whatweb`
++ Se analizó las tecnologías en uso usando `whatweb`
 
-+ Encontré la página del portal de inicio de sesión del administrador en `admin.php`
++ Encontramos la página del portal de inicio de sesión del administrador en `admin.php`
 
-+ Descubrí que la lista de directorios está habilitada y navegué por varios directorios
++ Descubrímos que la lista de directorios está habilitada y navegué por varios directorios
 
 + Confirmado que `admin` era el nombre de usuario válido
 
-+ Descubrí de la manera difícil que la lista negra de IP está habilitada para evitar intentos de inicio de sesión de fuerza bruta
++ Descubrimos de la manera difícil que la lista negra de IP está habilitada para evitar intentos de inicio de sesión de fuerza bruta
 
 + Pistas descubiertas que nos llevaron a una contraseña de administrador válida de nibbles
 
