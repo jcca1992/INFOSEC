@@ -9,11 +9,11 @@ Ahora que hemos iniciado sesión en el portal de administración, debemos intent
 | `Themes` | Esto nos permite instalar un nuevo tema de una lista preseleccionada. |
 | `Plugins` | Nos permite configurar, instalar o desinstalar complementos. El complemento `My image` nos permite cargar un archivo de imagen. ¿Se podría abusar de esto para cargar código `PHP` potencialmente? |
 
-Intentar crear una nueva página e incrustar código o cargar archivos no parece ser el camino. Echemos un vistazo a la página de complementos.
+Intentar crear una nueva página e incrustar código o cargar archivos no parece ser el camino. Echemos un vistazo a la página de plugins.
 
 ![](https://academy.hackthebox.com/storage/modules/77/plugins.png)
 
-Intentemos usar este complemento para cargar un fragmento de código `PHP` en lugar de una imagen. El siguiente fragmento se puede usar para probar la ejecución del código.
+Intentemos usar este plugin para cargar un fragmento de código `PHP` en lugar de una imagen. El siguiente fragmento se puede usar para probar la ejecución del código.
 
 ~~~
 <?php system('id'); ?>
@@ -113,3 +113,7 @@ ls
 personal.zip  user.txt
 ~~~
 
+### RETO
+Obtenga un foothold en el objetivo y envíe la bandera user.txt
+
+R: 79c03865431abf47b90ef24b9695e148

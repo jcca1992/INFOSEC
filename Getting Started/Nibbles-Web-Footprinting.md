@@ -124,7 +124,7 @@ Volvamos a nuestro directorio de resultados de fuerza bruta. el codigo de estado
 
 ![](https://academy.hackthebox.com/storage/modules/77/nibbles_dir_listing.png)
 
-Navegar `nibbleblog/content` muestra algunos subdirectorios `públicos`, `privados` y `tmp interesantes`. Buscando por un tiempo, encontramos un archivo `users.xml` que al menos parece confirmar que el nombre de usuario es realmente admin. También muestra las direcciones IP en la lista negra. Podemos solicitar este archivo con `cURL` y prettify la salida `XML` usando [xmllint](https://linux.die.net/man/1/xmllint).
+Navegar `nibbleblog/content` muestra algunos subdirectorios `públicos`, `privados` y `tmp` interesantes. Buscando por un tiempo, encontramos un archivo `users.xml` que al menos parece confirmar que el nombre de usuario es realmente admin. También muestra las direcciones IP en la lista negra. Podemos solicitar este archivo con `cURL` y prettify la salida `XML` usando [xmllint](https://linux.die.net/man/1/xmllint).
 
 ~~~
 Juceco@htb[/htb]$ curl -s http://10.129.42.190/nibbleblog/content/private/users.xml | xmllint  --format -
@@ -258,3 +258,5 @@ Esto nos muestra cuán crucial es la enumeración minuciosa. Recapitulemos lo qu
 + Pistas descubiertas que nos llevaron a una contraseña de administrador válida de nibbles
 
 Esto demuestra que necesitamos un proceso claro y repetible que usaremos una y otra vez, sin importar si estamos atacando una sola maquina en HTB, realizando una prueba de penetración de aplicaciones web para un cliente o atacando un gran entorno de Active Directory. Tenga en cuenta que la enumeración iterativa, junto con la toma de notas detallada, es una de las claves del éxito en este campo. A medida que avanza en su carrera, a menudo se maravillará de cómo el alcance inicial de una prueba de penetración parecía extremadamente pequeño y "aburrido", pero una vez que profundice y realice rondas y rondas de enumeración y retire las capas, puede encontrar un servicio expuesto en un high port o alguna página o directorio olvidado que puede conducir a la exposición de datos confidenciales o incluso a un punto de apoyo.
+
+contraseña es nibbles
