@@ -105,6 +105,3 @@ uid=0(root) gid=0(root) groups=0(root)
 
 Desde aquí, podemos agarrar el indicador `root.txt`. Finalmente, ahora hemos resuelto nuestra primera maquina sobre HTB. Trate de replicar todos los pasos por su cuenta. Pruebe varias herramientas para lograr el mismo efecto. Podemos utilizar muchas herramientas diferentes para los distintos pasos necesarios para resolver esta maquina. Este tutorial muestra un método posible. Asegúrate de tomar notas detalladas para practicar ese conjunto de habilidades vitales.
 
-
-
-
