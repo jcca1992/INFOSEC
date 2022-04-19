@@ -119,3 +119,9 @@ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)
 ~~~
 
 Desde aquí, podemos seguir el mismo camino de escalada de privilegios.
+
+### PROXIMOS PASOS
+
+Asegúrate de seguir y probar todos los pasos por ti mismo. Pruebe otras herramientas y métodos para lograr el mismo resultado. Tome notas detalladas sobre su propia ruta de explotación, o incluso si sigue los mismos pasos que se describen en esta sección. Es la buena práctica y la memoria muscular lo que te beneficiará significativamente a lo largo de tu carrera. Si tiene un blog, haga un tutorial en este cuadro y envíelo a la plataforma. Si no tienes uno, inicia uno. Simplemente no use la versión 4.0.3 de `Nibbleblog`.
+
+A menudo hay muchas maneras de lograr la misma tarea. Dado que este es una maquina más antigua, es probable que existan otros métodos de escalada de privilegios, como un núcleo desactualizado o alguna explotación de servicio. Ponte a prueba para enumerar la caja y buscar otros defectos. ¿Hay alguna otra forma de abusar de la aplicación web `Nibbleblog` para obtener un shell inverso? Estudie este tutorial detenidamente y asegúrese de comprender cada paso antes de continuar.
