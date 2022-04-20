@@ -21,3 +21,9 @@ Recuerde que la enumeración es un proceso iterativo. Después de realizar nuest
 Hay dos formas de ganar foothold: una usando `Metasploit` y otra a través de un proceso manual. Nos desafiamos a trabajar y obtener una comprensión de ambos métodos.
 
 Hay dos formas de escalar los privilegios para rootear en el objetivo después de obtener un punto de apoyo. Utilice scripts de ayuda como [LinEnum](https://github.com/rebootuser/LinEnum) y [LinPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS) para ayudarlo. Filtre la información con las dos conocidas técnicas de escalada de privilegios.
+
+## RETO
+
+Genere el objetivo, consiga un punto de apoyo y envíe el contenido de la bandera user.txt.
+
+Después de obtener un punto de apoyo en el objetivo, aumente los privilegios a la raíz y envíe el contenido del indicador root.txt.

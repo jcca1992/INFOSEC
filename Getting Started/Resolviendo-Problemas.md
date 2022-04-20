@@ -136,3 +136,56 @@ The key's randomart image is:
 
 De forma predeterminada, las claves SSH se almacenan en la carpeta `.ssh` dentro de nuestra carpeta de inicio (por ejemplo, `/home/htb-student/.ssh`). Si quisiéramos crear una clave ssh en un directorio diferente, podríamos ingresar una ruta absoluta para la clave cuando se nos solicite. Podemos cifrar nuestra clave SSH con una contraseña cuando se nos solicite o dejarla vacía si no queremos usar contraseña.
 ___
+
+## **OBTENIENDO AYUDA**
+
+Cuando comenzamos a trabajar en maquinas en Hack The Box, es probable que nos quedemos atascados en ciertas áreas y que necesitemos pedirle a otros jugadores algunos consejos y sugerencias para poder avanzar en la maquina. Aquí hay algunas áreas en las que podemos obtener ayuda.
+
+>Nota: Durante cualquiera de sus actividades a través de Hack The Box, siempre debe seguir las Reglas de HTB, que se pueden encontrar en este [enlace](https://www.hackthebox.eu/home/rules).
+___
+### **FORO**
+
+[El foro de Hack The Box](https://forum.hackthebox.eu/) es un lugar excelente para debatir maquinas y desafíos de Hack The Box en vivo y retirados.
+
+![](https://academy.hackthebox.com/storage/modules/77/htb_forums.jpg)
+
+Cada maquina tiene un hilo de discusión oficial, en el que se mantienen debates en vivo sobre todos los aspectos de la maquina, sin dar spoilers ni indicaciones claras sobre cómo explotar la maquina. Si queremos trabajar en una maquina retirada y no queremos seguir un tutorial paso a paso, podemos leer hilos de maquinas anteriores y buscar sugerencias y consejos. De esta manera, podemos desafiarnos a nosotros mismos en maquinas más antiguas y consultar el hilo de discusión oficial de la maquina en caso de que nos quedemos atascados.
+___
+### **DISCORD**
+
+Otro gran lugar para discutir las maquinas y los desafíos de Hack The Box, además de varios otros aspectos de Hack The Box, es el servidor oficial HTB Discord. Podemos unirnos al servidor oficial de HTB Discord haciendo clic en este [enlace](https://discord.gg/hRXnCFA). Se nos pedirá que descarguemos la aplicación Discord y creemos nuestra cuenta Discord para acceder al servidor HTB.
+
+El servidor de Discord cubre una amplia gama de temas relacionados con Hack The Box, y también puedes conocer las últimas noticias y torneos. El servidor de Discord también cubre debates sobre anuncios generales, maquinas y desafíos, módulos de la academia, HTB Labs, piratería y Pentesting y soporte general.
+
+![](https://academy.hackthebox.com/storage/modules/77/htb_discord.jpg)
+
+>Asegúrese de leer las Reglas del servidor para evitar cualquier irregularidad.
+___
+### **HACER PREGUNTAS CON EFICACIA**
+
+Para obtener la mejor orientación sobre nuestro problema, debemos hacer nuestras preguntas de manera efectiva.
+
+Asegúrese de incluir lo siguiente en nuestra pregunta:
+
++ ¿En qué punto de la maquina o desafío estamos atascados 'ejemplo, usuario o raíz'?
++ ¿Qué pasos hemos dado hasta ahora para llegar al punto en el que nos encontramos?
++ ¿En qué paso estamos fallando y qué hemos hecho para resolver nuestro problema?
++ Siempre trate de ser muy específico sobre la ayuda que necesitamos , en lugar de pedir ayuda general.
+
+Cuando formulamos nuestra pregunta utilizando los puntos anteriores, podemos obtener algunas ideas que se nos hayan pasado por alto, lo que puede ayudarnos a responder la pregunta nosotros mismos. A veces, un comentario de otra persona nos llevará a un "¡ajá!" momento, y podremos responder a su pregunta esencialmente. Otras veces encontraremos a alguien dispuesto a trabajar con nosotros para resolver nuestro problema. Siempre es mejor abordar las cosas desde una perspectiva de aprendizaje y no solo buscar respuestas para obtener puntos o mejorar nuestro posicionamiento en el salón de la fama. `NO` debemos hacer nada de lo siguiente:
+
++ Regale spoilers o indicaciones claras que puedan solucionar la máquina para otras personas.
++ Ser vagos en nuestra descripción sin proporcionar suficientes detalles de lo que hemos hecho.
+___
+### **RESPONDER PREGUNTAS CON EFICACIA**
+
+Si hemos completado un cuadro o desafío específico, es posible que queramos ayudar a otros respondiendo a sus preguntas. Involucrarse en la comunidad nos ayuda a construir conexiones y formar nuestro equipo, lo cual es una excelente manera de mejorar nuestro nivel general de pentest y seguridad de la información. También puede ayudarnos a construir nuestro perfil Hack The Box y fortalecer su comprensión de la maquina o el desafío que acaba de completar. Al responder preguntas, asegúrese de hacer lo siguiente:
+
++ Sea lo más libre de spoilers posible y no entregue instrucciones directas sobre cómo completar el paso actual o la maquina completa
++ Brinde sugerencias o tips menores que puedan conducir a la dirección correcta para completar, y no brinde sugerencias sutanciosas para completar la maquina
++ Compartir recursos que encontramos útiles
++ Comparta consejos sobre puntos en los que nos estábamos atascando
+___
+### **OBTENER AYUDA TECNICA**
+
+En caso de que nos enfrentemos a algún problema técnico, siempre podemos buscar el problema al que nos enfrentamos en las [preguntas frecuentes oficiales de HTB](https://help.hackthebox.eu/), que contiene muchos artículos muy detallados y útiles. Es muy probable que encontremos una respuesta a nuestra pregunta allí. Si no podemos encontrar una respuesta a nuestra pregunta, siéntase libre de generar un [ticket](https://hackthebox.atlassian.net/servicedesk/customer/portal/1) con HTB Support.
