@@ -17,3 +17,16 @@ Index
     + [Nibbles Metodo Alternativo Metasploit](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Nibbles-Alternativo-Metaesploit.md)
 + [Resolviendo problemas](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Resolviendo-Problemas.md)
 + [Chequeo de conocimientos](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Knowledge-Check.md)
+___
+
+## WEB REQUESTS
+
++ HTTP Fundamentos
+    + [(HTTP) Hypertext Transfer Protocol]()
+    + [(HTTPS) Hypertext Transfer Protocol Secure]()
+    + [HTTP Requuest and Response]()
+    + [HTTP Headers (CABECERAS)]()
++ HTTP Metodos
+    + [GET]()
+    + [POST]()
+    + [CRUD API]()
