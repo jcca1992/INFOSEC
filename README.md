@@ -22,11 +22,11 @@ ___
 ## WEB REQUESTS
 
 + HTTP Fundamentos
-    + [(HTTP) Hypertext Transfer Protocol]()
-    + [(HTTPS) Hypertext Transfer Protocol Secure]()
-    + [HTTP Requuest and Response]()
-    + [HTTP Headers (CABECERAS)]()
+    + [(HTTP) Hypertext Transfer Protocol](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/Hypertext-Transfer-Protocol(HTTP).md)
+    + [(HTTPS) Hypertext Transfer Protocol Secure](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/Hypertext-Transfer-Protocol-Secure(HTTPS).md)
+    + [HTTP Requuest and Response](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/HTTP-Solicitud-Respuesta.md)
+    + [HTTP Headers (CABECERAS)](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/HTTP-Headers-md)
 + HTTP Metodos
-    + [GET]()
-    + [POST]()
-    + [CRUD API]()
+    + [GET](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/GET.md)
+    + [POST](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/POST.md)
+    + [CRUD API](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/CRUD-20API.md)
