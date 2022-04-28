@@ -3,6 +3,8 @@ Apuntes, anotaciones, y practica de estudios en Seguridad informatica, con Hack 
 
 Index
 
+## GETTING STARTED
+
 + [Intro](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Intro.md)
 + [Setup](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Setup.md)
 + [Pentesting Basico](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Pentesting-Basic.md)
