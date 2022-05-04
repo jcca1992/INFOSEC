@@ -46,3 +46,85 @@ ___
 En este módulo, enviaremos solicitudes web a través de dos de las herramientas más importantes para cualquier pentester web, un navegador web, como Chrome o Firefox, y la herramienta de línea de comando `cURL`.
 
 [cURL](https://curl.haxx.se/) (URL de cliente) es una herramienta y biblioteca de línea de comandos que admite principalmente HTTP junto con muchos otros protocolos. Esto lo convierte en un buen candidato para secuencias de comandos y automatización, lo que lo hace esencial para enviar varios tipos de solicitudes web desde la línea de comandos, lo cual es necesario para muchos tipos de pruebas de penetración web.
+
+Podemos enviar una solicitud HTTP básica a cualquier URL usándola como argumento para cURL, de la siguiente manera:
+
+~~~
+Juceco@htb[/htb]$ curl inlanefreight.com
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://inlanefreight.com/">here</a>.</p>
+<hr>
+<address>Apache/2.4.29 (Ubuntu) Server at inlanefreight.com Port 80</address>
+</body></html>
+
+~~~
+
+Vemos que cURL no representa el código HTML/JavaScript/CSS, a diferencia de un navegador web, sino que lo imprime en su formato original. Sin embargo, como pentesters, estamos interesados principalmente en el contexto de solicitud y respuesta, que generalmente se vuelve mucho más rápido y conveniente que un navegador web.
+
+También podemos usar cURL para descargar una página o un archivo y enviar el contenido a un archivo usando el indicador `-O`. Si queremos especificar el nombre del archivo de salida, podemos usar el indicador `-o` y especificar el nombre. De lo contrario, podemos usar `-O` y cURL usará el nombre del archivo remoto, de la siguiente manera:
+
+~~~
+Juceco@htb[/htb]$ curl -O inlanefreight.com/index.html
+curl -O inlanefreight.com/index.html 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   327  100   327    0     0    276      0  0:00:01  0:00:01 --:--:--   277
+Juceco@htb[/htb]$ ls
+index.html
+~~~
+
+Como podemos ver, la salida no se imprimió esta vez sino que se guardó en `index.html`. Notamos que cURL aún imprimía algún estado mientras procesaba la solicitud. Podemos silenciar el estado con el indicador `-s`, de la siguiente manera:
+
+~~~
+Juceco@htb[/htb]$ curl -s -O inlanefreight.com/index.html
+~~~
+
+Esta vez, cURL no imprimió nada, ya que la salida se guardó en el archivo `index.html`. Finalmente, podemos usar el indicador `-h` para ver qué otras opciones podemos usar con cURL:
+
+~~~
+Juceco@htb[/htb]$ curl -h                             
+Usage: curl [options...] <url>
+ -d, --data <data>          HTTP POST data
+ -f, --fail                 Fail silently (no output at all) on HTTP errors
+ -h, --help <category>      Get help for commands
+ -i, --include              Include protocol response headers in the output
+ -o, --output <file>        Write to file instead of stdout
+ -O, --remote-name          Write output to a file named as the remote file
+ -s, --silent               Silent mode
+ -T, --upload-file <file>   Transfer local FILE to destination
+ -u, --user <user:password> Server user and password
+ -A, --user-agent <name>    Send User-Agent <name> to server
+ -v, --verbose              Make the operation more talkative
+ -V, --version              Show version number and quit
+
+This is not the full help, this menu is stripped into categories.
+Use "--help category" to get an overview of all categories.
+For all options use the manual or "--help all".
+~~~
+
+Como menciona el mensaje anterior, podemos usar `--help all` para imprimir un menú de ayuda más detallado, o `--help category` (por ejemplo, `-h http`) para imprimir la ayuda detallada de un parametro específica. Si alguna vez necesitamos leer documentación más detallada, podemos usar `man curl` para ver la página completa del manual cURL.
+
+En las próximas secciones, cubriremos la mayoría de los parametros anteriores y veremos dónde debemos usar cada una de ellas.
+___
+
+### RETO
+
+Para obtener la bandera, use cURL para descargar el archivo devuelto por '/download.php' en el servidor anterior.
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl -O -s http://167.71.139.192:31690/download.php                                
+                                                                                                                                     
+┌──(root㉿kali)-[/home/kali]
+└─# ls
+download.php
+                                                                                                                                     
+┌──(root㉿kali)-[/home/kali]
+└─# cat download.php                                   
+HTB{64$!c_cURL_u$3r}
+~~~
