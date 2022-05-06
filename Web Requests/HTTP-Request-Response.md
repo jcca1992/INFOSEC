@@ -89,6 +89,9 @@ Como podemos ver, las herramientas de desarrollo nos muestran de un vistazo el e
 >Ejercicio: intente hacer clic en cualquiera de las solicitudes para ver sus detalles. Luego puede hacer clic en la pestaña `Response` para ver el cuerpo de la respuesta y luego hacer clic en el botón `Raw` para ver el código fuente raw (sin procesar) del cuerpo de la respuesta.
 
 ¿Cuál es el método HTTP utilizado al interceptar la solicitud? (distingue mayúsculas y minúsculas)
+R: `GET`
 
+Envíe una solicitud GET al servidor anterior y lea los encabezados de respuesta para encontrar la versión de Apache que se ejecuta en el servidor, luego envíela como respuesta. (formato de respuesta: X.Y.ZZ)
+R: `2.4.41`
 
- Send a GET request to the above server, and read the response headers to find the version of Apache running on the server, then submit it as the answer. (answer format: X.Y.ZZ)
+>Server: Apache/`2.4.41` (Ubuntu)
