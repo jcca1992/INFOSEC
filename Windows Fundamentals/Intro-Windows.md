@@ -56,5 +56,6 @@ Juceco@htb[/htb]$ xfreerdp /v:<targetIp> /u:htb-student /p:Password
 user "htb-student" and password "Academy_WinFun!" 
 
 ¿Cuál es el número de compilación de la estación de trabajo de destino?
-
+R: 19041
 ¿Qué versión de Windows NT está instalada en la estación de trabajo? (es decir, Windows X - distingue entre mayúsculas y minúsculas)
+R: Windows 10
