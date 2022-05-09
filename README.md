@@ -30,3 +30,19 @@ ___
     + [GET](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/GET.md)
     + [POST](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/POST.md)
     + [CRUD API](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/CRUD-20API.md)
+___
+
+## WINDOWS FUNDAMENTALS
+
++ Introduccion
++ Nucleo del S.O.
+    + Estructura del S.O
+    + Sistema de archivo
+    + NTFSvs share
++ Trabajar con servicos y procesos
+    + Servicios y procesos de Windows
+    + Service Permisions
++ Interactuando con Windows
+    + Sesiones de Windows
+    + Interactuando con el S.O Windows
+    + (WMI) xxxx
