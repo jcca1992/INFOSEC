@@ -110,3 +110,47 @@ Juceco@htb[/htb]$ curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' http://<SERVER
 ...SNIP...
 ~~~
 
+Como vemos, esto también nos dio acceso a la página. Estos son algunos métodos que podemos usar para autenticarnos en la página. La mayoría de las aplicaciones web modernas utilizan formularios de inicio de sesión creados con el lenguaje de secuencias de comandos de back-end (por ejemplo, PHP), que utilizan solicitudes HTTP POST para autenticar a los usuarios y luego devuelven una cookie para mantener su autenticación.
+___
+
+### **PARAMETROS GET**
+
+Una vez que estamos autenticados, tenemos acceso a una función de búsqueda de ciudades, en la que podemos ingresar un término de búsqueda y obtener una lista de ciudades coincidentes:
+
+![](https://academy.hackthebox.com/storage/modules/35/http_auth_index.jpg)
+
+A medida que la página devuelve nuestros resultados, puede ponerse en contacto con un recurso remoto para obtener la información y luego mostrarlos en la página. Para verificar esto, podemos abrir las herramientas de desarrollo del navegador e ir a la pestaña Network, o usar el atajo [`CTRL+SHIFT+E`] para llegar a la misma pestaña. Antes de ingresar nuestro término de búsqueda y ver las solicitudes, es posible que debamos hacer clic en el ícono de la papelera en la parte superior izquierda, para asegurarnos de eliminar las solicitudes anteriores y solo monitorear las solicitudes más nuevas:
+
+![](https://academy.hackthebox.com/storage/modules/35/network_clear_requests.jpg)
+
+Después de eso, podemos ingresar cualquier término de búsqueda y presionar enter, e inmediatamente notaremos que se envía una nueva solicitud al backend:
+
+![](https://academy.hackthebox.com/storage/modules/35/web_requests_get_search.jpg)
+
+Cuando hacemos clic en la solicitud, se envía a `search.php` con el parámetro GET `search=le` utilizado en la URL. Esto nos ayuda a comprender que la función de búsqueda solicita otra página para los resultados.
+
+Ahora, podemos enviar la misma solicitud directamente a `search.php` para obtener los resultados de búsqueda completos, aunque probablemente los devolverá en un formato específico (por ejemplo, JSON) sin tener el diseño HTML que se muestra en la captura de pantalla anterior.
+
+Para enviar una solicitud GET con cURL, podemos usar exactamente la misma URL que se ve en las capturas de pantalla anteriores, ya que las solicitudes GET colocan sus parámetros en la URL. Sin embargo, las herramientas de desarrollo del navegador brindan un método más conveniente para obtener el comando cURL. Podemos hacer clic con el botón derecho en la solicitud y seleccionar `Copy>Copy as cURL.` Luego, podemos pegar el comando copiado en nuestra terminal y ejecutarlo, y deberíamos obtener exactamente la misma respuesta:
+
+~~~
+Juceco@htb[/htb]$ curl 'http://<SERVER_IP>:<PORT>/search.php?search=le' -H 'Authorization: Basic YWRtaW46YWRtaW4='
+
+Leeds (UK)
+Leicester (UK)
+~~~
+
+>Nota: El comando copiado contendrá todos los encabezados utilizados en la solicitud HTTP. Sin embargo, podemos eliminar la mayoría de ellos y mantener solo los encabezados de autenticación necesarios, como el encabezado de `Authorization`.
+
+También podemos repetir la solicitud exacta dentro de las herramientas de desarrollo del navegador, seleccionando `Copy>Copy as Fetch`. Esto copiará la misma solicitud HTTP utilizando la libreria JavaScript Fetch. Luego, podemos ir a la pestaña de la consola de JavaScript haciendo clic en [`CTRL+MAYÚS+K`], pegar nuestro comando Fetch y presionar enter para enviar la solicitud:
+
+![](https://academy.hackthebox.com/storage/modules/35/web_requests_fetch_search.jpg)
+
+Como vemos, el navegador envió nuestra solicitud y podemos ver la respuesta devuelta después. Podemos hacer clic en la respuesta para ver sus detalles, ampliar varios detalles y leerlos.
+___
+
+### RETO
+
+El ejercicio anterior parece estar roto, ya que arroja resultados incorrectos. Use las herramientas de desarrollo del navegador para ver cuál es la solicitud que envía cuando buscamos, y use cURL para buscar 'flag' y obtener la bandera.
+
+R:
