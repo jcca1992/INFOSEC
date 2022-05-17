@@ -45,4 +45,11 @@ ___
 + Interactuando con Windows
     + Sesiones de Windows
     + Interactuando con el S.O Windows
-    + (WMI) xxxx
+    + (WMI) Instrumentacion de Administracion de Windows
++ Mas usos de Windows
+    + (MMC) Consola de Administracion de Microsoft
+    + (WSL) Subsistema de Windows para Linux
++ Profundizando y Cierre
+    + Experiencia de Escritorio vs Nucleo de Servidor
+    + Seguridad de Windows
+    + Skill Assessment
