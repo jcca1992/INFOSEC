@@ -147,10 +147,18 @@ También podemos repetir la solicitud exacta dentro de las herramientas de desar
 ![](https://academy.hackthebox.com/storage/modules/35/web_requests_fetch_search.jpg)
 
 Como vemos, el navegador envió nuestra solicitud y podemos ver la respuesta devuelta después. Podemos hacer clic en la respuesta para ver sus detalles, ampliar varios detalles y leerlos.
+
+>Nota: en caso que aparezca `Scam Warning: Take care when pasting things you don’t understand...` se puede escribir `allow pasting`. No hay problema si aparece `Uncaught SyntaxError: unexpected token: identifier` ya estaria permitido, podremos reiniciar firefox para asegurar. En caso de que no funcione podemos probar mas metodos ingresando [aqui](https://www.brainytechz.com/2021/05/how-to-fix-mozilla-firefox-scam-warning.html)
 ___
 
 ### RETO
 
 El ejercicio anterior parece estar roto, ya que arroja resultados incorrectos. Use las herramientas de desarrollo del navegador para ver cuál es la solicitud que envía cuando buscamos, y use cURL para buscar 'flag' y obtener la bandera.
 
-R:
+R: flag: HTB{curl_g3773r}
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl 'http://178.62.119.24:30083/search.php?search=flag' -H 'Authorization: Basic YWRtaW46YWRtaW4='
+flag: HTB{curl_g3773r}
+~~~
