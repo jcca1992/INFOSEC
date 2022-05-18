@@ -134,3 +134,23 @@ Usar `PUT` es bastante similar a `POST` en este caso, con la única diferencia d
 Juceco@htb[/htb]$ curl -X PUT http://<SERVER_IP>:<PORT>/api.php/city/london -d '{"city_name":"New_HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'
 ~~~
 
+Vemos en el ejemplo anterior que primero especificamos `/city/london` como nuestra ciudad y pasamos una cadena JSON que contenía `"city_name":"New_HTB_City"` en los datos de la solicitud. Por lo tanto, la ciudad de Londres ya no debería existir y debería existir una nueva ciudad con el nombre `New_HTB_City`. Intentemos leer ambos para confirmar:
+
+~~~
+Juceco@htb[/htb]$ curl -s http://<SERVER_IP>:<PORT>/api.php/city/london | jq
+~~~
+
+~~~
+Juceco@htb[/htb]$ curl -s http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City | jq
+
+[
+  {
+    "city_name": "New_HTB_City",
+    "country_name": "HTB"
+  }
+]
+~~~
+
+De hecho, reemplazamos con éxito el nombre de la ciudad antigua con el de la ciudad nueva.
+
+>Nota: En algunas API, la operación `Update` también se puede usar para crear nuevas entradas. Básicamente, enviaríamos nuestros datos, y si no existen, los crearía. Por ejemplo, en el ejemplo anterior, incluso si no existiera una entrada con una ciudad de `London`, se crearía una nueva entrada con los detalles que pasamos. En nuestro ejemplo, sin embargo, este no es el caso. Intente actualizar una ciudad inexistente y vea lo que obtiene.
