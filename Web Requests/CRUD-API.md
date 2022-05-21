@@ -180,9 +180,10 @@ ___
 
 ### **RETO**
 
-Primero, intente actualizar el nombre de cualquier ciudad para que sea 'flag'. Luego, elimine cualquier ciudad. Una vez hecho esto, busque una ciudad llamada 'flag' para obtener la bandera.
+Primero, intente actualizar el nombre de cualquier ciudad para que sea '`flag`'. Luego, elimine cualquier ciudad. Una vez hecho esto, busque una ciudad llamada '`flag`' para obtener la bandera.
 
-R:
+`R:` "country_name": "HTB{crud_4p!_m4n!pul4t0r}"
+
 ~~~
 ┌──(root㉿kali)-[/home/kali]
 └─# curl -X PUT http://178.62.119.24:30980/api.php/city/london -d '{"city_name":"flag", "country_name":"HTB"}' -H 'Content-Type: application/json'

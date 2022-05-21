@@ -143,7 +143,7 @@ ___
 
 Obtenga una cookie de sesión a través de un inicio de sesión válido y luego use la cookie con cURL para buscar la "flag" a través de una solicitud JSON POST a '/ search.php'
 
-R: ["flag: HTB{p0$t_r3p34t3r}"]
+`R:` ["flag: HTB{p0$t_r3p34t3r}"]
 
 ~~~
 ┌──(root㉿kali)-[/home/kali]

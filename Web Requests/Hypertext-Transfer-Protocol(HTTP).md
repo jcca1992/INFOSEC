@@ -112,9 +112,11 @@ Como menciona el mensaje anterior, podemos usar `--help all` para imprimir un me
 En las próximas secciones, cubriremos la mayoría de los parametros anteriores y veremos dónde debemos usar cada una de ellas.
 ___
 
-### RETO
+### **RETO**
 
-Para obtener la bandera, use cURL para descargar el archivo devuelto por '/download.php' en el servidor anterior.
+Para obtener la bandera, use cURL para descargar el archivo devuelto por '`/download.php`' en el servidor anterior.
+
+`R:` HTB{64$!c_cURL_u$3r}
 
 ~~~
 ┌──(root㉿kali)-[/home/kali]

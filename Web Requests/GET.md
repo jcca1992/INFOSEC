@@ -151,11 +151,11 @@ Como vemos, el navegador envió nuestra solicitud y podemos ver la respuesta dev
 >Nota: en caso que aparezca `Scam Warning: Take care when pasting things you don’t understand...` se puede escribir `allow pasting`. No hay problema si aparece `Uncaught SyntaxError: unexpected token: identifier` ya estaria permitido, podremos reiniciar firefox para asegurar. En caso de que no funcione podemos probar mas metodos ingresando [aqui](https://www.brainytechz.com/2021/05/how-to-fix-mozilla-firefox-scam-warning.html)
 ___
 
-### RETO
+### **RETO**
 
 El ejercicio anterior parece estar roto, ya que arroja resultados incorrectos. Use las herramientas de desarrollo del navegador para ver cuál es la solicitud que envía cuando buscamos, y use cURL para buscar 'flag' y obtener la bandera.
 
-R: flag: HTB{curl_g3773r}
+`R:` flag: HTB{curl_g3773r}
 
 ~~~
 ┌──(root㉿kali)-[/home/kali]

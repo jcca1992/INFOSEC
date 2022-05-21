@@ -130,4 +130,4 @@ ___
 ### RETO
 El servidor anterior carga la bandera después de cargar la página. Use la pestaña Network en las herramientas de desarrollo del navegador para ver qué solicitudes realiza la página y busque la solicitud en la bandera.
 
-R: HTB{p493_r3qu3$t$_m0n!t0r}
+`R:` HTB{p493_r3qu3$t$_m0n!t0r}
