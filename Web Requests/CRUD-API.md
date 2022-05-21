@@ -38,6 +38,8 @@ Juceco@htb[/htb]$ curl http://<SERVER_IP>:<PORT>/api.php/city/london
 
 Vemos que el resultado se envía como una cadena JSON. Para formatearlo correctamente en formato JSON, podemos canalizar la salida a la utilidad `jq`, que lo formateará correctamente. También silenciaremos cualquier salida cURL innecesaria con `-s`, de la siguiente manera:
 
+>Nota: en muchos casos tendran que instalar `jq` antes de poder usarlo
+
 ~~~
 Juceco@htb[/htb]$ curl -s http://<SERVER_IP>:<PORT>/api.php/city/london | jq
 
@@ -154,3 +156,30 @@ Juceco@htb[/htb]$ curl -s http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City | 
 De hecho, reemplazamos con éxito el nombre de la ciudad antigua con el de la ciudad nueva.
 
 >Nota: En algunas API, la operación `Update` también se puede usar para crear nuevas entradas. Básicamente, enviaríamos nuestros datos, y si no existen, los crearía. Por ejemplo, en el ejemplo anterior, incluso si no existiera una entrada con una ciudad de `London`, se crearía una nueva entrada con los detalles que pasamos. En nuestro ejemplo, sin embargo, este no es el caso. Intente actualizar una ciudad inexistente y vea lo que obtiene.
+___
+
+### **DELETE**
+
+Finalmente, intentemos borrar una ciudad, que es tan fácil como leer una ciudad. Simplemente especificamos el nombre de la ciudad para la API y usamos el método HTTP `DELETE`, y eliminaría la entrada, de la siguiente manera:
+
+~~~
+Juceco@htb[/htb]$ curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City
+~~~
+
+~~~
+Juceco@htb[/htb]$ curl -s http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City | jq
+[]
+~~~
+
+Como podemos ver, después de eliminar `New_HTB_City`, obtenemos una matriz vacía cuando intentamos leerla, lo que significa que ya no existe.
+
+>Ejercicio: intente eliminar cualquiera de las ciudades que agregó anteriormente a través de solicitudes POST y luego lea todas las entradas para confirmar que se eliminaron correctamente.
+
+Con esto, podemos realizar las 4 operaciones `CRUD` a través de cURL. En una aplicación web real, es posible que tales acciones no estén permitidas para todos los usuarios, o se consideraría una vulnerabilidad si alguien puede modificar o eliminar cualquier entrada. Cada usuario tendría ciertos privilegios sobre lo que puede  `read` o `write`, donde `write` se refiere a agregar, modificar o eliminar datos. Para autenticar a nuestro usuario para usar la API, necesitaríamos pasar una cookie o un encabezado de autorización (por ejemplo, JWT), como hicimos en una sección anterior. Aparte de eso, las operaciones son similares a las que practicamos en esta sección.
+___
+
+### **RETO**
+
+Primero, intente actualizar el nombre de cualquier ciudad para que sea 'flag'. Luego, elimine cualquier ciudad. Una vez hecho esto, busque una ciudad llamada 'flag' para obtener la bandera.
+
+R:
