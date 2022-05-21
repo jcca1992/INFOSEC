@@ -32,19 +32,19 @@ ___
     + [CRUD API](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/CRUD-API.md)
 ___
 
-## [JAVASCRIPT DEOBFUSCATION]()
+## [JAVASCRIPT DEOBFUSCATION](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/README.md)
 
-+ Codigo Fuente
++ [Codigo Fuente](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Codigo-Fuente.md)
 + Ofuscacion
-    + Ofuscacion de Codigo
-    + Ofuscacion Basica
-    + Ofuscacion Avanzada
-    + Desofuscacion
+    + [Ofuscacion de Codigo](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Ofuscacion-Codigo.md)
+    + [Ofuscacion Basica](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Ofuscacion-Basica.md)
+    + [Ofuscacion Avanzada](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Ofuscacion-Avanzada.md)
+    + [Desofuscacion](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Desofuscacion.md)
 + Ejemplos de Desofuscacion
-    + Analisis de Codigo
-    + HTTP Request
-    + Decodificando
-+ Evaluacion de Habilidades
+    + [Analisis de Codigo](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Analisis-Codigo.md)
+    + [HTTP Request](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/HTTP-Request.md)
+    + [Decodificando](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Decodificando.md)
++ [Evaluacion de Habilidades](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Evaluacion-Habilidades.md)
 ___
 
 ## [WINDOWS FUNDAMENTALS](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Windows%20Fundamentals/README.md)

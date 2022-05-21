@@ -29,5 +29,5 @@ Indice
     + [Analisis de Codigo](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Analisis-Codigo.md)
     + [HTTP Request](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/HTTP-Request.md)
     + [Decodificando](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Decodificando.md)
-+ Evaluacion de Habilidades
++ [Evaluacion de Habilidades](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Evaluacion-Habilidades.md)
 ___
