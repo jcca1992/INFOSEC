@@ -3,7 +3,7 @@ Apuntes, anotaciones, y practica de estudios en Seguridad informatica, con Hack 
 
 Index
 
-## [GETTING STARTED]()
+## [GETTING STARTED](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/README.md)
 
 + [Intro](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Intro.md)
 + [Setup](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Setup.md)
@@ -19,7 +19,7 @@ Index
 + [Chequeo de conocimientos](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Knowledge-Check.md)
 ___
 
-## [WEB REQUESTS]()
+## [WEB REQUESTS](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/README.md)
 
 + HTTP Fundamentos
     + [(HTTP) Hypertext Transfer Protocol](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/Hypertext-Transfer-Protocol(HTTP).md)
@@ -32,7 +32,7 @@ ___
     + [CRUD API](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/CRUD-API.md)
 ___
 
-## WINDOWS FUNDAMENTALS
+## [WINDOWS FUNDAMENTALS]()
 
 + Introduccion
 + Nucleo del S.O.
