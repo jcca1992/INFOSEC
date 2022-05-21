@@ -3,7 +3,7 @@ Apuntes, anotaciones, y practica de estudios en Seguridad informatica, con Hack 
 
 Index
 
-## GETTING STARTED
+## [GETTING STARTED]()
 
 + [Intro](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Intro.md)
 + [Setup](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Setup.md)
@@ -19,7 +19,7 @@ Index
 + [Chequeo de conocimientos](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Knowledge-Check.md)
 ___
 
-## WEB REQUESTS
+## [WEB REQUESTS]()
 
 + HTTP Fundamentos
     + [(HTTP) Hypertext Transfer Protocol](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/Hypertext-Transfer-Protocol(HTTP).md)
@@ -53,3 +53,4 @@ ___
     + Experiencia de Escritorio vs Nucleo de Servidor
     + Seguridad de Windows
     + Skill Assessment
+___
