@@ -183,3 +183,77 @@ ___
 Primero, intente actualizar el nombre de cualquier ciudad para que sea 'flag'. Luego, elimine cualquier ciudad. Una vez hecho esto, busque una ciudad llamada 'flag' para obtener la bandera.
 
 R:
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl -X PUT http://178.62.119.24:30980/api.php/city/london -d '{"city_name":"flag", "country_name":"HTB"}' -H 'Content-Type: application/json'
+~~~
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl -s  http://178.62.119.24:30980/api.php/city/flag | jq
+[
+  {
+    "city_name": "flag",
+    "country_name": "HTB"
+  }
+]
+~~~
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl -s  http://178.62.119.24:30980/api.php/city/le | jq  
+[
+  {
+    "city_name": "Leeds",
+    "country_name": "(UK)"
+  },
+  {
+    "city_name": "Dudley",
+    "country_name": "(UK)"
+  },
+  {
+    "city_name": "Leicester",
+    "country_name": "(UK)"
+  },
+  {
+    "city_name": "Newcastle",
+    "country_name": "(UK)"
+  },
+  {
+    "city_name": "Los Angeles",
+    "country_name": "(US)"
+  },
+  {
+    "city_name": "Jacksonville",
+    "country_name": "(US)"
+  },
+  {
+    "city_name": "Seattle",
+    "country_name": "(US)"
+  },
+  {
+    "city_name": "Nashville-Davidson",
+    "country_name": "(US)"
+  }
+]
+~~~
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl -X DELETE http://178.62.119.24:30980/api.php/city/Dudley
+                                                                                 
+┌──(root㉿kali)-[/home/kali]
+└─# curl -s  http://178.62.119.24:30980/api.php/city/Dudley | jq 
+[]
+~~~
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl -s  http://178.62.119.24:30980/api.php/city/flag | jq   
+[
+  {
+    "city_name": "flag",
+    "country_name": "HTB{crud_4p!_m4n!pul4t0r}"
+  }
+]
+~~~
