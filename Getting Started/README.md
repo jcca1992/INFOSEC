@@ -1,4 +1,4 @@
-## [GETTING STARTED]()
+## GETTING STARTED
 
 + [Intro](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Intro.md)
 + [Setup](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Setup.md)

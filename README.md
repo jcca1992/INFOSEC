@@ -32,7 +32,22 @@ ___
     + [CRUD API](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Web%20Requests/CRUD-API.md)
 ___
 
-## [WINDOWS FUNDAMENTALS]()
+## [JAVASCRIPT DEOBFUSCATION]()
+
++ Codigo Fuente
++ Ofuscacion
+    + Ofuscacion de Codigo
+    + Ofuscacion Basica
+    + Ofuscacion Avanzada
+    + Desofuscacion
++ Ejemplos de Desofuscacion
+    + Analisis de Codigo
+    + HTTP Request
+    + Decodificando
++ Evaluacion de Habilidades
+___
+
+## [WINDOWS FUNDAMENTALS](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Windows%20Fundamentals/README.md)
 
 + Introduccion
 + Nucleo del S.O.
