@@ -20,3 +20,24 @@ var _0x1ec6=['Bg9N','sfrciePHDMfty3jPChqGrgvVyMz1C2nHDgLVBIbnB2r1Bgu='];(functio
 ~~~
 
 Este código obviamente está más ofuscado y no podemos ver ningún remanente de nuestro código original. Ahora podemos intentar ejecutarlo en [jsconsole ](https://jsconsole.com/) para verificar que aún realiza su función original. Intente jugar con la configuración de ofuscación en [obfuscator](https://obfuscator.io/) para generar aún más código ofuscado y luego intente volver a ejecutarlo en [jsconsole ](https://jsconsole.com/) para verificar que aún realiza su función original.
+___
+
+### **MAS OFUSCACION**
+
+Ahora deberíamos tener una idea clara de cómo funciona la ofuscación de código. Todavía hay muchas variaciones de herramientas de ofuscación de código, cada una de las cuales ofusca el código de manera diferente. Tome el siguiente código JavaScript, por ejemplo:
+
+~~~
+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]]+([][[]]+[])[+!+[]]+(![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(!
+...SNIP...
+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]]](!+[]+!+[]+[+[]])))()
+~~~
+
+Todavía podemos ejecutar este código, y aún realizaría su función original:
+
+![](https://academy.hackthebox.com/storage/modules/41/js_deobf_jsf.jpg)
+
+>Nota: El código anterior se cortó porque el código completo es demasiado largo, pero el código completo debería ejecutarse correctamente.
+
+Podemos intentar ofuscar el código usando la misma herramienta en [JSF](http://www.jsfuck.com/) y luego volver a ejecutarlo. Notaremos que el código puede tardar un tiempo en ejecutarse, lo que muestra cómo la ofuscación del código podría afectar el rendimiento, como se mencionó anteriormente.
+
+Hay muchos otros ofuscadores de JavaScript, como [JJ Encode](https://utf-8.jp/public/jjencode.html) o [AA Encode](https://utf-8.jp/public/aaencode.html). Sin embargo, estos ofuscadores suelen hacer que la ejecución y compilación del código sea muy lenta, por lo que no se recomienda su uso a menos que sea por una razón obvia, como pasar por alto los filtros o las restricciones web.
