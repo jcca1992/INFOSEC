@@ -52,7 +52,7 @@ function generateSerial() {
 Como se mencionó anteriormente, el método de ofuscación utilizado anteriormente es el `empaquetado`. Otra forma de `descomprimir` dicho código es encontrar el valor de `return` al final y usar `console.log` para imprimirlo en lugar de ejecutarlo.
 ___
 
-### ** INGENIERIA REVERSA**
+### **INGENIERIA REVERSA**
 
 Aunque estas herramientas están haciendo un buen trabajo hasta ahora al aclarar el código en algo que podamos entender, una vez que el código se vuelve más ofuscado y codificado, sería mucho más difícil para las herramientas automatizadas limpiarlo. Esto es especialmente cierto si el código se ofuscó con una herramienta de ofuscación personalizada.
 
