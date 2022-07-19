@@ -55,7 +55,7 @@ ___
 ### **RETO**
 Intente aplicar lo que aprendió en esta sección enviando una solicitud 'POST' a '/serial.php'. ¿Cuál es la respuesta que obtienes?
 
-`R:` N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz
+`R: N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz`
 
 ~~~
 ┌──(root㉿kali)-[/home/kali]

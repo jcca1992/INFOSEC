@@ -19,11 +19,11 @@ ___
 
 La codificación `base64` generalmente se usa para reducir el uso de caracteres especiales, ya que cualquier carácter codificado en `base64` se representaría en caracteres alfanuméricos, además de + y / solamente. Independientemente de la entrada, incluso si está en formato binario, solo los usaria la cadena codificada en base64 resultante.
 
-#### **DECTECTANDO BASE64**
+#### *DECTECTANDO BASE64*
 
 Las cadenas codificadas en `base64` se detectan fácilmente ya que solo contienen caracteres alfanuméricos. Sin embargo, la característica más distintiva de `base64` es su relleno con caracteres `=`. La longitud de las cadenas codificadas en `base64` debe ser un múltiplo de 4. Si la salida resultante tiene solo 3 caracteres, por ejemplo, se agrega un `=` adicional como relleno, y así sucesivamente.
 
-#### **CODIFICAR BASE64**
+#### *CODIFICAR BASE64*
 
 Para codificar cualquier texto en `base64` en Linux, podemos repetirlo y canalizarlo con `'|'` a `base64`:
 ~~~
@@ -32,7 +32,7 @@ Juceco@htb[/htb]$ echo https://www.hackthebox.eu/ | base64
 aHR0cHM6Ly93d3cuaGFja3RoZWJveC5ldS8K
 ~~~
 
-#### **DECODIFICAR BASE64**
+#### *DECODIFICAR BASE64*
 
 Si queremos decodificar cualquier cadena codificada en `base64`, podemos usar `base64 -d`, de la siguiente manera:
 ~~~
@@ -46,11 +46,11 @@ ___
 
 Otro método de codificación común es la codificación hexadecimal, que codifica cada carácter en su orden hexadecimal en la tabla `ASCII`. Por ejemplo, `a` es `61` en `hex`, `b` es `62`, `c` es `63`, etc. Puede encontrar la tabla `ASCII` completa en Linux usando el comando `man ascii`.
 
-#### **DECTECTANDO HEX**
+#### *DECTECTANDO HEX*
 
 Cualquier cadena codificada en `hex` estaría compuesta solo por caracteres hexadecimales, que son solo 16 caracteres: 0-9 y a-f. Eso hace que detectar cadenas codificadas en `hex` sea tan fácil como detectar cadenas codificadas en `base64`.
 
-#### **CODIFICAR HEX**
+#### *CODIFICAR HEX*
 
 Para codificar cualquier cadena en hex en Linux, podemos usar el comando `xxd -p`:
 
@@ -60,7 +60,7 @@ Juceco@htb[/htb]$ echo https://www.hackthebox.eu/ | xxd -p
 68747470733a2f2f7777772e6861636b746865626f782e65752f0a
 ~~~
 
-#### **DECODIFICAR HEX**
+#### *DECODIFICAR HEX*
 
 Para decodificar una cadena codificada en `hex`, podemos usar el comando `xxd -p -r`:
 
@@ -75,11 +75,11 @@ ___
 
 Otra técnica de codificación común, y muy antigua, es el cifrado Caesar, que cambia cada letra por un número fijo. Por ejemplo, el cambio de 1 carácter hace que `a` se convierta en `b`, y `b` se convierta en `c`, y así sucesivamente. Muchas variaciones del cifrado Caesar usan un número diferente de cambios, el más común de los cuales es `rot13`, que cambia cada carácter 13 veces hacia adelante.
 
-### **DETECTANDO CAESAR/ROT13**
+#### *DETECTANDO CAESAR/ROT13*
 
 Aunque este método de codificación hace que cualquier texto parezca aleatorio, aún es posible detectarlo porque cada carácter se asigna a un carácter específico. Por ejemplo, en `rot13`,` http://www` se convierte en `uggc://jjj`, que todavía tiene algunas similitudes y puede reconocerse como tal.
 
-#### **CODIFICAR ROT13**
+#### *CODIFICAR ROT13*
 
 No hay un comando específico en Linux para realizar la codificación `rot13`. Sin embargo, es bastante fácil crear nuestro propio comando para cambiar el carácter:
 
@@ -89,7 +89,7 @@ Juceco@htb[/htb]$ echo https://www.hackthebox.eu/ | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 uggcf://jjj.unpxgurobk.rh/
 ~~~
 
-#### **CODIFICAR ROT13**
+#### *CODIFICAR ROT13*
 
 También podemos usar el mismo comando anterior para decodificar rot13:
 ~~~

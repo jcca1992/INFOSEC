@@ -74,7 +74,7 @@ ___
 
 Repite lo que aprendiste en esta sección, y deberías encontrar una bandera secreta, ¿cuál es?
 
-`R:` HTB{4lw4y5_r34d_7h3_50urc3}
+`R: HTB{4lw4y5_r34d_7h3_50urc3}`
 
 ~~~
 <style>
