@@ -114,3 +114,96 @@ ___
 ### RETO
 
 Usando lo que aprendiste en esta sección, determina el tipo de codificación usada en la cadena que obtuviste en el ejercicio anterior y decodifícala. Para obtener el indicador, puede enviar una solicitud 'POST' a 'serial.php' y configurar los datos como "serial=YOUR_DECODED_OUTPUT".
+
+`R: HTB{ju57_4n07h3r_r4nd0m_53r14l}`
+
+Como es costumbre vamos a revisar por encima la pagina
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl http://104.248.173.13:31030                        
+</html>
+<!DOCTYPE html>
+
+<head>
+    <title>Secret Serial Generator</title>
+    <style>
+        *,
+        html {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #6fb3eb;
+        }
+
+        .center {
+            width: 100%;
+            height: 50%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: "Helvetica", Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 144px;
+        }
+
+        p {
+            font-size: 64px;
+        }
+    </style>
+    <script src="secret.js"></script>
+    <!-- HTB{4lw4y5_r34d_7h3_50urc3} -->
+</head>
+
+<body>
+    <div class="center">
+        <h1>Secret Serial Generator</h1>
+        <p>This page generates secret serials!</p>
+    </div>
+</body>
+
+</html>
+~~~
+
+Ahora repetimos el procedimiento que vimos en el ejercicio de [HTTP-Request](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/HTTP-Request.md) para obtener la bandera codificada
+~~~                                                                                 
+┌──(root㉿kali)-[/home/kali]
+└─# curl http://104.248.173.13:31030/serial.php -X POST -d "param1=sample"
+N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz                                                                      ~~~
+
+Analizando la codificacion podemos presumir que es con `Rot13` asi que lo vamos a decodificar
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# echo N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz | tr 'A-Za-z' 'N-ZA-Mn-za-m'    
+A2tkAI8kAI9uK3ZmL3VmA19gZmH1ATpm
+~~~
+
+Al tratar de decodificar nos arroja un codigo igualmente codificado, por lo que no seria `Rot13`, asi que probamos con el otro metodo de codificacion mas parecido que seria `Base64`
+~~~                                                                                 
+┌──(root㉿kali)-[/home/kali]
+└─# echo N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz | base64 -d                 
+7h15_15_a_s3cr37_m3554g3
+~~~
+
+Como vemos el codigo fue decodificado con `base64`, ahora como nos instruye el enunciado enviamos la informacion con POST para que nos arroje la bandera, hay que tener mucho cuidado con errores de tipeo ya que al haberlo no nos arrojara la bandera
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# curl http://104.248.173.13:31030/serial.php -X POST -d "serial=7h15_15_a_s3cr37_m3554g3" 
+HTB{ju57_4n07h3r_r4nd0m_53r14l}
+~~~
