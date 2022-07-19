@@ -182,10 +182,12 @@ Como es costumbre vamos a revisar por encima la pagina
 ~~~
 
 Ahora repetimos el procedimiento que vimos en el ejercicio de [HTTP-Request](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/HTTP-Request.md) para obtener la bandera codificada
+
 ~~~                                                                                 
 ┌──(root㉿kali)-[/home/kali]
 └─# curl http://104.248.173.13:31030/serial.php -X POST -d "param1=sample"
-N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz                                                                      ~~~
+N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz
+~~~
 
 Analizando la codificacion podemos presumir que es con `Rot13` asi que lo vamos a decodificar
 ~~~
