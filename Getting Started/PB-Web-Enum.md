@@ -44,7 +44,7 @@ Un status code HTTP de 200 revela que la solicitud del recurso fue exitosa, mien
 
 El escaneo se completó con éxito e identifica una instalación de WordPress en `/wordpress`. WordPress es el CMS (Content Management System) Sistema de gestión de contenido más utilizado y tiene una superficie de ataque potencial enorme. En este caso, visitar `http://10.10.10.121/wordpress` en un navegador revela que WordPress todavía está en modo de configuración, lo que nos permitirá obtener la ejecución remota de código (RCE) en el servidor. 
 
-![](https://academy.hackthebox.com/storage/modules/77/wordpress.png)
+![wordpress](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/wordpress.png)
 
 ___
 ### ENUMERACION DE SUBDOMINIO DNS
@@ -137,25 +137,25 @@ ___
 
 Los certificados SSL/TLS son otra fuente de información potencialmente valiosa si se utiliza HTTPS. Navega en `https://10.10.10.121/` a continuacion revela el detalle de los certificados, incluida la dirección de correo electrónico y el nombre de la empresa. Estos podrían usarse potencialmente para realizar un ataque de phishing si esto está dentro del alcance de una evaluación. 
 
-![Certificado](https://academy.hackthebox.com/storage/modules/77/cert.txt)
+![Certificado](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/cert.png)
 
 ___
 ### ROBOTS.TXT
 
 Es común que los sitios web contengan un archivo `robots.txt`, cuyo propósito es instruir a los rastreadores web de los motores de búsqueda, como Googlebot, a qué recursos se puede o no acceder para la indexación. El archivo `robots.txt` puede proporcionar información valiosa, como la ubicación de archivos privados y páginas de administración. En este caso, vemos que el archivo `robots.txt` contiene dos entradas no permitidas. 
 
-![robot.txt](https://academy.hackthebox.com/storage/modules/77/robots.txt)
+![robot.txt](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/robots.png)
 
 Navega en `http://10.10.10.121/private` en un navegador revela una página de inicio de sesión de administrador de HTB. 
 
-![HTB](https://academy.hackthebox.com/storage/modules/77/academy.txt)
+![HTB](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/academy.png)
 
 ___
 ### CODIGO FUENTE
 
 También vale la pena comprobar el código fuente de cualquier página web con la que nos encontremos. Podemos presionar `[CTRL + U]` para que aparezca la ventana del código fuente en un navegador. Este ejemplo revela un comentario de desarrollador que contiene credenciales para una cuenta de prueba, que podría usarse para iniciar sesión en el sitio web. 
 
-![Codigo-Fuente](https://academy.hackthebox.com/storage/modules/77/academy.txt)
+![Codigo-Fuente](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/source.png)
 ___
 ### RETO
 
