@@ -1,3 +1,5 @@
+## NIBBLES-ENUMERACION
+
 Hay 201 maquinas independientes de varios sistemas operativos y niveles de dificultad disponibles en la plataforma HTB con membresía VIP al momento de escribir esto. Esta membresía incluye un recorrido oficial creado por HTB para cada máquina retirada. También podemos encontrar tutoriales en blogs y videos para la mayoría de las cajas con una búsqueda rápida en Google.
 
 Para nuestros propósitos, repasemos la maquina `Nibbles`, un cuadro de Linux fácil de calificar que muestra tácticas de enumeración comunes, explotación básica de aplicaciones web y una configuración incorrecta relacionada con archivos para escalar privilegios.
@@ -129,10 +131,11 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 19.23 seconds
 ~~~
-
 ### RETO
 
-Ejecute un escaneo de script nmap en el objetivo. ¿Cuál es la versión de Apache que se ejecuta en el servidor? (formato de respuesta: X.X.XX)
++ Ejecute un escaneo de script nmap en el objetivo. ¿Cuál es la versión de Apache que se ejecuta en el servidor? (formato de respuesta: X.X.XX)
+
+`R: 2.4.18`
 
 ~~~
 # nmap -sV 10.129.200.170      
@@ -148,5 +151,3 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 13.66 seconds
 ~~~
-
-Respuesta es `2.4.18`

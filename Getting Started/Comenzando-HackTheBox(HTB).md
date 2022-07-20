@@ -24,7 +24,7 @@ ___
 
 Al comenzar, la gran cantidad de contenido disponible en la web puede ser abrumadora. Además, no es fácil saber por dónde empezar y la calidad de los materiales disponibles. Lo que sigue son algunos recursos fuera de HTB que recomendamos a cualquiera que comience su viaje o busque mejorar su conjunto de habilidades y aprender nuevos trucos.
 
-### *MAQUINAS VULNERABLES/APLICACIONES*
+#### *MAQUINAS VULNERABLES/APLICACIONES*
 
 Hay muchos recursos disponibles para practicar vulnerabilidades web y de red comunes en un entorno seguro y controlado. Los siguientes son algunos ejemplos de aplicaciones web vulnerables a propósito y máquinas vulnerables que podemos configurar en un entorno de laboratorio para practicar más.
 |||
@@ -36,8 +36,7 @@ Hay muchos recursos disponibles para practicar vulnerabilidades web y de red com
 
 Vale la pena aprender a configurarlos en su entorno de laboratorio para obtener práctica adicional configurando máquinas virtuales y trabajando con configuraciones comunes, como configurar un servidor web. Aparte de estas máquinas/aplicaciones vulnerables, también podemos configurar muchas máquinas y aplicaciones en un entorno de laboratorio para practicar la configuración, enumeración/explotación y remediación.
 ___
-
-### *CANALES DE YOUTUBE*
+#### *CANALES DE YOUTUBE*
 
 Hay muchos canales de YouTube que muestran pruebas de penetración/técnicas de hacking. Algunos que vale la pena marcar son:
 
@@ -47,29 +46,24 @@ Hay muchos canales de YouTube que muestran pruebas de penetración/técnicas de 
 |[VbScrub](https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ)|Proporciona videos HTB, así como videos sobre técnicas, centrándose principalmente en la explotación de Active Directory.|
 |[STÖK](https://www.youtube.com/channel/UCQN2DsjnYH60SFBIA6IkNwg)|Proporciona videos sobre varios temas relacionados con la seguridad de la información, centrándose principalmente en recompensas de errores y pruebas de penetración de aplicaciones web.|
 |[LiveOverflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w)| Proporciona videos sobre una amplia variedad de temas técnicos de seguridad de la información.|
-
-### *BLOGS*
+#### *BLOGS*
 
 Hay demasiados blogs por ahí para enumerarlos a todos. Si realiza una búsqueda en Google de un tutorial de la mayoría de las maquinas HTB retiradas, generalmente se encontrará con los mismos blogs una y otra vez. Estos pueden ser excelentes para ver la perspectiva de otra persona sobre el mismo tema, especialmente si sus publicaciones contienen información "adicional" sobre el objetivo que otros blogs no cubren.
 Un gran blog que vale la pena revisar es [0xdf hacks stuff](https://0xdf.gitlab.io/). Este blog tiene recorridos fantásticos de la mayoría de las cajas HTB retiradas, cada una con una sección "Beyong Root" que cubre algún aspecto único de la caja que notó el autor. El blog también tiene publicaciones sobre diversas técnicas, análisis de malware y reseñas de eventos anteriores de CTF.
 
 En cualquier punto del proceso de aprendizaje, vale la pena leer tanto material como sea posible para comprender mejor un tema y obtener diferentes perspectivas. Además de los blogs relacionados con cajas HTB retiradas, también vale la pena buscar artículos de blog sobre exploits/ataques recientes, técnicas de explotación de Active Directory, artículos de eventos de CTF y artículos de informes de bug bounty. Todos estos pueden contener una gran cantidad de información que puede ayudar a conectar algunos puntos en nuestro aprendizaje o incluso enseñarnos algo nuevo que puede ser útil en una evaluación.
-
-### *TUTORIALES WEBSITES*
+#### *TUTORIALES WEBSITES*
 
 Existen muchos sitios web de tutoriales para practicar las habilidades informáticas fundamentales, como la creación de scripts.
 Dos excelentes sitios web de tutoriales son [Under The Wire](https://www.underthewire.tech/index.htm) y [Over The Wire](https://overthewire.org/wargames/). Estos sitios web están configurados para ayudar a capacitar a los usuarios en el uso de `Windows PowerShell` y la línea de comandos de Linux, respectivamente, a través de varios escenarios en un formato de "juegos de guerra".
 Llevan al usuario a través de varios niveles, que consisten en tareas o desafíos para capacitarlos en el uso básico y avanzado de la línea de comandos de Windows y Linux y scripts de `Bash` y `PowerShell`. Estas habilidades son primordiales para cualquiera que busque tener éxito en esta industria.
-
-### *HTB STARTING POINT*
+#### *HTB STARTING POINT*
 
 [Starting Point](https://www.hackthebox.eu/home/start) es una introducción a los laboratorios HTB y máquinas/desafíos básicos. Después de completar un tutorial que cubre la conexión a VPN, la enumeración, la obtención de un foothold y la escalada de privilegios contra un solo objetivo, se nos presentan varias máquinas clasificadas como `easy` que pueden ser atacadas antes de acceder al resto de la plataforma HTB.
-
-### *HTB TRACKS*
+#### *HTB TRACKS*
 
 En la plataforma principal de HTB Tracks, "selecciones de máquinas y desafíos unidos para que los usuarios progresen, dominando un tema en particular". Las pistas cubren una variedad de temas y se agregan continuamente a la plataforma. Su objetivo es ayudar a los estudiantes a mantenerse enfocados en una meta específica de manera estructurada mientras siguen un enfoque de aprendizaje exploratorio.
-
-### *MAQUINAS HTB PARA PRINCIPIANTES*
+#### *MAQUINAS HTB PARA PRINCIPIANTES*
 
 ||||||
 |--|--|--|--|--|
@@ -80,16 +74,14 @@ Si prefiere ver un tutorial en video mientras trabaja en una máquina fácil, la
 |||
 |--|--|
 |[Easy Linux Boxes](https://www.youtube.com/watch?list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&v=byYZl9CSFtM)|[Easy Windows Boxes](https://www.youtube.com/watch?list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn&v=N2ahkarb-zI)|
-
-### *DESAFIOS HTB PARA PRINCIPIANTES*
+#### *DESAFIOS HTB PARA PRINCIPIANTES*
 
 La plataforma HTB contiene desafíos únicos en una variedad de categorías. Algunos desafíos para principiantes incluyen:
 
 ||||
 |--|--|--|
 |[Find The Easy Pass](https://www.hackthebox.eu/home/challenges/Reversing?name=Find%20The%20Easy%20Pass)|[Weak RSA](https://www.hackthebox.eu/home/challenges/Crypto?name=Weak%20RSA)|[You know 0xDiablos](https://www.hackthebox.eu/home/challenges/Pwn?name=You%20know%200xDiablos)|
-
-### *DANTE PROLAB*
+#### *DANTE PROLAB*
 
 La plataforma HTB tiene varios Pro Labs que son redes empresariales simuladas con muchos hosts interconectados que los jugadores pueden usar para practicar sus habilidades en una red que contiene múltiples objetivos.
 La explotación exitosa de hosts específicos generará información que ayudará a los jugadores cuando ataquen hosts encontrados más adelante en el laboratorio.
@@ -98,7 +90,6 @@ El Dante Pro Lab es el laboratorio más amigable para principiantes ofrecido has
 
 Ahora que hemos cubierto la terminología y las técnicas básicas y el escaneo/enumeración, juntemos las piezas recorriendo paso a paso un cuadro HTB fácil de calificar.
 ___
-
 ## **NAVEGANDO POR HTB**
 
 Hack The Box proporciona una gran cantidad de información para cualquier persona que se inicie en las pruebas de penetración o busque mejorar sus habilidades. El sitio web ofrece muchas oportunidades de aprendizaje, por lo que es imprescindible comprender su estructura y diseño para aprovechar al máximo la experiencia de aprendizaje.
@@ -173,7 +164,6 @@ ___
 
 El diseño de la página de desafíos es similar al de la página de máquinas. Encontrarás desafíos activos y retirados clasificados en diez categorías diferentes, cada una de las cuales tiene un máximo de 10 desafíos. Puede hacer clic en cualquier categoría para obtener una vista previa de la lista de desafíos dentro de ella, y luego puede hacer clic en cualquier desafío para ver su página y enviar sus banderas.
 ___
-
 ### FORTRESS
 
 Las Fortress son laboratorios vulnerables creados por empresas externas y alojados en HackTheBox.
@@ -210,7 +200,6 @@ Los laboratorios profesionales son grandes y pueden tardar un tiempo en terminar
 
 Pro Labs requiere un plan de suscripción por separado. Una vez que completa un Pro Lab, obtiene un Certificado de finalización HTB.
 ___
-
 ### BATTLEGROUNDS
 
 La última incorporación a HackThebox es HTB Battlegrounds.

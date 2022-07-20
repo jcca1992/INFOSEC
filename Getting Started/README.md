@@ -15,6 +15,8 @@
     + [Escalando Privilegios](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/PB-Privilege-Scaling.md)
     + [Transferencia de Archivos](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/PB-Transfer-File.md)
 + [Comenzando con Hack The Box (HTB)](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Comenzando-HackTheBox(HTB).md)
+    + Empezando
+    + Navegando por HTB
 + Atacando tu primera maquina
     + [Nibbles Enumeracion](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Nibbles-enum.md)
     + [Nibbles Footprinting](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Nibbles-Web-Footprinting.md)

