@@ -168,4 +168,42 @@ ___
 
 + Intente ejecutar algunas de las técnicas de enumeración web que aprendió en esta sección en el servidor y use la información que obtiene para obtener la bandera.
 
+`R:HTB{w3b_3num3r4710n_r3v34l5_53cr375}`
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# gobuster dir -u http://138.68.190.93:31070/ -w /usr/share/dirb/wordlists/common.txt
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://138.68.190.93:31070/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/dirb/wordlists/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/07/20 17:13:42 Starting gobuster in directory enumeration mode
+===============================================================
+/.hta                 (Status: 403) [Size: 281]
+/.htpasswd            (Status: 403) [Size: 281]
+/.htaccess            (Status: 403) [Size: 281]
+/index.php            (Status: 200) [Size: 990]
+/robots.txt           (Status: 200) [Size: 45] 
+/server-status        (Status: 403) [Size: 281]
+/wordpress            (Status: 301) [Size: 327] [--> http://138.68.190.93:31070/wordpress/]
+Progress: 4487 / 4615 (97.23%)                                                   Progress: 4514 / 4615 (97.81%)                                                   Progress: 4537 / 4615 (98.31%)                                                   Progress: 4561 / 4615 (98.83%)                                                   Progress: 4585 / 4615 (99.35%)                                                   Progress: 4611 / 4615 (99.91%)                                                                                                                                              
+===============================================================
+2022/07/20 17:15:21 Finished
+===============================================================
+~~~
+
 ![](https://raw.githubusercontent.com/jcca1992/INFOSEC/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_45_20.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_46_26.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_47_38.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_51_21.png)
