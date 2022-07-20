@@ -36,4 +36,3 @@ Por lo tanto, todo lo que está haciendo `generateSerial` es simplemente enviar 
 Los desarrolladores pueden haber implementado esta función cada vez que necesitan generar una serie, como al hacer clic en un determinado botón `Generate Serial`, por ejemplo. Sin embargo, dado que no vimos ningún elemento HTML similar que genere publicaciones seriadas, los desarrolladores aún no deben haber usado esta función y la guardaron para uso futuro.
 
 Con el uso de desofuscación de código y análisis de código, pudimos descubrir esta función. Ahora podemos intentar replicar su funcionalidad para ver si se maneja en el lado del servidor al enviar una solicitud `POST`. Si la función está habilitada y manejada en el lado del servidor, podemos descubrir una funcionalidad inédita, que generalmente tiende a tener errores y vulnerabilidades dentro de ellos.
-

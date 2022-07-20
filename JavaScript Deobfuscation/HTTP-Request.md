@@ -53,7 +53,8 @@ Ahora que sabemos cómo usar `cURL` para enviar solicitudes `POST` básicas, en 
 ___
 
 ### **RETO**
-Intente aplicar lo que aprendió en esta sección enviando una solicitud 'POST' a '/serial.php'. ¿Cuál es la respuesta que obtienes?
+
++ Intente aplicar lo que aprendió en esta sección enviando una solicitud 'POST' a '/serial.php'. ¿Cuál es la respuesta que obtienes?
 
 `R: N2gxNV8xNV9hX3MzY3IzN19tMzU1NGcz`
 

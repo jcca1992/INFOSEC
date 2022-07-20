@@ -60,7 +60,8 @@ Tendríamos que aplicar ingeniería inversa manualmente al código para comprend
 ___
 
 ### **RETO**
-Usando lo que aprendiste en esta sección, intenta desofuscar 'secret.js' para obtener el contenido de la bandera. ¿Qué es la bandera?
+
++ Usando lo que aprendiste en esta sección, intenta desofuscar 'secret.js' para obtener el contenido de la bandera. ¿Qué es la bandera?
 
 `R: HTB{1_4m_7h3_53r14l_g3n3r470r!}`
 

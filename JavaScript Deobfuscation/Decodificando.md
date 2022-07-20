@@ -113,7 +113,7 @@ ___
 
 ### RETO
 
-Usando lo que aprendiste en esta sección, determina el tipo de codificación usada en la cadena que obtuviste en el ejercicio anterior y decodifícala. Para obtener el indicador, puede enviar una solicitud 'POST' a 'serial.php' y configurar los datos como "serial=YOUR_DECODED_OUTPUT".
++ Usando lo que aprendiste en esta sección, determina el tipo de codificación usada en la cadena que obtuviste en el ejercicio anterior y decodifícala. Para obtener el indicador, puede enviar una solicitud 'POST' a 'serial.php' y configurar los datos como "serial=YOUR_DECODED_OUTPUT".
 
 `R: HTB{ju57_4n07h3r_r4nd0m_53r14l}`
 
