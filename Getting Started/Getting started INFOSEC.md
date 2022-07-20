@@ -1786,9 +1786,10 @@ Como podemos ver, ahora podemos entrar como usuario root. Los módulos [Linux Pr
 
 ___
 ### RETO
-+ SSH en el servidor anterior con las credenciales proporcionadas y use '-p xxxxxx' para especificar el puerto que se muestra arriba. Una vez que inicie sesión, intente encontrar una manera de moverse a 'usuario2', para obtener la bandera en '/home/user2/flag.txt' 
 
-+ Una vez que obtenga acceso a 'usuario2', intente encontrar una manera de escalar sus privilegios a la raíz, para obtener el indicador en '/root/flag.txt'. 
++ SSH en el servidor anterior con las credenciales proporcionadas y use '-p xxxxxx' para especificar el puerto que se muestra arriba. Una vez que inicie sesión, intente encontrar una manera de moverse a 'usuario2', para obtener la bandera en '/home/user2/flag.txt'
+
+`R: HTB{l473r4l_m0v3m3n7_70_4n07h3r_u53r}`
 
 ~~~
 $ ssh user1@139.59.176.69 -p31157
@@ -1840,6 +1841,11 @@ user2@gettingstartedprivesc-423812-646697d759-wtj9q:/home$ cd user2
 user2@gettingstartedprivesc-423812-646697d759-wtj9q:~$ cat /home/user2/flag.txt
 HTB{l473r4l_m0v3m3n7_70_4n07h3r_u53r}
 ~~~
+___
+
++ Una vez que obtenga acceso a 'usuario2', intente encontrar una manera de escalar sus privilegios a la raíz, para obtener el indicador en '/root/flag.txt'. 
+
+`R: HTB{pr1v1l363_35c4l4710n_2_r007}`
 
 para la segunda pregunta debemos descargar el [linpeas.sh](https://github.com/carlospolop/PEASS-ng/releases/latest) y correrlo para enumerar las vulnerabilidades por supuesto lo que debemos hacer es crear un archivo con `vim` donde copiaremos todo lo que esta en el archivo descargado de `linpeas`
 
@@ -1881,8 +1887,7 @@ tiene que ir toda la informacion incluso ` -----BEGIN OPENSSH PRIVATE KEY-----` 
 
 ahora ingresaremos con esta llave de la siguiente forma
 
-~~~
-                                                                             
+~~~                                                                             
 ┌──(kali㉿kali)-[/home/kali]
 └─$ ssh root@139.59.176.69 -p31157 -i id_rsa
 Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 4.19.0-17-amd64 x86_64)

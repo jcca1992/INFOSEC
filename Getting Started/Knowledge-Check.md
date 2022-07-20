@@ -24,7 +24,9 @@ Hay dos formas de escalar los privilegios para rootear en el objetivo después d
 
 ## RETO
 
-Genere el objetivo, consiga un punto de apoyo y envíe el contenido de la flag user.txt.
++ Genere el objetivo, consiga un punto de apoyo y envíe el contenido de la flag user.txt.
+ `R: 7002d65b149b0a4d19132a66feed21d8`
 
-Después de obtener un punto de apoyo en el objetivo, aumente los privilegios a rott y envíe el contenido de la flag root.txt.
++ Después de obtener un punto de apoyo en el objetivo, aumente los privilegios a rott y envíe el contenido de la flag root.txt.
+ `R: f1fba6e9f71efb2630e6e34da6387842`
 ___
