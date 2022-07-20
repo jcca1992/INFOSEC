@@ -170,6 +170,7 @@ ___
 
 `R:HTB{w3b_3num3r4710n_r3v34l5_53cr375}`
 
+Lo primero que hay que revisar es los directorios que se pueden acceder, como vemos esta `robots.txt` e `index.php`
 ~~~
 ┌──(root㉿kali)-[/home/kali]
 └─# gobuster dir -u http://138.68.190.93:31070/ -w /usr/share/dirb/wordlists/common.txt
@@ -200,16 +201,26 @@ Progress: 4487 / 4615 (97.23%)                                                  
 ===============================================================
 ~~~
 
+Vamos a revisar en el navegador que tenemos en index.php, como vemos la pagina principal no muestra nada de utilidad
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/1.png)
 
+
+Veamos el codigo fuente de la pagina con CTRL+U, de igual forma no muestra nada interesante
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/2.png)
 
+
+ingresamos ahora a robots.txt y vemos algo de mucha utilidad disallow: /admin-login-page.php 
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/3.png)
 
+
+ingresamos a esa direccion y como podemos apreciar es la pagina para validar credenciales
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/4.png)
 
+
+Vemos el codigo fuente y en verde nos resalta una nota que nos indica que usuario y contraseña seria admin:password123
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/5.png)
 
+Colocamos usuario y contraseña para acceder a la informacion
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/6.png)
 
 ![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/7.png)
