@@ -368,3 +368,131 @@ ___
 ### CONCLUSION
 
 El escaneo y la enumeración de servicios es un tema amplio sobre el que aprenderemos más a medida que avancemos. Los aspectos que hemos cubierto aquí se aplican a muchas redes, incluidas las máquinas HTB.
+___
+
+### RETO
+
++ Realice un escaneo Nmap del objetivo. ¿Cuál es la versión del servicio que se ejecuta en el puerto 8080?
+
+`R: Apache Tomcat`
+
+Hacemos un escaneo con `nmap` de la IP y obtenemos que el puerto 8080 ejecuta el servicio `Apache Tomcat`
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# nmap -sV -sC 10.129.138.81  
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-07-20 16:32 UTC
+Nmap scan report for 10.129.138.81
+Host is up (0.15s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 ftp      ftp          4096 Feb 25  2021 pub
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.93
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 a0:01:d7:79:e9:d2:09:2a:b8:d9:b4:9a:6c:00:0c:1c (RSA)
+|   256 2b:99:b2:1f:ec:1a:5a:c6:b7:be:b5:50:d1:0e:a9:df (ECDSA)
+|_  256 e4:f8:17:8d:d4:71:d1:4e:d4:0e:bd:f0:29:4f:6d:14 (ED25519)
+80/tcp   open  http        Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: PHP 7.4.3 - phpinfo()
+139/tcp  open  netbios-ssn Samba smbd 4.6.2
+445/tcp  open  netbios-ssn Samba smbd 4.6.2
+2323/tcp open  telnet      Linux telnetd
+8080/tcp open  http        Apache Tomcat
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Apache Tomcat
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -1s
+| smb2-time: 
+|   date: 2022-07-20T16:32:40
+|_  start_date: N/A
+|_nbstat: NetBIOS name: GS-SVCSCAN, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 29.90 seconds
+~~~
+___
++ Realice una exploración Nmap del destino e identifique el puerto no predeterminado en el que se ejecuta el servicio telnet.
+
+`R: 2323`
+___
++ Enumere los recursos compartidos de SMB disponibles en el host de destino. Conéctese al recurso compartido disponible como usuario `bob` clave `Welcome1`. Una vez conectado, acceda a la carpeta llamada 'flag' y envíe el contenido del archivo flag.txt.
+
+`R: dceece590f3284c3866305eb2473d099`
+
+Listamos la IP
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# smbclient -N -L \\\\10.129.138.81
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        print$          Disk      Printer Drivers
+        users           Disk      
+        IPC$            IPC       IPC Service (gs-svcscan server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+smbXcli_negprot_smb1_done: No compatible protocol selected by server.
+protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+Unable to connect with SMB1 -- no workgroup available
+~~~
+
+Ingresamos a la carpeta `users` como usuario `bob` colocando su contraseña y una ves a dentro listamos para encontrarnos con un directorio de nombre `flag`
+~~~                                               
+┌──(root㉿kali)-[/home/kali]
+└─# smbclient -U bob  \\\\10.129.138.81\\users
+Password for [WORKGROUP\bob]:
+Try "help" to get a list of possible commands.
+smb: \> ls
+  .                                   D        0  Thu Feb 25 23:06:52 2021
+  ..                                  D        0  Thu Feb 25 20:05:31 2021
+  flag                                D        0  Thu Feb 25 23:09:26 2021
+  bob                                 D        0  Thu Feb 25 21:42:23 2021
+
+                4062912 blocks of size 1024. 1124792 blocks available
+~~~
+
+Ingresamos al directorio y nos econtramos con el archivo `flag.txt`, como el servicio `SMB` es para compartir archivos no podremos abrirlo directamente, tendremos que descargarlo en nuestra terminal con `get`
+~~~
+smb: \> cd flag
+smb: \flag\> ls
+  .                                   D        0  Thu Feb 25 23:09:26 2021
+  ..                                  D        0  Thu Feb 25 23:06:52 2021
+  flag.txt                            N       33  Thu Feb 25 23:09:26 2021
+                4062912 blocks of size 1024. 1124792 blocks available
+smb: \flag\> get flag.txt
+getting file \flag\flag.txt of size 33 as flag.txt (0.0 KiloBytes/sec) (average 0.0 KiloBytes/sec)
+smb: \flag\> exit
+~~~
+
+Una ves descargado se ubica el archivo y se abre con `cat`
+~~~                                                                                 
+┌──(root㉿kali)-[/home/kali]
+└─# ls
+Desktop    download.php  flag.txt  key      LinEnum.sh  Pictures  Templates
+Documents  Downloads     id_rsa    key.pub  Music       Public    Videos
+~~~
+
+~~~                                                                                 
+┌──(root㉿kali)-[/home/kali]
+└─# cat flag.txt    
+dceece590f3284c3866305eb2473d099
+~~~

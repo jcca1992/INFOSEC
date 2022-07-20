@@ -106,3 +106,16 @@ Hay muchos comandos disponibles para nosotros. Los siguientes son algunos de ell
 | :wq |	Write and quit |
 
 Vim es una herramienta muy poderosa y tiene muchos otros comandos y funciones. Esta [hoja de trucos](https://vimsheet.com/) es un excelente recurso para desbloquear aún más el poder de Vim.
+___
+
+### RETO
+
++ Aplique lo que aprendió en esta sección para tomar el banner del servidor y enviarlo como respuesta.
+
+`R: SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.1`
+
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# netcat 178.62.104.23 31245
+SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.1
+~~~

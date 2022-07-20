@@ -162,3 +162,8 @@ ___
 También vale la pena comprobar el código fuente de cualquier página web con la que nos encontremos. Podemos presionar `[CTRL + U]` para que aparezca la ventana del código fuente en un navegador. Este ejemplo revela un comentario de desarrollador que contiene credenciales para una cuenta de prueba, que podría usarse para iniciar sesión en el sitio web. 
 
 ![Codigo-Fuente](https://academy.hackthebox.com/storage/modules/77/source.txt)
+___
+
+### RETO
+
++ Intente ejecutar algunas de las técnicas de enumeración web que aprendió en esta sección en el servidor y use la información que obtiene para obtener la bandera.
