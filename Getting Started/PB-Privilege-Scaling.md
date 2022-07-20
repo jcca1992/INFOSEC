@@ -106,7 +106,6 @@ Una vez que encontramos una aplicación en particular que podemos ejecutar con `
 
 [LOLBAS](https://lolbas-project.github.io/#) también contiene una lista de aplicaciones de Windows que podemos aprovechar para realizar ciertas funciones, como descargar archivos o ejecutar comandos en el contexto de un usuario privilegiado. 
 ___
-
 ### TRAREAS PROGRAMADAS
 
 Tanto en Linux como en Windows, existen métodos para que los scripts se ejecuten a intervalos específicos para realizar una tarea. Algunos ejemplos son la ejecución de un análisis antivirus cada hora o un script de copia de seguridad que se ejecuta cada 30 minutos. Normalmente hay dos formas de aprovechar las tareas programadas (Windows) o los trabajos cron (Linux) para escalar nuestros privilegios: 
@@ -123,7 +122,6 @@ La forma más sencilla es comprobar si se nos permite añadir nuevas tareas prog
 
 Si podemos escribir en un directorio llamado por un `cron job`, podemos escribir un script bash con un comando de `reverse shell`, que debería enviarnos un `reverse shell` cuando se ejecute. 
 ___
-
 ### CREDENCIALES EXPUESTOS
 
 A continuación, podemos buscar archivos que podamos leer y ver si contienen alguna credencial expuesta. Esto es muy común con archivos de configuración, archivos de registro y archivos de historial de usuario (`bash_history` en Linux y `PSReadLine` en Windows). Los scripts de enumeración que discutimos al principio generalmente buscan posibles contraseñas en los archivos y nos las proporcionan, como se muestra a continuación: 
@@ -205,7 +203,7 @@ ___
 ### RETO
 + SSH en el servidor anterior con las credenciales proporcionadas y use '-p xxxxxx' para especificar el puerto que se muestra arriba. Una vez que inicie sesión, intente encontrar una manera de moverse a 'usuario2', para obtener la bandera en '/home/user2/flag.txt' 
 
-+ Una vez que obtenga acceso a 'usuario2', intente encontrar una manera de escalar sus privilegios a la raíz, para obtener el indicador en '/root/flag.txt'. 
+`R:HTB{l473r4l_m0v3m3n7_70_4n07h3r_u53r}`
 
 ~~~
 $ ssh user1@139.59.176.69 -p31157
@@ -257,6 +255,10 @@ user2@gettingstartedprivesc-423812-646697d759-wtj9q:/home$ cd user2
 user2@gettingstartedprivesc-423812-646697d759-wtj9q:~$ cat /home/user2/flag.txt
 HTB{l473r4l_m0v3m3n7_70_4n07h3r_u53r}
 ~~~
+
++ Una vez que obtenga acceso a 'usuario2', intente encontrar una manera de escalar sus privilegios a la raíz, para obtener el indicador en '/root/flag.txt'. 
+
+`R: HTB{pr1v1l363_35c4l4710n_2_r007}`
 
 para la segunda pregunta debemos descargar el [linpeas.sh](https://github.com/carlospolop/PEASS-ng/releases/latest) y correrlo para enumerar las vulnerabilidades por supuesto lo que debemos hacer es crear un archivo con `vim` donde copiaremos todo lo que esta en el archivo descargado de `linpeas`
 
