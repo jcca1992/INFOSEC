@@ -9,7 +9,6 @@ ___
 Después de descubrir una aplicación web, siempre vale la pena comprobar si podemos descubrir archivos o directorios ocultos en el servidor web que no estén destinados al acceso público. Podemos usar una herramienta como ffuf o GoBuster para realizar esta enumeración de directorios. A veces encontraremos funciones ocultas o páginas/directorios que exponen datos confidenciales que se pueden aprovechar para acceder a la aplicación web o incluso a la ejecución remota de código en el propio servidor web. 
 
 ___
-
 ### ENUMERACION DE DIRECTORIOS/ARCHIVOS
 
 GoBuster es una herramienta versátil que permite realizar fuerza bruta de DNS, vhost y directorios. La herramienta tiene una funcionalidad adicional, como la enumeración de depósitos públicos de AWS S3. Para los propósitos de este módulo, estamos interesados en los modos de fuerza bruta del directorio (y archivo) especificados con el switch `dir`. Ejecutemos un escaneo simple usando la worldlist `dirb common.txt.`
@@ -48,7 +47,6 @@ El escaneo se completó con éxito e identifica una instalación de WordPress en
 ![wordpress](https://academy.hackthebox.com/storage/modules/77/wordpress.txt)
 
 ___
-
 ### ENUMERACION DE SUBDOMINIO DNS
 
 También puede haber recursos esenciales alojados en subdominios, como paneles de administración o aplicaciones con funciones adicionales que podrían explotarse. Podemos usar GoBuster para enumerar los subdominios disponibles de un dominio dado usando el indicador dns para especificar el modo DNS. Primero, clonemos el [repositorio](https://github.com/danielmiessler/SecLists) SecLists GitHub, que contiene muchas listas útiles para fuzzing y explotación: 
@@ -95,7 +93,6 @@ ___
 
 Veamos algunos consejos de enumeración web adicionales que ayudarán a completar las máquinas en HTB y en el mundo real. 
 ___
-
 ### BANNER GRABBING/ENCABEZADOS DE SERVIDORES WEB
 
 En la última sección, discutimos la captura de banners para propósitos generales. Los headers del servidor web brindan una buena imagen de lo que está alojado en un servidor web. Pueden revelar el framework de aplicación específico en uso, las opciones de autenticación y si al servidor le faltan opciones de seguridad esenciales o si se ha configurado incorrectamente. Podemos usar `cURL` para recuperar la información del encabezado del servidor desde la línea de comandos. `cURL` es otra adición esencial a nuestro kit de herramientas de pentest, y se recomienda familiarizarse con sus muchas opciones. 
@@ -114,7 +111,6 @@ Content-Type: text/html; charset=UTF-8
 Otra herramienta útil es EyeWitness, que se puede usar para tomar screenshots de las aplicaciones web objetivos, tomar huellas digitales e identificar posibles credenciales predeterminadas. 
 
 ___
-
 ### WHATWEB
 
 Podemos extraer la versión de los servidores web, los frameworks de soporte y las aplicaciones utilizando la herramienta de línea de comandos `whatweb`. Esta información puede ayudarnos a identificar las tecnologías en uso y comenzar a buscar posibles vulnerabilidades. 
@@ -144,7 +140,6 @@ Los certificados SSL/TLS son otra fuente de información potencialmente valiosa 
 ![Certificado](https://academy.hackthebox.com/storage/modules/77/cert.txt)
 
 ___
-
 ### ROBOTS.TXT
 
 Es común que los sitios web contengan un archivo `robots.txt`, cuyo propósito es instruir a los rastreadores web de los motores de búsqueda, como Googlebot, a qué recursos se puede o no acceder para la indexación. El archivo `robots.txt` puede proporcionar información valiosa, como la ubicación de archivos privados y páginas de administración. En este caso, vemos que el archivo `robots.txt` contiene dos entradas no permitidas. 
@@ -156,14 +151,12 @@ Navega en `http://10.10.10.121/private` en un navegador revela una página de in
 ![HTB](https://academy.hackthebox.com/storage/modules/77/academy.txt)
 
 ___
-
 ### CODIGO FUENTE
 
 También vale la pena comprobar el código fuente de cualquier página web con la que nos encontremos. Podemos presionar `[CTRL + U]` para que aparezca la ventana del código fuente en un navegador. Este ejemplo revela un comentario de desarrollador que contiene credenciales para una cuenta de prueba, que podría usarse para iniciar sesión en el sitio web. 
 
-![Codigo-Fuente](https://academy.hackthebox.com/storage/modules/77/source.txt)
+![Codigo-Fuente](https://academy.hackthebox.com/storage/modules/77/academy.txt)
 ___
-
 ### RETO
 
 + Intente ejecutar algunas de las técnicas de enumeración web que aprendió en esta sección en el servidor y use la información que obtiene para obtener la bandera.
