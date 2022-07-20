@@ -1,4 +1,4 @@
-## **PRIMEROS PASOS CON DISTRIBUCION PENTES**
+# **PRIMEROS PASOS CON DISTRIBUCION PENTES**
 
 Cualquiera que busque iniciar un camino técnico en seguridad de la información debe sentirse cómodo con una amplia gama de tecnologías y sistemas operativos. Como pentesters, debemos comprender cómo configurar, mantener y proteger las máquinas de ataque Linux y Windows. Según el entorno del cliente o el alcance de la evaluación, es posible que utilicemos una máquina virtual Linux o Windows en nuestra máquina, nuestro sistema operativo base, una caja de Linux en la nube, una máquina virtual instalada dentro del entorno del cliente o incluso realizar pruebas directamente desde una estación de trabajo propia del cliente para simular una amenaza interna (suponiendo un escenario de ruptura). 
 ___
@@ -32,9 +32,6 @@ Para nuestros propósitos, usaremos una versión modificada de Parrot Security (
 + Optical disc image (ISO)
 + Open Virtual Appliance (OVA)
 
-
-
-
 ### ISO
 
 El archivo ISO es esencialmente solo un CD-ROM que se puede montar dentro de nuestro hipervisor de elección para construir la máquina virtual instalando el sistema operativo nosotros mismos. Una ISO nos brinda más espacio para la personalización, por ejemplo, distribución del teclado, configuración regional, cambio de entorno de escritorio, particiones personalizadas, etc. y, por lo tanto, un enfoque más granular al configurar nuestra máquina virtual de ataque. 
@@ -57,7 +54,7 @@ Se puede acceder a las instancias de Docker sin necesidad de una conexión VPN i
 
 ___
 
-## **MANTENERSE ORGANIZADO**
+# **MANTENERSE ORGANIZADO**
 
 Ya sea que estemos realizando evaluaciones de clientes, usando CTF, tomando un curso en Academy o en otro lugar, o usando Boxes/labs de HTB, la organización siempre es crucial. Es fundamental priorizar una documentación clara y precisa desde el principio. Esta habilidad nos beneficiará sin importar el camino que tomemos en seguridad de la información o incluso en otras carreras. 
 ___
@@ -124,7 +121,7 @@ A medida que completamos box, labs, evaluaciones, cursos de capacitación, etc.,
 También debemos mantener checklist, plantillas de informes para varios tipos de evaluación y crear una base de datos de hallazgos/vulnerabilidad. Esta base de datos puede tomar la forma de una hoja de cálculo o algo más complejo e incluir un título de hallazgo, descripción, impacto, consejos de remediación y referencias. Tener estos hallazgos ya escritos nos ahorrará un tiempo considerable y reelaboración durante la fase de informes, ya que la mayor parte de los hallazgos ya estarán escritos y probablemente solo requieran cierta personalización para el entorno de destino. 
 ___
 
-## **CONECTARSE USANDO VPN**
+# **CONECTARSE USANDO VPN**
 
 Una red privada virtual (VPN) nos permite conectarnos a una red privada (interna) y acceder a hosts y recursos como si estuviéramos conectados directamente a la red privada de destino. Es un canal de comunicaciones seguro sobre redes públicas compartidas para conectarse a una red privada (es decir, un empleado que se conecta de forma remota a la red corporativa de su empresa desde su hogar). Las VPN brindan un grado de privacidad y seguridad al cifrar las comunicaciones a través del canal para evitar las escuchas y el acceso a los datos que atraviesan el canal. 
 
