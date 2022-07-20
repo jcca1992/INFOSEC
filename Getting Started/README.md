@@ -2,7 +2,18 @@
 
 + [Intro](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Intro.md)
 + [Setup](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Setup.md)
+    + Primeros Pasos con SO para Pentest
+    + Mantenerse Organizado
+    + Conectar Usando VPN
 + [Pentesting Basico](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Pentesting-Basic.md)
+    + [Terminos comunes]
+    + [Herramientas Basicas]
+    + [Servicios de Escaneo]
+    + [Enumeracion Web]
+    + [Exploits Publicos]
+    + [Tipos de Shells]
+    + [Escalando Privilegios]
+    + [Transferencia de Archivos]
 + [Comenzando con Hack The Box (HTB)](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Comenzando-HackTheBox(HTB).md)
 + Atacando tu primera maquina
     + [Nibbles Enumeracion](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Nibbles-enum.md)
