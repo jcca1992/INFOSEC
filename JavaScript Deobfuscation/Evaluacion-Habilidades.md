@@ -2,7 +2,7 @@
 
 Durante nuestra prueba de penetración, encontramos un servidor web que contiene JavaScript y API. Necesitamos determinar su funcionalidad para comprender cómo puede afectar negativamente a nuestro cliente.
 
-Trate de estudiar el código HTML de la página web e identifique el código JavaScript usado dentro de él. ¿Cuál es el nombre del archivo JavaScript que se está utilizando?
++ Trate de estudiar el código HTML de la página web e identifique el código JavaScript usado dentro de él. ¿Cuál es el nombre del archivo JavaScript que se está utilizando?
 
 `R:api.min.js`
 ~~~
