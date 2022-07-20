@@ -167,3 +167,5 @@ ___
 ### RETO
 
 + Intente ejecutar algunas de las técnicas de enumeración web que aprendió en esta sección en el servidor y use la información que obtiene para obtener la bandera.
+
+![](https://raw.githubusercontent.com/jcca1992/INFOSEC/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_45_20.png)
