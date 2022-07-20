@@ -200,10 +200,16 @@ Progress: 4487 / 4615 (97.23%)                                                  
 ===============================================================
 ~~~
 
-![](https://raw.githubusercontent.com/jcca1992/INFOSEC/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_45_20.png)
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/1.png)
 
-![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_46_26.png)
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/2.png)
 
-![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_47_38.png)
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/3.png)
 
-![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/Screenshot_2022-07-20_17_51_21.png)
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/4.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/5.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/6.png)
+
+![](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Getting%20Started/Images/PB-Web-Enum/7.png)
