@@ -4,6 +4,7 @@ Durante nuestra prueba de penetración, encontramos un servidor web que contiene
 ___
 
 + Trate de estudiar el código HTML de la página web e identifique el código JavaScript usado dentro de él. ¿Cuál es el nombre del archivo JavaScript que se está utilizando?
+
 `R:api.min.js`
 
 ~~~
@@ -70,6 +71,7 @@ ___
 ___
 
 + Una vez que encuentre el código JavaScript, intente ejecutarlo para ver si realiza alguna función interesante. ¿Obtuviste algo a cambio?
+
 `R: HTB{j4v45cr1p7_3num3r4710n_15_k3y}`
 
 En el navegador ingresamos a la URL y vemos el codigo fuente con `CTRL+U` o podemos ingresar a las herramientas de desarrollador directamente en la pagina con `CTRL+SHIFT+I` en la pestaña `Debugger` vemos el `api` ingresamos y vemos lo siguiente
@@ -125,12 +127,14 @@ console["log"]("HTB{j" + "4v45c" + "r1p7_" + "3num3" + "r4710" + "n_15_" + "k3y}
 ___
 
 + Como habrás notado, el código JavaScript está ofuscado. Intente aplicar las habilidades que aprendió en este módulo para desofuscar el código y recuperar la variable 'bandera'.
+
 `R: HTB{n3v3r_run_0bfu5c473d_c0d3!}`
 
 asi como hicimos con la informacion en consolelog eliminamos los caracteres especiales como las comillas `""` y los signos `+`
 ___
 
 + Intente analizar el código JavaScript desofuscado y comprenda su funcionalidad principal. Una vez que lo haga, intente replicar lo que está haciendo para obtener una clave secreta. ¿Cuál es la clave?
+
 `R:4150495f70336e5f37333537316e365f31355f66756e`
 
 vemos la variable `var url = "/keys" + ".php"` por lo que desofuscado quedaria como `var url = /keys.php` y asi como en los ejercicios anteriores enviamos un parametro con `POST` y nos muestra el codigo
@@ -143,6 +147,7 @@ ___
 
 
 + Una vez que tenga la clave secreta, intente decidir su método de codificación y decodificarlo. A continuación, envíe una solicitud 'POST' a la misma página anterior con la clave decodificada como "key=DECODED_KEY". ¿Cuál es la bandera que tienes?
+
 `R: HTB{r34dy_70_h4ck_my_w4y_1n_2_HTB}`
 
 Podemos deducir que el codigo que muestra esta codificado en hex, asi que lo decodificaremos segun lo aprenido
