@@ -44,7 +44,7 @@ Un status code HTTP de 200 revela que la solicitud del recurso fue exitosa, mien
 
 El escaneo se completó con éxito e identifica una instalación de WordPress en `/wordpress`. WordPress es el CMS (Content Management System) Sistema de gestión de contenido más utilizado y tiene una superficie de ataque potencial enorme. En este caso, visitar `http://10.10.10.121/wordpress` en un navegador revela que WordPress todavía está en modo de configuración, lo que nos permitirá obtener la ejecución remota de código (RCE) en el servidor. 
 
-![wordpress](https://academy.hackthebox.com/storage/modules/77/wordpress.txt)
+![](https://academy.hackthebox.com/storage/modules/77/wordpress.txt)
 
 ___
 ### ENUMERACION DE SUBDOMINIO DNS
