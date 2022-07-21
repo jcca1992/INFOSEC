@@ -19,7 +19,6 @@ ___
 |Change|Los usuarios pueden leer, editar, eliminar y agregar archivos y subcarpetas|
 |Read|Los usuarios pueden ver el contenido de archivos y subcarpetas|
 ___
-
 ### **PERMISOS BASICOS NTFS**
 
 |Permiso|Descripcion|
@@ -32,7 +31,6 @@ ___
 |Write| A los usuarios se les permite o deniega permisos para escribir cambios en un archivo y agregar nuevos archivos a una carpeta|
 |Special Permissions| Una variedad de opciones de permisos avanzados|
 ___
-
 ### **PERMISOS ESPECIALES NTFS**
 
 |Permiso|Descripcion|
@@ -54,7 +52,6 @@ ___
 
 Tenga en cuenta que los permisos NTFS se aplican al sistema donde se alojan la carpeta y los archivos. Las carpetas creadas en NTFS heredan los permisos de las carpetas principales de forma predeterminada. Es posible deshabilitar la herencia para establecer permisos personalizados en carpetas principales y subcarpetas, como lo haremos más adelante en este módulo. Los permisos para compartir se aplican cuando se accede a la carpeta a través de SMB, generalmente desde un sistema diferente a través de la red. Esto significa que alguien que inició sesión localmente en la máquina o a través de RDP puede acceder a la carpeta y los archivos compartidos simplemente navegando a la ubicación en el sistema de archivos y solo necesita considerar los permisos NTFS. Los permisos a nivel de NTFS brindan a los administradores un control mucho más granular sobre lo que los usuarios pueden hacer dentro de una carpeta o archivo.
 ___
-
 ### **CREANDO RECURSOS COMPARTIDOS**
 
 Para obtener una comprensión fundamental sólida de SMB y su relación con NTFS, crearemos un recurso compartido de red en el `Windows 10 de la maquina objetivo`.
@@ -70,7 +67,6 @@ Pasaremos por este proceso usando la GUI en Windows
 ![](https://academy.hackthebox.com/storage/modules/49/creating_directory.png)
 
 Vamos a utilizar la opción `Advanced Sharing` para configurar nuestro recurso compartido.
-
 #### *COMPARTIENDO ARCHIVO*
 
 ![](https://academy.hackthebox.com/storage/modules/49/configuring_share.png)
@@ -80,7 +76,6 @@ Observe cómo el nombre del recurso compartido automáticamente toma como valor 
 Similar a los permisos NTFS, existe una `lista de control de acceso (ACL)` para los recursos compartidos. Podemos considerar esto como la lista de permisos SMB. Tenga en cuenta que con los recursos compartidos, las listas de permisos de SMB y NTFS se aplican a todos los recursos que se comparten en Windows. La ACL contiene `entradas de control de acceso (ACE)`. Por lo general, estas ACE están compuestas por `usuarios` y `grupos` (también llamados principales de seguridad), ya que son un mecanismo adecuado para administrar y rastrear el acceso a los recursos compartidos.
 
 Observe la entrada de control de acceso predeterminada y la configuración de permisos.
-
 #### *COMPARTIR PERMISOS ACL (PESTAÑA COMPARTIR)*
 
 ![](https://academy.hackthebox.com/storage/modules/49/share_permissions.png)
@@ -88,7 +83,6 @@ Observe la entrada de control de acceso predeterminada y la configuración de pe
 Por ahora, aplicaremos esta configuración para probar el efecto de esta ACL y los permisos aplicados tal cual. Probaremos la conectividad desde el Pwnbox abriendo la terminal y usando `smbclient`.
 
 >Nota: Un servidor es técnicamente una función de software utilizada para atender las solicitudes de un cliente. En este caso, el Pwnbox es nuestro cliente y la maquina target con Windows 10 es nuestro servidor.
-
 #### *USANDO SMBCLIENT PARA CONECTARSE AL RECURSO COMPARTIDO*
 
 ~~~
@@ -105,7 +99,6 @@ Enter WORKGROUP\htb-student's password:
 
 ¿Qué podría impedirnos acceder a este recurso compartido si todas nuestras entradas son correctas y nuestra lista de permisos tiene el grupo `all` presente con al menos permisos de lectura?
 ___
-
 ### **CONSIDERACIONES DE FIREWALL DE WINDOWS DEFENDER**
 
 Es el Firewall de Windows Defender el que podría estar bloqueando el acceso al recurso compartido SMB. Dado que nos estamos conectando desde un sistema basado en Linux, el firewall ha bloqueado el acceso desde cualquier dispositivo que no esté unido al mismo `workgroup`. También es importante tener en cuenta que cuando un sistema Windows forma parte de un grupo de trabajo, todas las solicitudes de `inicio de sesión de red `se autentican en la base de datos `SAM` de ese sistema Windows en particular. Cuando un sistema Windows se une a un entorno de dominio de Windows, todas las solicitudes de inicio de sesión de red se autentican en `Active Directory`. La principal diferencia entre un grupo de trabajo y un Dominio de Windows en términos de autenticación es que con un grupo de trabajo se usa la base de datos SAM local y en un Dominio de Windows se usa una base de datos centralizada basada en la red (Active Directory). Debemos conocer esta información cuando intentemos iniciar sesión y autenticarnos con un sistema Windows. Considere dónde está alojada la cuenta de htb-student para conectarse correctamente al objetivo.

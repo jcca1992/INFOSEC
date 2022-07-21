@@ -132,7 +132,7 @@ ___
 
 ¿Qué usuario del sistema tiene control total sobre el directorio c:\users?
 
-R: bob.smith
+`R: bob.smith`
 
 ~~~
 PS C:\Users\htb-student> icacls c:\Users
@@ -142,4 +142,3 @@ c:\Users Everyone:(OI)(CI)(RX)
          WS01\bob.smith:(OI)(CI)(F)
          BUILTIN\Users:(OI)(CI)(RX)
 ~~~
-___

@@ -2,9 +2,9 @@
 
 + Introduccion
 + Nucleo del S.O.
-    + Estructura del S.O
-    + Sistema de archivo
-    + NTFSvs share
+    + [Estructura del S.O]()
+    + [Sistema de archivo]()
+    + [NTFSvs share]()
 + Trabajar con servicos y procesos
     + Servicios y procesos de Windows
     + Service Permisions

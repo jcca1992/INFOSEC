@@ -103,12 +103,12 @@ El comando `tree` puede proporcionarnos una gran cantidad de información. El si
 ~~~
 tree c:\ /f | more
 ~~~
-
+___
 ### RETO
 
-Busque el directorio no estándar en la unidad C. Envíe el contenido del archivo flag guardado en este directorio.
++ Busque el directorio no estándar en la unidad C. Envíe el contenido del archivo flag guardado en este directorio.
 
-R:
+`R: c8fe8d977d3a0c655ed7cf81e4d13c75`
 
 ~~~
 PS C:\Users\htb-student> tree c:\ /f | more
@@ -162,13 +162,10 @@ C:\
 │   │   │   │   │   ipsptg.xml
 ~~~
 
-al filtrar con el pipe line `|` y `more` estamos indicandole que no nos muestre todo directamente sino que nos muestre una parte si queremos ver mas presionamos enter y nos muestra otra parte. Tenemos que presionar `q`para salir del `more`
+Al filtrar con el pipe line `|` y `more` estamos indicandole que no nos muestre todo directamente sino que nos muestre una parte si queremos ver mas presionamos enter y nos muestra otra parte. Tenemos que presionar `q`para salir del `more`
 
 ~~~
 PS C:\Users\htb-student> Get-Content C:\Academy\flag.txt
 c8fe8d977d3a0c655ed7cf81e4d13c75
 ~~~
 ___
-
-
-

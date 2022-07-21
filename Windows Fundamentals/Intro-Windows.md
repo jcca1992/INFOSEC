@@ -1,3 +1,5 @@
+## INTRODUCCION A WINDOWS
+
 Como pentesters, es importante tener conocimiento de una amplia variedad de tecnologías. Una comprensión profunda de los sistemas operativos Windows y Linux es beneficiosa en una amplia gama de tipos de evaluación. La mayoría de los sistemas que encontramos durante las evaluaciones, ya sea en las instalaciones o en la nube, se basarán en estos dos sistemas operativos. Es importante comprender cómo atacar y defender estos sistemas operativos y cómo se pueden usar como plataforma para realizar más actividades de pruebas de penetración.
 ___
 
@@ -52,10 +54,29 @@ Juceco@htb[/htb]$ xfreerdp /v:<targetIp> /u:htb-student /p:Password
 ~~~
 
 >Nota: la instancia de destino puede tardar entre 1 y 2 minutos en generarse.
+___
+
+### RETO
 
 user "htb-student" and password "Academy_WinFun!" 
 
-¿Cuál es el número de compilación de la estación de trabajo de destino?
-R: 19041
-¿Qué versión de Windows NT está instalada en la estación de trabajo? (es decir, Windows X - distingue entre mayúsculas y minúsculas)
-R: Windows 10
++ ¿Cuál es el número de compilación de la estación de trabajo de destino?
+
+`R: 19041`
+
+Abrimos el escritorio remoto
+~~~
+┌──(root㉿kali)-[/home/kali]
+└─# xfreerdp /v:10.129.201.57 /u:htb-student /p:Academy_WinFun!
+~~~
+
+Usamos el comando `Get-WmiObject` nos solicita la clase y ponemos `win32_OperatingSystem` sin el `pipe line |` y tambien lo hacemos con el `pipe line |` para que nos muestre solo la version y el numero
+
+![PShell]()
+
+___
++ ¿Qué versión de Windows NT está instalada en la estación de trabajo? (es decir, Windows X - distingue entre mayúsculas y minúsculas)
+
+`R: Windows 10`
+
+Sabemos que es windows 10 porque la version es 10.0
