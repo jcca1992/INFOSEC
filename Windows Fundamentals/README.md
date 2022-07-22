@@ -1,10 +1,10 @@
 ## WINDOWS FUNDAMENTALS
 
-+ Introduccion
++ [Introduccion](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Windows%20Fundamentals/Intro-Windows.md)
 + Nucleo del S.O.
-    + [Estructura del S.O]()
-    + [Sistema de archivo]()
-    + [NTFSvs share]()
+    + [Estructura del S.O](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Windows%20Fundamentals/Estructura-Del-SO.md)
+    + [Sistema de archivo](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Windows%20Fundamentals/Sistema-De-Archivo.md)
+    + [NTFSvs share](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/Windows%20Fundamentals/NTFS-vs-Permisos-Compartidos.md)
 + Trabajar con servicos y procesos
     + Servicios y procesos de Windows
     + Service Permisions
