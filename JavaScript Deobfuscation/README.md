@@ -19,15 +19,15 @@ Se tratarán los siguientes temas:
 
 Indice
 
-+ [Codigo Fuente](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Codigo-Fuente.md)
++ [Codigo Fuente](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Codigo-Fuente.md)
 + Ofuscacion
-    + [Ofuscacion de Codigo](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Ofuscacion-Codigo.md)
-    + [Ofuscacion Basica](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Ofuscacion-Basica.md)
-    + [Ofuscacion Avanzada](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Ofuscacion-Avanzada.md)
-    + [Desofuscacion](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Desofuscacion.md)
+    + [Ofuscacion de Codigo](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Ofuscacion-Codigo.md)
+    + [Ofuscacion Basica](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Ofuscacion-Basica.md)
+    + [Ofuscacion Avanzada](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Ofuscacion-Avanzada.md)
+    + [Desofuscacion](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Desofuscacion.md)
 + Ejemplos de Desofuscacion
-    + [Analisis de Codigo](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Analisis-Codigo.md)
-    + [HTTP Request](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/HTTP-Request.md)
-    + [Decodificando](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Decodificando.md)
-+ [Evaluacion de Habilidades](https://github.com/jcca1992/INFOSEC/blob/HackTheBox/JavaScript%20Deobfuscation/Evaluacion-Habilidades.md)
+    + [Analisis de Codigo](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Analisis-Codigo.md)
+    + [HTTP Request](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/HTTP-Request.md)
+    + [Decodificando](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Decodificando.md)
++ [Evaluacion de Habilidades](https://github.com/jcca1992/INFOSEC/blob/main/JavaScript%20Deobfuscation/Evaluacion-Habilidades.md)
 ___
