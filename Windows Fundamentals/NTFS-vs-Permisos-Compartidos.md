@@ -115,3 +115,82 @@ Perfiles de Firewall de Windows Defender:
 Es una buena práctica habilitar reglas predefinidas o agregar excepciones personalizadas en lugar de desactivar el firewall por completo. Desafortunadamente, es muy común que los firewalls se dejen completamente desactivados por conveniencia o por falta de comprensión. Las reglas de firewall en los sistemas de escritorio se pueden administrar de forma centralizada cuando se unen a un entorno de dominio de Windows mediante el uso de la directiva de grupo. Los conceptos y configuraciones de directivas de grupo están fuera del alcance de este módulo.
 
 Una vez que las reglas de firewall `entrantes` adecuadas estén habilitadas, nos conectaremos con éxito al recurso compartido. Tenga en cuenta que solo podemos conectarnos al recurso compartido porque la cuenta de usuario que estamos usando (`htb-student`) está en el `grupo Todos`. Recuerde que dejamos los permisos de uso compartido específicos para el grupo Todos establecidos en Lectura, lo que literalmente significa que solo podremos Leer archivos en este recurso compartido. Una vez que se establece una conexión con un recurso compartido, podemos crear un `punto de montaje` desde nuestro Pwnbox al sistema de archivos del Windows 10 de la maquina objetivo. Aquí es donde también debemos considerar que los permisos NTFS se aplican junto con los permisos compartidos. Recuerde que NTFS es el sistema de archivos predeterminado en Windows. Volvamos a nuestra sesión xfreerdp con nuestro Windows 10 de la maquina objetivo y echemos un vistazo a los permisos NTFS en la carpeta Data Company.
+
+#### **NTFS PERMISOS ALC (SECURITY TAB)**
+
+![](https://academy.hackthebox.com/storage/modules/49/ntfs.png)
+
+Hay un control más granular con permisos NTFS que se pueden aplicar a usuarios y grupos. Cada vez que vemos una checkmark gris junto a un permiso, se heredó de un directorio principal. De forma predeterminada, todos los permisos de NTFS se heredan del directorio principal. En el mundo de Windows, `la unidad C:\` es el directorio principal para gobernar todos los directorios a menos que un administrador del sistema deshabilite la herencia dentro de la configuración de seguridad avanzada de una carpeta recién creada.
+
+En muchos casos, los administradores del sistema de una organización serían responsables de decidir qué permisos obtiene un usuario o grupo de usuarios sobre los recursos de la red. Esta es la razón por la que muchos ataques de spear-phishing están dirigidos a administradores de sistemas y otros líderes de TI. Tienen mucha influencia sobre lo que está permitido en los entornos que supervisan, incluso más que los líderes de nivel C no técnicos de una organización en muchos casos. Por ejemplo, los médicos o ejecutivos que trabajan en un hospital no tendrán derechos administrativos sobre la red, pero los administradores del sistema sí.
+
+Ahora vamos a darle al grupo Todos el control total en el nivel de recurso compartido y probar el impacto del cambio al intentar crear un punto de montaje para el recurso compartido desde el escritorio de nuestro Pwnbox.
+
+#### **MONTANDO LA SHARE**
+
+~~~
+Juceco@htb[/htb]$ sudo mount -t cifs -o username=htb-student,password=Academy_WinFun! //ipaddoftarget/"Company Data" /home/user/Desktop/
+~~~
+
+Si este comando no funciona, verifique la sintaxis. Si la sintaxis es correcta pero el comando aún funciona, es posible que deba instalar cifs-utils. Esto se puede hacer con el siguiente comando:
+
+#### **INSTALANDO CIFS**
+
+~~~
+Juceco@htb[/htb]$ sudo apt-get install cifs-utils
+~~~
+
+Una vez que hayamos creado con éxito el punto de montaje en el escritorio de nuestro Pwnbox, debemos buscar un par de herramientas integradas en Windows que nos permitirán rastrear y monitorear lo que hemos hecho.
+
+El comando `net share` nos permite ver todas las carpetas compartidas en el sistema. Observe el recurso compartido que creamos y también la unidad C:\.
+
+`¿Te acuerdas de nosotros compartiendo la unidad C:\?`
+
+No compartimos manualmente C:. La unidad más importante con los archivos más críticos en un sistema Windows se comparte a través de SMB en la instalación. Esto significa que cualquier persona con el acceso adecuado podría acceder de forma remota a todo C:\ de cada sistema Windows en una red.
+
+También podemos ver el recurso compartido que creamos.
+
+#### **MOSTRANDO LOS DATOS COMPARTIDOS CON NET SHARE**
+
+~~~
+C:\Users\htb-student> net share
+
+Share name   Resource                        Remark
+
+-------------------------------------------------------------------------------
+C$           C:\                             Default share
+IPC$                                         Remote IPC
+ADMIN$       C:\WINDOWS                      Remote Admin
+Company Data C:\Users\htb-student\Desktop\Company Data
+
+The command completed successfully.
+~~~
+
+`Computer Management` es otra herramienta que podemos usar para identificar y monitorear recursos compartidos en un sistema Windows.
+
+#### **MONITOREANDO COMPARTIDOS CON COMPUTER MANAGEMENT**
+
+![](https://academy.hackthebox.com/storage/modules/49/computer_management.png)
+
+Podemos hurgar en `Recursos compartidos`, `Sesiones` y `Abrir archivos` para tener una idea de qué información nos proporciona. En caso de que haya una situación en la que ayudemos a una persona u organización a responder a una infracción relacionada con SMB, estos son algunos lugares excelentes para verificar y comenzar a comprender cómo pudo haber ocurrido la infracción y qué pudo haber quedado atrás.
+
+#### **VISUALIZACION DE RECURSOS COMPARTIDOS EN EL VISOR DE EVENTOS**
+
+El `Visor de eventos` es otro buen lugar para investigar acciones completadas en Windows. Casi todos los sistemas operativos tienen un mecanismo de registro y una utilidad para ver los registros capturados. Sepa que un registro es como una entrada de diario para una computadora, donde la computadora anota todas las acciones que se realizaron y numerosos detalles asociados con esa acción. Podemos ver los registros creados para cada acción que realizamos al acceder al cuadro de destino de Windows 10, así como al crear, editar y acceder a la carpeta compartida.
+
+![](https://academy.hackthebox.com/storage/modules/49/event_viewer.png)
+___
+
+### RETO
+
++ ¿Qué protocolo discutido en esta sección se usa para compartir recursos en la red usando Windows? (Formato: distingue entre mayúsculas y minúsculas)
+
+`R: SMB`
+
++ ¿Cuál es el nombre de la utilidad que se puede usar para ver los registros realizados por un sistema Windows? (Formato: 2 palabras, 1 espacio, no distingue entre mayúsculas y minúsculas)
+
+`R: Event Viewer`
+
++ ¿Cuál es la ruta completa del directorio al recurso compartido de datos de la empresa que creamos?
+
+`R: C:\Users\htb-student\Desktop\Company Data`
