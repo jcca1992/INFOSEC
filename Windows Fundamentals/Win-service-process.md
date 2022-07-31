@@ -51,5 +51,99 @@ En Windows, tenemos algunos [servicios críticos del sistema](https://docs.micro
 |services.exe|Gestiona la operación de iniciar y detener los servicios.|
 |winlogon.exe|Responsable de manejar la secuencia de atención segura, cargar un perfil de usuario al iniciar sesión y bloquear la computadora cuando se ejecuta un protector de pantalla.|
 |System|Un proceso del sistema en segundo plano que ejecuta el kernel de Windows.|
-|svchost.exe with RPCSS|Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Remote Procedure Call (RPC) Service (RPCSS).|
+|svchost.exe with RPCSS|Administra los servicios del sistema que se ejecutan desde bibliotecas de vínculos dinámicos (archivos con la extensión .dll), como "Actualizaciones automáticas", "Firewall de Windows" y "Plug and Play". Utiliza el servicio de llamada a procedimiento remoto (RPC) (RPCSS).|
 |svchost.exe with Dcom/PnP|Administra los servicios del sistema que se ejecutan desde bibliotecas de vínculos dinámicos (archivos con la extensión .dll), como "Actualizaciones automáticas", "Firewall de Windows" y "Plug and Play". Utiliza los servicios del modelo de objetos de componentes distribuidos (DCOM) y Plug and Play (PnP).|
+
+Este [enlace](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_components#Services) tiene una lista de los componentes de Windows, incluidos los servicios clave.
+___
+
+### **PROCESOS**
+
+Los procesos se ejecutan en segundo plano en los sistemas Windows. Se ejecutan automáticamente como parte del sistema operativo Windows o las inician otras aplicaciones instaladas.
+
+Los procesos asociados con las aplicaciones instaladas a menudo se pueden terminar sin causar un impacto severo en el sistema operativo. Ciertos procesos son críticos y, si se terminan, impedirán que ciertos componentes del sistema operativo funcionen correctamente. Algunos ejemplos incluyen Windows Logon Application, System, System Idle Process, Windows Start-Up Application, Client Server Runtime, Windows Session Manager, Service Host, el proceso Local Security Authority Subsystem Service (LSASS)
+___
+
+#### LOCAL SECURITY AUTHORITY SUBSYSTEM SERVICE (LSASS)
+
+`lsass.exe` es el proceso responsable de hacer cumplir la política de seguridad en los sistemas Windows. Cuando un usuario intenta iniciar sesión en el sistema, este proceso verifica su intento de inicio de sesión y crea tokens de acceso basados en los niveles de permiso del usuario. LSASS también es responsable de los cambios de contraseña de la cuenta de usuario. Todos los eventos asociados con este proceso (intentos de inicio/cierre de sesión, etc.) se registran en el registro de seguridad de Windows. LSASS es un objetivo de valor extremadamente alto, ya que existen varias herramientas para extraer tanto el texto sin cifrar como las credenciales fragmentadas almacenadas en la memoria mediante este proceso.
+___
+
+### **SYSINTERNALS TOOLS**
+
+La suite SysInternals Tools es un conjunto de aplicaciones portátiles de Windows que se pueden usar para administrar sistemas Windows (en su mayor parte sin necesidad de instalación). Las herramientas se pueden descargar desde el sitio web de Microsoft o cargándolas directamente desde un recurso compartido de archivos con acceso a Internet escribiendo \\live.sysinternals.com\tools en una ventana del Explorador de Windows.
+
+Por ejemplo, podemos ejecutar `procdump.exe` directamente desde este recurso compartido sin descargarlo directamente al disco.
+
+~~~
+C:\htb> \\live.sysinternals.com\tools\procdump.exe -accepteula
+
+ProcDump v9.0 - Sysinternals process dump utility
+Copyright (C) 2009-2017 Mark Russinovich and Andrew Richards
+Sysinternals - www.sysinternals.com
+
+Monitors a process and writes a dump file when the process exceeds the
+specified criteria or has an exception.
+
+Capture Usage:
+   procdump.exe [-mm] [-ma] [-mp] [-mc Mask] [-md Callback_DLL] [-mk]
+                [-n Count]
+                [-s Seconds]
+                [-c|-cl CPU_Usage [-u]]
+                [-m|-ml Commit_Usage]
+                [-p|-pl Counter_Threshold]
+                [-h]
+                [-e [1 [-g] [-b]]]
+                [-l]
+                [-t]
+                [-f  Include_Filter, ...]
+                [-fx Exclude_Filter, ...]
+                [-o]
+                [-r [1..5] [-a]]
+                [-wer]
+                [-64]
+                {
+                 {{[-w] Process_Name | Service_Name | PID} [Dump_File | Dump_Folder]}
+                |
+                 {-x Dump_Folder Image_File [Argument, ...]}
+                }
+				
+<SNIP>
+~~~
+
+El paquete incluye herramientas como `Process Explorer`, una versión mejorada de `Task Manager` y `Process Monitor`, que se pueden usar para monitorear el sistema de archivos, el registro y la actividad de la red relacionada con cualquier proceso que se ejecute en el sistema. Algunas herramientas adicionales son `TCPView`, que se usa para monitorear la actividad de Internet, y `PSExec`, que se puede usar para administrar y conectarse a sistemas a través del protocolo `SMB` de forma remota.
+
+Estas herramientas pueden ser útiles para que los pentesters, por ejemplo, descubran procesos interesantes y posibles rutas de escalada de privilegios, así como para el movimiento lateral.
+___
+### **TASK MANAGER**
+
+El Administrador de tareas de Windows es una poderosa herramienta para administrar sistemas Windows. Proporciona información sobre procesos en ejecución, rendimiento del sistema, servicios en ejecución, programas de inicio, usuarios registrados, procesos de usuarios registrados y servicios. El Administrador de tareas se puede abrir haciendo clic derecho en la barra de tareas y seleccionando Administrador de tareas, presionando ctrl + shift + Esc, presionando ctrl + alt + del y seleccionando Administrador de tareas, abriendo el menú de inicio y escribiendo Administrador de tareas, o escribiendo `taskmgr` desde un CMD o consola PowerShell.
+
+![](https://academy.hackthebox.com/storage/modules/49/taskmgr.png)
+
+|Tab|Descripcion|
+|--|--|
+|Processes|Muestra una lista de aplicaciones en ejecución y procesos en segundo plano junto con la CPU, la memoria, el disco, la red y el uso de energía para cada uno.|
+|Performance|Muestra gráficos y datos como la utilización de la CPU, el tiempo de actividad del sistema, el uso de la memoria, el disco y las redes y el uso de la GPU. También podemos abrir el `Monitor de recursos`, que nos brinda una vista mucho más detallada del uso actual de recursos de CPU, memoria, disco y red.|
+
+![](https://academy.hackthebox.com/storage/modules/49/resource_monitor.png)
+
+|Tab|Descripcion|
+|--|--|
+|App History|Muestra el uso de recursos de la cuenta de usuario actual para cada aplicación durante un período de tiempo.|
+|Startup|Muestra qué aplicaciones están configuradas para iniciarse en el arranque, así como el impacto en el proceso de inicio.|
+|Users|Muestra los usuarios registrados y los procesos/uso de recursos asociados con su sesión.|
+|Details|Muestra el nombre, el ID del proceso (PID), el estado, el nombre de usuario asociado, la CPU y el uso de la memoria para cada aplicación en ejecución.|
+|Services|Muestra el nombre, PID, descripción y estado de cada servicio instalado. También se puede acceder al complemento Servicios desde esta pestaña.|
+___
+
+### **EXPLORADOR DE PROCESOS**
+
+[Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer) es parte del conjunto de herramientas de Sysinternals. Esta herramienta puede mostrar qué identificadores y procesos DLL se cargan cuando se ejecuta un programa. Process Explorer muestra una lista de los procesos que se están ejecutando actualmente y, a partir de ahí, podemos ver qué controles ha seleccionado el proceso en una vista o las DLL y los archivos de intercambio de memoria que se han cargado en otra vista. También podemos buscar dentro de la herramienta para mostrar qué procesos se relacionan con un identificador o DLL específico. La herramienta también se puede utilizar para analizar las relaciones entre procesos primarios y secundarios para ver qué procesos secundarios genera una aplicación y ayudar a solucionar cualquier problema, como los procesos huérfanos, que pueden quedar atrás cuando finaliza un proceso.
+___
+
+### RETO
+
++ Identifique uno de los servicios de actualización no estándar que se ejecutan en el host. Envíe el nombre completo del ejecutable del servicio (no el DisplayName) como su respuesta.
+
+R: 
