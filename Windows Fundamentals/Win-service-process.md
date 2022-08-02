@@ -146,4 +146,101 @@ ___
 
 + Identifique uno de los servicios de actualización no estándar que se ejecutan en el host. Envíe el nombre completo del ejecutable del servicio (no el DisplayName) como su respuesta.
 
-R: 
+`R: FoxitReaderUpdateService.exe`
+
+
+~~~
+PS C:\WINDOWS\system32> Get-Service | ? {$_.Status -eq "Running"}
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  Appinfo            Application Information
+Running  AudioEndpointBu... Windows Audio Endpoint Builder
+Running  Audiosrv           Windows Audio
+Running  BFE                Base Filtering Engine
+Running  BITS               Background Intelligent Transfer Ser...
+Running  BrokerInfrastru... Background Tasks Infrastructure Ser...
+Running  Browser            Computer Browser
+Running  BthAvctpSvc        AVCTP service
+Running  cbdhsvc_652c8      cbdhsvc_652c8
+Running  CDPSvc             Connected Devices Platform Service
+Running  CDPUserSvc_652c8   CDPUserSvc_652c8
+Running  CertPropSvc        Certificate Propagation
+Running  ClipSVC            Client License Service (ClipSVC)
+Running  COMSysApp          COM+ System Application
+Running  CoreMessagingRe... CoreMessaging
+Running  CryptSvc           Cryptographic Services
+Running  DcomLaunch         DCOM Server Process Launcher
+Running  Dhcp               DHCP Client
+Running  DiagTrack          Connected User Experiences and Tele...
+Running  DispBrokerDeskt... Display Policy Service
+Running  Dnscache           DNS Client
+Running  DPS                Diagnostic Policy Service
+Running  DsmSvc             Device Setup Manager
+Running  DusmSvc            Data Usage
+Running  EventLog           Windows Event Log
+Running  EventSystem        COM+ Event System
+Running  FontCache          Windows Font Cache Service
+Running  FoxitReaderUpda... Foxit Reader Update Service
+Running  InstallService     Microsoft Store Install Service
+Running  iphlpsvc           IP Helper
+Running  KeyIso             CNG Key Isolation
+Running  LanmanServer       Server
+Running  LanmanWorkstation  Workstation
+Running  LicenseManager     Windows License Manager Service
+Running  lmhosts            TCP/IP NetBIOS Helper
+Running  LSM                Local Session Manager
+Running  mpssvc             Windows Defender Firewall
+Running  MSDTC              Distributed Transaction Coordinator
+Running  NcbService         Network Connection Broker
+Running  netprofm           Network List Service
+Running  NlaSvc             Network Location Awareness
+Running  nsi                Network Store Interface Service
+Running  OneSyncSvc_652c8   OneSyncSvc_652c8
+Running  PlugPlay           Plug and Play
+Running  Power              Power
+Running  ProfSvc            User Profile Service
+Running  RmSvc              Radio Management Service
+Running  RpcEptMapper       RPC Endpoint Mapper
+Running  RpcSs              Remote Procedure Call (RPC)
+Running  SamSs              Security Accounts Manager
+Running  ScDeviceEnum       Smart Card Device Enumeration Service
+Running  Schedule           Task Scheduler
+Running  SecurityHealthS... Windows Security Service
+Running  SENS               System Event Notification Service
+Running  SessionEnv         Remote Desktop Configuration
+Running  SgrmBroker         System Guard Runtime Monitor Broker
+Running  ShellHWDetection   Shell Hardware Detection
+Running  Spooler            Print Spooler
+Running  SSDPSRV            SSDP Discovery
+Running  StateRepository    State Repository Service
+Running  StorSvc            Storage Service
+Running  SysMain            SysMain
+Running  SystemEventsBroker System Events Broker
+Running  TabletInputService Touch Keyboard and Handwriting Pane...
+Running  TermService        Remote Desktop Services
+Running  Themes             Themes
+Running  TimeBrokerSvc      Time Broker
+Running  TokenBroker        Web Account Manager
+Running  TrkWks             Distributed Link Tracking Client
+Running  UmRdpService       Remote Desktop Services UserMode Po...
+Running  UserManager        User Manager
+Running  UsoSvc             Update Orchestrator Service
+Running  VaultSvc           Credential Manager
+Running  VGAuthService      VMware Alias Manager and Ticket Ser...
+Running  vm3dservice        VMware SVGA Helper Service
+Running  VMTools            VMware Tools
+Running  Wcmsvc             Windows Connection Manager
+Running  WdiServiceHost     Diagnostic Service Host
+Running  WdNisSvc           Microsoft Defender Antivirus Networ...
+Running  WinDefend          Microsoft Defender Antivirus Service
+Running  WinHttpAutoProx... WinHTTP Web Proxy Auto-Discovery Se...
+Running  Winmgmt            Windows Management Instrumentation
+Running  WpnService         Windows Push Notifications System S...
+Running  WpnUserService_... WpnUserService_652c8
+Running  wscsvc             Security Center
+Running  WSearch            Windows Search
+Running  wuauserv           Windows Update
+~~~
+
+![]()
