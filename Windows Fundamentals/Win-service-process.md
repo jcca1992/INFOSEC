@@ -243,4 +243,4 @@ Running  WSearch            Windows Search
 Running  wuauserv           Windows Update
 ~~~
 
-![]()
+![](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/2.png)
