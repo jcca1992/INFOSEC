@@ -359,6 +359,37 @@ MachinePolicy       Undefined
  LocalMachine    RemoteSigned
 ~~~
 
-¿Cuál es el alias establecido para el comando ipconfig.exe?
++ ¿Cuál es el alias establecido para el comando ipconfig.exe?
 
-Busque el conjunto de políticas de ejecución para el ámbito de LocalMachine.
+`R:ifconfig`
+~~~
+PS C:\Users\htb-student> get-alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+...<SNIP>...
+Alias           iex -> Invoke-Expression
+Alias           ifconfig -> ipconfig.exe
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+...<SNIP>...
+~~~
+
++ Busque el conjunto de políticas de ejecución para el ámbito de LocalMachine.
+
+`R: Unrestricted`
+
+~~~
+PS C:\Users\htb-student> get-executionpolicy -list
+
+        Scope ExecutionPolicy
+        ----- ---------------
+MachinePolicy       Undefined
+   UserPolicy       Undefined
+      Process          Bypass
+  CurrentUser       Undefined
+ LocalMachine    Unrestricted
+~~~
