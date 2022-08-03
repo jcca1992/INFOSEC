@@ -1,0 +1,3 @@
+## SUBSISTEMA DE WINDOWS PARA LINUX (WSL)
+
+[WSL](https://docs.microsoft.com/en-us/windows/wsl/) es una característica que permite que los binarios de Linux se ejecuten de forma nativa en Windows 10 y Windows Server 2019. Originalmente estaba destinado a desarrolladores que necesitaban ejecutar `Bash`, `Ruby` y herramientas de línea de comandos nativas de Linux como `sed`, `awk`, `grep`, etc. ., directamente en su estación de trabajo Windows. La segunda versión de WSL, lanzada en mayo de 2019, introdujo un kernel de Linux real que utilizaba un subconjunto de características de Hyper-V.
