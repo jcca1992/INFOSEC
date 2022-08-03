@@ -358,6 +358,9 @@ MachinePolicy       Undefined
   CurrentUser       Undefined
  LocalMachine    RemoteSigned
 ~~~
+___
+
+### RETO
 
 + ¿Cuál es el alias establecido para el comando ipconfig.exe?
 
@@ -377,7 +380,7 @@ Alias           ihy -> Invoke-History
 Alias           ii -> Invoke-Item
 ...<SNIP>...
 ~~~
-
+___
 + Busque el conjunto de políticas de ejecución para el ámbito de LocalMachine.
 
 `R: Unrestricted`
