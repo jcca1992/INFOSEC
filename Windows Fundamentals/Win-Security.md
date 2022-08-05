@@ -34,6 +34,7 @@ El SID se descompone en este patrón
 Desglosemos el SID pieza por pieza.
 
 |Numero|Significado|Descripcion|
+|--|--|--|
 |S|SID|Identifica la cadena como un SID.|
 |1|Nivel de Revision|Hasta la fecha, esto nunca ha cambiado y siempre ha sido `1`.|
 |5|Identificador de Autoridad|Una cadena de 48 bits que identifica la autoridad (la computadora o la red) que creó el SID.|
@@ -256,11 +257,55 @@ Windows Defender recogerá `payloads` útiles de `frameworks` comunes de código
 
 Aunque cada vez es más difícil, todavía es posible eludir por completo las protecciones de Windows Defender impuestas por la última versión con las definiciones más actualizadas instaladas.
 ___
-
 ### RETO
 
 + Busque el SID del usuario bob.smith.
 
+`R: S-1-5-21-2614195641-1726409526-3792725429-1003`
+
+Por CMD
+~~~
+C:\WINDOWS\system32>wmic useraccount where name="bob.smith" get sid
+SID
+S-1-5-21-2614195641-1726409526-3792725429-1003
+~~~
+
+Por PowerShell de forma extensa
+~~~
+PS C:\users> get-wmiobject win32_useraccount
+
+
+AccountType : 512
+Caption     : WS01\Administrator
+Domain      : WS01
+SID         : S-1-5-21-2614195641-1726409526-3792725429-500
+FullName    :
+Name        : Administrator
+
+AccountType : 512
+Caption     : WS01\bob.smith
+Domain      : WS01
+SID         : S-1-5-21-2614195641-1726409526-3792725429-1003
+FullName    :
+Name        : bob.smith
+~~~
+
+Por PowerShell un poco mas directa
+~~~
+PS C:\users> get-wmiobject win32_useraccount | select name,sid
+
+name               sid
+----               ---
+Administrator      S-1-5-21-2614195641-1726409526-3792725429-500
+bob.smith          S-1-5-21-2614195641-1726409526-3792725429-1003
+DefaultAccount     S-1-5-21-2614195641-1726409526-3792725429-503
+defaultuser0       S-1-5-21-2614195641-1726409526-3792725429-1000
+Guest              S-1-5-21-2614195641-1726409526-3792725429-501
+htb-student        S-1-5-21-2614195641-1726409526-3792725429-1002
+mrb3n              S-1-5-21-2614195641-1726409526-3792725429-1001
+WDAGUtilityAccount S-1-5-21-2614195641-1726409526-3792725429-504
+~~~
+___
 + ¿Qué aplicación de seguridad de terceros está deshabilitada al inicio para el usuario actual? (La respuesta distingue entre mayúsculas y minúsculas).
 
 
