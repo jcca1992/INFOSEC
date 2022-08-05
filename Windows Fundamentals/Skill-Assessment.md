@@ -4,24 +4,24 @@ Inlanefreight recientemente tuvo un incidente en el que un empleado de marketing
 
 >Nota: Es importante que cada paso se complete en el orden en que se presentan. Comenzando con el paso 1 y avanzando hasta el paso 8, incluidas todas las especificaciones asociadas con cada paso. Tenga en cuenta que cada paso está diseñado para brindarle la oportunidad de aplicar las habilidades y los conceptos que se enseñan a lo largo de este módulo. Tómese su tiempo, diviértase y siéntase libre de comunicarse si se queda atascado.
 
-En esta demostración, usted es:
+En esta demostración, usted va:
 
-Creación de una carpeta compartida llamada Datos de la empresa
-Creación de una subcarpeta llamada HR dentro de la carpeta de datos de la empresa
-Creando un usuario llamado Jim
-+ Desmarque: El usuario debe cambiar la contraseña al iniciar sesión
-Crear un grupo de seguridad llamado HR
-Adición de Jim al grupo de seguridad de recursos humanos
-Adición del grupo de seguridad de recursos humanos a la carpeta de datos de la empresa compartida y a la lista de permisos de NTFS
-+ Eliminar el grupo predeterminado que está presente
-+ Compartir permisos: Permitir cambiar y leer
-+ Deshabilite la herencia antes de emitir permisos NTFS específicos
-+ Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer, Escribir
-Adición del grupo de seguridad de recursos humanos a la lista de permisos NTFS de la subcarpeta de recursos humanos
-+ Eliminar el grupo predeterminado que está presente
-+ Deshabilite la herencia antes de emitir permisos NTFS específicos
-+ Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer y Escribir
-Uso de PowerShell para enumerar detalles sobre un servicio
+1. Crear una carpeta compartida llamada Datos de la empresa (`Company Data`)
+2. Crear de una subcarpeta llamada HR dentro de la carpeta de datos de la empresa
+3. Crear un usuario llamado Jim
+    + Desmarque: El usuario debe cambiar la contraseña al iniciar sesión
+4. Crear un grupo de seguridad llamado HR
+5. Adición de Jim al grupo de seguridad de recursos humanos
+6. Adición del grupo de seguridad de recursos humanos a la carpeta de datos de la empresa compartida y a la lista de permisos de NTFS
+    + Eliminar el grupo predeterminado que está presente
+    + Compartir permisos: Permitir cambiar y leer
+    + Deshabilite la herencia antes de emitir permisos NTFS específicos
+    + Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer, Escribir
+7. Adición del grupo de seguridad de recursos humanos a la lista de permisos NTFS de la subcarpeta de recursos humanos
+    + Eliminar el grupo predeterminado que está presente
+    + Deshabilite la herencia antes de emitir permisos NTFS específicos
+    + Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer y Escribir
+8. Uso de PowerShell para enumerar detalles sobre un servicio
 
 ¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
 
