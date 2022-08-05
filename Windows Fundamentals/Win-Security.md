@@ -308,7 +308,16 @@ WDAGUtilityAccount S-1-5-21-2614195641-1726409526-3792725429-504
 ___
 + ¿Qué aplicación de seguridad de terceros está deshabilitada al inicio para el usuario actual? (La respuesta distingue entre mayúsculas y minúsculas).
 
+`R: NordVPN`
 
+~~~
+PS C:\WINDOWS\system32> reg query HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+    OneDrive    REG_SZ    "C:\Users\htb-student\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+    NordVPN    REG_SZ    C:\Program Files\NordVPN\NordVPN.exe
+~~~
+___
 
 
 
