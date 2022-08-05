@@ -22,13 +22,14 @@ En esta demostración, usted va:
     + Deshabilite la herencia antes de emitir permisos NTFS específicos
     + Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer y Escribir
 8. Uso de PowerShell para enumerar detalles sobre un servicio
+___
 
-¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
++ ¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
 
-¿Cuál es el nombre de la pestaña que le permite configurar los permisos de NTFS?
++ ¿Cuál es el nombre de la pestaña que le permite configurar los permisos de NTFS?
 
-¿Cuál es el nombre del servicio asociado con Windows Update?
++ ¿Cuál es el nombre del servicio asociado con Windows Update?
 
-Enumere el SID asociado con la cuenta de usuario Jim que creó.
++ Enumere el SID asociado con la cuenta de usuario Jim que creó.
 
-Enumere el SID asociado con el grupo de seguridad de recursos humanos que creó.
++ Enumere el SID asociado con el grupo de seguridad de recursos humanos que creó.
