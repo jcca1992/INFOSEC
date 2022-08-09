@@ -9,10 +9,10 @@ En esta demostración, usted va:
 1. Crear una carpeta compartida llamada Datos de la empresa (`Company Data`)
 2. Crear de una subcarpeta llamada HR dentro de la carpeta de datos de la empresa
 3. Crear un usuario llamado Jim
-    + Desmarque: El usuario debe cambiar la contraseña al iniciar sesión
+    + Desmarque: El usuario debe cambiar la contraseña al iniciar sesión    
 4. Crear un grupo de seguridad llamado HR
-5. Adición de Jim al grupo de seguridad de recursos humanos
-6. Adición del grupo de seguridad de recursos humanos a la carpeta de datos de la empresa compartida y a la lista de permisos de NTFS
+5. Adición de Jim al grupo de seguridad HR
+6. Adición del grupo de seguridad HR a la carpeta de datos de la empresa compartida y a la lista de permisos de NTFS
     + Eliminar el grupo predeterminado que está presente
     + Compartir permisos: Permitir cambiar y leer
     + Deshabilite la herencia antes de emitir permisos NTFS específicos
