@@ -9,9 +9,24 @@ En esta demostración, usted va:
 1. Crear una carpeta compartida llamada Datos de la empresa (`Company Data`)
 2. Crear de una subcarpeta llamada HR dentro de la carpeta de datos de la empresa
 3. Crear un usuario llamado Jim
-    + Desmarque: El usuario debe cambiar la contraseña al iniciar sesión    
+    + Desmarque: El usuario debe cambiar la contraseña al iniciar sesión
+
+Nos vamos a Computer Management, en Local Users and Group y en la carpeta Users
+![3]()
+
+Presionamos click derecho, en New User agregamos los datos y desmarcamos `User must change at next logon`
+![4]()
+
 4. Crear un grupo de seguridad llamado HR
+Ahora seleccionamos Groups y hacemos el mismo procedimiento
+![5]()
+Presionamos add para agregar Usuarios al grupo
+![6]()
+
 5. Adición de Jim al grupo de seguridad HR
+buscamos Jim y presionamos Check Names
+![7]()
+
 6. Adición del grupo de seguridad HR a la carpeta de datos de la empresa compartida y a la lista de permisos de NTFS
     + Eliminar el grupo predeterminado que está presente
     + Compartir permisos: Permitir cambiar y leer
@@ -22,14 +37,51 @@ En esta demostración, usted va:
     + Deshabilite la herencia antes de emitir permisos NTFS específicos
     + Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer y Escribir
 8. Uso de PowerShell para enumerar detalles sobre un servicio
+
+![8]()
+![9]()
+![10]()
+![11]()
+![12]()
+![13]()
+![14]()
+![15]()
 ___
 
 + ¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
+`R: Everyone`
 
 + ¿Cuál es el nombre de la pestaña que le permite configurar los permisos de NTFS?
+R: `Security`
 
 + ¿Cuál es el nombre del servicio asociado con Windows Update?
+R: `wuauserv`
+
+~~~
+PS C:\WINDOWS\system32> get-service | ? {$_.DisplayName -eq "Windows Update"}
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  wuauserv           Windows Update
+~~~
 
 + Enumere el SID asociado con la cuenta de usuario Jim que creó.
 
+`R: S-1-5-21-2614195641-1726409526-3792725429-1006`
+
+~~~
+C:\WINDOWS\system32>wmic useraccount where name="Jim" get sid
+SID
+S-1-5-21-2614195641-1726409526-3792725429-1006
+~~~
+
+
 + Enumere el SID asociado con el grupo de seguridad de recursos humanos que creó.
+
+`R: S-1-5-21-2614195641-1726409526-3792725429-1007`
+
+~~~
+C:\WINDOWS\system32>wmic group where name="HR" get sid
+SID
+S-1-5-21-2614195641-1726409526-3792725429-1007
+~~~
