@@ -13,27 +13,27 @@ En esta demostración, usted va:
 
 Nos vamos a `Computer Management`, en `Local Users and Group` y en la carpeta `Users`
 
-![1]()
+![1](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/1.png)
 
 Presionamos click derecho, en `New User` agregamos los datos y desmarcamos `User must change at next logon`
 
-![2]()
+![2](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/2.png)
 
 4. Crear un grupo de seguridad llamado HR
 
 Ahora seleccionamos `Groups` y hacemos el mismo procedimiento
 
-![3]()
+![3](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/3.png)
 
 Presionamos `add` para agregar Usuarios al grupo
 
-![4]()
+![4](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/4.png)
 
 5. Adición de Jim al grupo de seguridad HR
 
 buscamos `Jim` y presionamos `Check Names`
 
-![5]()
+![5](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/5.png)
 
 6. Agregue El grupo de seguridad HR a la carpeta compartida de `Data Company` y a la lista de permisos de NTFS
     + Eliminar el grupo predeterminado que está presente
@@ -48,48 +48,50 @@ buscamos `Jim` y presionamos `Check Names`
 
 En la carpeta creada click derecho, `Properties` en la pestaña `Sharing` presionamos `Advance Sharing`, 
 
-![6]()
+![6](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/6.png)
 
 seleccionamos `Share this folder` y despues presionamos `Permissions` 
 
-![7]()
+![7](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/7.png)
 
 presionamos `Add` y agregamos el grupo 
 
-![8]
+![8](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/8.png)
 
-![9]
+![9](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/9.png)
 
 Seleccionamos los permisos que tendra el grupo `HR`
 
-![10]
+![10](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/10.png)
 
 Eliminammos el grupo `Everyone` seleccionandolo y presionando `Remove`
 
-![11]
+![11](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/11.png)
 
 Ahora nos vamos a la pestaña Security y presionamos Edit para agregar el grupo HR
-![12]
+![12](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/12.png)
 
-![13]
+![13](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/13.png)
 
-Presionamos Advanced 
+Presionamos `Advanced` 
 
-![14]
+![14](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/14.png)
 
-Presionamos Disable Inheritance
+Presionamos `Disable Inheritance`
 
-![15]
+![15](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/15.png)
 
-Presionamos Remove all inherited permissions from this object
+Presionamos `Remove all inherited permissions from this object`
 
-![16]
+![16](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/16.png)
 
-![17]
+Ahora seleccionamos el grupo `HR` y presionamos `Add` para agregar los permisos NTFS
 
-![18]
+![17](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/17.png)
 
-![19]
+![18] https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/18.png)
+
+![19](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/19.png)
 ___
 
 + ¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
