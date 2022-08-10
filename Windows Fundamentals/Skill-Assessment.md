@@ -12,20 +12,26 @@ En esta demostración, usted va:
     + Desmarque: El usuario debe cambiar la contraseña al iniciar sesión
 
 Nos vamos a Computer Management, en Local Users and Group y en la carpeta Users
-![3]()
 
-Presionamos click derecho, en New User agregamos los datos y desmarcamos `User must change at next logon`
-![4]()
+![3](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/3.png)
+
+Presionamos click derecho, en `New User` agregamos los datos y desmarcamos `User must change at next logon`
+
+![4](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/4.png)
 
 4. Crear un grupo de seguridad llamado HR
-Ahora seleccionamos Groups y hacemos el mismo procedimiento
-![5]()
+
+Ahora seleccionamos `Groups` y hacemos el mismo procedimiento
+
+![5](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/5.png)
+
 Presionamos add para agregar Usuarios al grupo
-![6]()
+
+![6](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/6.png)
 
 5. Adición de Jim al grupo de seguridad HR
 buscamos Jim y presionamos Check Names
-![7]()
+![7](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/7.png)
 
 6. Adición del grupo de seguridad HR a la carpeta de datos de la empresa compartida y a la lista de permisos de NTFS
     + Eliminar el grupo predeterminado que está presente
@@ -38,14 +44,14 @@ buscamos Jim y presionamos Check Names
     + Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer y Escribir
 8. Uso de PowerShell para enumerar detalles sobre un servicio
 
-![8]()
-![9]()
-![10]()
-![11]()
-![12]()
-![13]()
-![14]()
-![15]()
+![8](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/8.png)
+![9](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/9.png)
+![10](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/10.png)
+![11](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/11.png)
+![12](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/12.png)
+![13](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/13.png)
+![14](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/14.png)
+![15](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/15.png)
 ___
 
 + ¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
