@@ -46,49 +46,63 @@ buscamos `Jim` y presionamos `Check Names`
     + Permisos NTFS: Modificar, Leer y Ejecutar, Mostrar el contenido de la carpeta, Leer y Escribir
 8. Uso de PowerShell para enumerar detalles sobre un servicio
 
-En la carpeta creada click derecho, Properties en la pestaña Sharing presionamos Advance Sharing, seleccionamos Share this folder y despues presionamos Permissions presionamos add y agregamos el grupo despues eliminammos el grupo Everyone
-
-En la carpeta creada click derecho, Properties en la pestaña Security presionamos Edit para agregar el Grupo HR
+En la carpeta creada click derecho, `Properties` en la pestaña `Sharing` presionamos `Advance Sharing`, 
 
 ![6]()
 
-Ponemos HR en el espacio en blanco y presionamos Check Names y despues el boton OK
+seleccionamos `Share this folder` y despues presionamos `Permissions` 
 
 ![7]()
 
-como vemos e la seccion Group or Users Names aparece HR (WS01\HR)
+presionamos `Add` y agregamos el grupo 
 
 ![8]
 
 ![9]
 
+Seleccionamos los permisos que tendra el grupo `HR`
+
 ![10]
+
+Eliminammos el grupo `Everyone` seleccionandolo y presionando `Remove`
 
 ![11]
 
+Ahora nos vamos a la pestaña Security y presionamos Edit para agregar el grupo HR
 ![12]
 
 ![13]
 
+Presionamos Advanced 
+
 ![14]
 
+Presionamos Disable Inheritance
+
 ![15]
+
+Presionamos Remove all inherited permissions from this object
 
 ![16]
 
 ![17]
 
 ![18]
+
+![19]
 ___
 
 + ¿Cuál es el nombre del grupo que está presente en la LCA de permisos de uso compartido de datos de la empresa de forma predeterminada?
+
 `R: Everyone`
 
 + ¿Cuál es el nombre de la pestaña que le permite configurar los permisos de NTFS?
-R: `Security`
+
+`R: Security`
 
 + ¿Cuál es el nombre del servicio asociado con Windows Update?
-R: `wuauserv`
+
+`R: wuauserv`
 
 ~~~
 PS C:\WINDOWS\system32> get-service | ? {$_.DisplayName -eq "Windows Update"}
