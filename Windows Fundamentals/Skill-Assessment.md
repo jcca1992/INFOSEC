@@ -59,15 +59,25 @@ Ponemos HR en el espacio en blanco y presionamos Check Names y despues el boton 
 como vemos e la seccion Group or Users Names aparece HR (WS01\HR)
 
 ![8]
+
 ![9]
+
 ![10]
+
 ![11]
+
 ![12]
+
 ![13]
+
 ![14]
+
 ![15]
+
 ![16]
+
 ![17]
+
 ![18]
 ___
 
