@@ -68,7 +68,8 @@ Eliminammos el grupo `Everyone` seleccionandolo y presionando `Remove`
 
 ![11](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/11.png)
 
-Ahora nos vamos a la pestaña Security y presionamos Edit para agregar el grupo HR
+Ahora nos vamos a la pestaña `Security` y presionamos `Edit` para agregar el grupo `HR`
+
 ![12](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/12.png)
 
 ![13](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/13.png)
@@ -89,7 +90,7 @@ Ahora seleccionamos el grupo `HR` y presionamos `Add` para agregar los permisos 
 
 ![17](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/17.png)
 
-![18] https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/18.png)
+![18](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/18.png)
 
 ![19](https://github.com/jcca1992/INFOSEC/blob/main/Windows%20Fundamentals/Images/Skill-Assessent/19.png)
 ___
