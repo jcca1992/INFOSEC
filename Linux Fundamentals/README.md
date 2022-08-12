@@ -5,8 +5,8 @@
     + [Introduccion a Shell]()
 + La Shell
     + [Descripcion del Prompt]()
-    + Obteniendo Ayuda
+    + [Obteniendo Ayuda]()
     + Informacion del Sistema
 + Administracion del Sistema
-+ 
+    + Administracion de Usuario
 ___
