@@ -107,19 +107,51 @@ Linux PCnotebook 5.18.0-14parrot1-amd64 #1 SMP PREEMPT_DYNAMIC Debian 5.18.14-1p
 
 Del comando anterior, podemos ver que el nombre del kernel es `Linux`, el nombre del host es `PCNotebook`, el kernel release es `5.18.0-14parrot1-amd64`, la version del kernel es `#1 SMP PREEMPT_DYNAMIC Debian 5.18.14-1parrot1 (2022-08-07)`, y así sucesivamente. Ejecutar cualquiera de estas opciones por sí sola nos dará la salida de bits específica que nos interesa.
 
+~~~
+cry0l1t3@htb[/htb]$ uname -a
+
+Linux box 4.15.0-99-generic #100-Ubuntu SMP Wed Apr 22 20:32:56 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+~~~
+Del comando anterior, podemos ver que el nombre del kernel es `Linux`, el nombre del host es `box`, el kernel release es `4.15.0-99-generic`, la version del kernel es `#100-Ubuntu SMP Wed Apr 22 20:32:56 UTC 2020`, y así sucesivamente. Ejecutar cualquiera de estas opciones por sí sola nos dará la salida de bits específica que nos interesa.
+
+
 `Uname para obtener el Kernel Release`
 
 Supongamos que queremos imprimir la versión del kernel para buscar rápidamente posibles vulnerabilidades del kernel. Podemos escribir `uname -r` para obtener esta información.
 
 ~~~
-┌─[juliocesar@PCnotebook]─[~]
-└──╼ $uname -r
-5.18.0-14parrot1-amd64
+cry0l1t3@htb[/htb]$ uname -r
+
+4.15.0-99-generic
 ~~~
 
-Con esta información, podríamos ir y buscar "exploit genérico 4.15.0-99", y el primer resultado nos parece útil de inmediato.
+Con esta información, podríamos ir y buscar "exploit genérico 4.15.0-99", y el primer [resultado](https://www.exploit-db.com/exploits/47163) nos parece útil de inmediato.
 
-Es muy recomendable estudiar los comandos y comprender para qué sirven y qué información pueden proporcionar. Aunque es un poco tedioso, podemos aprender mucho estudiando las páginas de manual de los comandos comunes. Incluso podemos descubrir cosas que ni siquiera sabíamos que eran posibles con un comando dado. Esta información no solo se utiliza para trabajar con Linux. Sin embargo, también se usará más adelante para descubrir vulnerabilidades y configuraciones incorrectas en el sistema Linux que pueden contribuir a la escalada de privilegios. Aquí hay algunos ejercicios opcionales que podemos resolver con fines de práctica, que nos ayudarán a familiarizarnos con algunos de los comandos.
+Es muy recomendable estudiar los comandos y comprender para qué sirven y qué información pueden proporcionar. Aunque es un poco tedioso, podemos aprender mucho estudiando las páginas de manual de los comandos comunes. Incluso podemos descubrir cosas que ni siquiera sabíamos que eran posibles con un comando dado. Esta información no solo se utiliza para trabajar con Linux. También se usará más adelante para descubrir vulnerabilidades y configuraciones incorrectas en el sistema Linux que pueden contribuir a la escalada de privilegios. Aquí hay algunos ejercicios opcionales que podemos resolver con fines de práctica, que nos ayudarán a familiarizarnos con algunos de los comandos.
+___
+
+### INICIAR SESION CON SSH
+
+`Secure Shell (SSH)` se refiere a un protocolo que permite a los clientes acceder y ejecutar comandos o acciones en equipos remotos. En hosts y servidores basados en Linux que se ejecutan u otro sistema operativo similar a Unix, SSH es una de las herramientas estándar instaladas permanentemente y es la opción preferida por muchos administradores para configurar y mantener una computadora a través del acceso remoto. Es un protocolo antiguo y muy probado que no requiere ni ofrece una interfaz gráfica de usuario (GUI). Por ello, funciona de forma muy eficiente y ocupa muy pocos recursos. Usamos este tipo de conexión en las siguientes secciones y en la mayoría de los otros módulos para ofrecer la posibilidad de probar los comandos y acciones aprendidos en un entorno seguro. Podemos conectarnos a nuestros objetivos con el siguiente comando:
+
+~~~
+Juceco@htb[/htb]$ ssh [username]@[IP address]
+~~~
+___
+
+### RETO
+
++ Averigüe el nombre del hardware de la máquina y envíelo como respuesta.
+
++ ¿Cuál es la ruta al directorio de inicio de htb-student?
+
++ ¿Cuál es la ruta al correo de htb-student?
+
++ ¿Qué shell se especifica para el usuario htb-student?
+
++ ¿Qué versión del kernel está instalada en el sistema? (Formato: 1.22.3)
+
++ ¿Cuál es el nombre de la interfaz de red en la que la MTU está configurada en 1500?
 
 ___
 #### [Anterior (Obteniendo Ayuda)]()
