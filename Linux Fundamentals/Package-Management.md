@@ -120,7 +120,7 @@ ___
 
 Ahora que tenemos `git` instalado, podemos usarlo para descargar herramientas útiles de Github. Uno de estos proyectos se llama 'Nishang'. Nos ocuparemos y trabajaremos con el proyecto en sí más adelante. Primero, debemos navegar al [repositorio del proyecto](https://github.com/samratashok/nishang) y copiar el enlace de Github antes de usar git para descargarlo.
 
-![](https://academy.hackthebox.com/storage/modules/18/git-nishang.png)
+![1]()
 
 Sin embargo, antes de descargar el proyecto y sus scripts y listas, debemos crear una carpeta en particular.
 

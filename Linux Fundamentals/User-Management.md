@@ -2,7 +2,7 @@
 ___
 La gestión de usuarios es una parte esencial de la administración de Linux. A veces necesitamos crear nuevos usuarios o agregar otros usuarios a grupos específicos. Otra posibilidad es ejecutar comandos como un usuario diferente. Después de todo, no es muy raro que los usuarios de un solo grupo específico tengan permisos para ver o editar archivos o directorios específicos. Esto, a su vez, nos permite recopilar más información localmente en la máquina, lo que puede ser muy importante. Echemos un vistazo al siguiente ejemplo de cómo ejecutar código como un usuario diferente.
 
-Ejecucion como usuario
+`Ejecucion como usuario:`
 
 ~~~
 Juceco@htb[/htb]$ cat /etc/shadow
@@ -10,7 +10,7 @@ Juceco@htb[/htb]$ cat /etc/shadow
 cat: /etc/shadow: Permission denied
 ~~~
 
-Ejecucion como Root
+`Ejecucion como Root:`
 
 ~~~
 Juceco@htb[/htb]$ sudo cat /etc/shadow
