@@ -8,7 +8,7 @@
     + [Obteniendo Ayuda]()
     + [Informacion del Sistema]()
 + Administracion del Sistema
-    + Administracion de Usuario
-    + Administracion de Paquete
-    + 
+    + [Gestion de Usuarios]()
+    + Gestion de Paquetes
+    + Gestion de servicios y procesos
 ___

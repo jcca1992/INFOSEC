@@ -1,4 +1,4 @@
-## ADMINISTRACION DE USUARIO
+## GESTION DE USUARIO
 ___
 La gestión de usuarios es una parte esencial de la administración de Linux. A veces necesitamos crear nuevos usuarios o agregar otros usuarios a grupos específicos. Otra posibilidad es ejecutar comandos como un usuario diferente. Después de todo, no es muy raro que los usuarios de un solo grupo específico tengan permisos para ver o editar archivos o directorios específicos. Esto, a su vez, nos permite recopilar más información localmente en la máquina, lo que puede ser muy importante. Echemos un vistazo al siguiente ejemplo de cómo ejecutar código como un usuario diferente.
 
