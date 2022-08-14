@@ -6,7 +6,9 @@
 + La Shell
     + [Descripcion del Prompt]()
     + [Obteniendo Ayuda]()
-    + Informacion del Sistema
+    + [Informacion del Sistema]()
 + Administracion del Sistema
     + Administracion de Usuario
+    + Administracion de Paquete
+    + 
 ___
