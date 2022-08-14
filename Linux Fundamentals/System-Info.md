@@ -143,16 +143,118 @@ ___
 
 + Averigüe el nombre del hardware de la máquina y envíelo como respuesta.
 
+`R: x86_64`
+
+~~~
+htb-student@nixfund:~$ uname -m
+x86_64
+~~~
+
+___
 + ¿Cuál es la ruta al directorio de inicio de htb-student?
 
+`R: /home/htb-student`
+
+~~~
+htb-student@nixfund:~$ pwd
+/home/htb-student
+~~~
+
+___
 + ¿Cuál es la ruta al correo de htb-student?
 
+`R: /var/mail/htb-student`
+
+~~~
+htb-student@nixfund:~$ env | grep MAIL
+MAIL=/var/mail/htb-student
+~~~
+
+___
 + ¿Qué shell se especifica para el usuario htb-student?
 
+`R: /bin/bash`
+
+Vemos al final htb-student:x:1002:1002::/home/htb-student:/bin/bash
+~~~
+htb-student@nixfund:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+syslog:x:102:106::/home/syslog:/usr/sbin/nologin
+messagebus:x:103:107::/nonexistent:/usr/sbin/nologin
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+lxd:x:105:65534::/var/lib/lxd/:/bin/false
+uuidd:x:106:110::/run/uuidd:/usr/sbin/nologin
+dnsmasq:x:107:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+landscape:x:108:112::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:109:1::/var/cache/pollinate:/bin/false
+sshd:x:110:65534::/run/sshd:/usr/sbin/nologin
+mrb3n:x:1000:1000:mrb3n:/home/mrb3n:/bin/bash
+cry0l1t3:x:1001:1001::/home/cry0l1t3:/bin/bash
+postfix:x:111:114::/var/spool/postfix:/usr/sbin/nologin
+proftpd:x:112:65534::/run/proftpd:/usr/sbin/nologin
+ftp:x:113:65534::/srv/ftp:/usr/sbin/nologin
+dovecot:x:114:117:Dovecot mail server,,,:/usr/lib/dovecot:/usr/sbin/nologin
+dovenull:x:115:118:Dovecot login user,,,:/nonexistent:/usr/sbin/nologin
+htb-student:x:1002:1002::/home/htb-student:/bin/bash
+mysql:x:116:120:MySQL Server,,,:/nonexistent:/bin/false
+~~~
+
+___
 + ¿Qué versión del kernel está instalada en el sistema? (Formato: 1.22.3)
 
+`R: 4.15.0`
+
+~~~
+htb-student@nixfund:~$ uname -r
+4.15.0-123-generic
+~~~
+
+___
 + ¿Cuál es el nombre de la interfaz de red en la que la MTU está configurada en 1500?
 
+`R: ens192`
+
+MTU es Maximum Transmission Unit es el mayor tamaño posible de una unidad de datos en un protocolo de capa de red (PDU de capa de red) que puede ser utilizado en una comunicación 
+~~~
+htb-student@nixfund:~$ ifconfig
+ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.129.124.204  netmask 255.255.0.0  broadcast 10.129.255.255
+        inet6 fe80::250:56ff:feb9:7d6  prefixlen 64  scopeid 0x20<link>
+        inet6 dead:beef::250:56ff:feb9:7d6  prefixlen 64  scopeid 0x0<global>
+        ether 00:50:56:b9:07:d6  txqueuelen 1000  (Ethernet)
+        RX packets 515  bytes 49734 (49.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 509  bytes 81159 (81.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 902  bytes 71550 (71.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 902  bytes 71550 (71.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+~~~
 ___
 #### [Anterior (Obteniendo Ayuda)]()
 #### [Siguiente (Administracion de Usuario)]()
