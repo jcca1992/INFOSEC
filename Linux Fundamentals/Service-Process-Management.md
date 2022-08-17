@@ -136,11 +136,171 @@ Juceco@htb[/htb]$ kill 9 <PID>
 ___
 ### PROCESOS EN SEGUNDO PLANO
 
+En ocasiones será necesario poner en segundo plano el escaneo o proceso que acabamos de iniciar para continuar usando la sesión actual para interactuar con el sistema o iniciar otros procesos. Como ya hemos visto, esto lo podemos hacer con el atajo `[Ctrl + Z]`. Como se mencionó anteriormente, enviamos la señal `SIGTSTP` al kernel, que suspende el proceso.
 
+~~~
+Juceco@htb[/htb]$ ping -c 10 www.hackthebox.eu
 
+Juceco@htb[/htb]$ vim tmpfile
+[Ctrl + Z]
+[2]+  Stopped                 vim tmpfile
+~~~
 
+Ahora todos los procesos en segundo plano se pueden mostrar con el siguiente comando.
 
+~~~
+Juceco@htb[/htb]$ jobs
 
+[1]+  Stopped                 ping -c 10 www.hackthebox.eu
+[2]+  Stopped                 vim tmpfile
+~~~
+El atajo `[Ctrl + Z]` suspende los procesos y no se ejecutarán más. Para mantenerlo funcionando en segundo plano, debemos ingresar el comando `bg` para poner el proceso en segundo plano.
+
+~~~
+Juceco@htb[/htb]$ bg
+
+Juceco@htb[/htb]$ 
+--- www.hackthebox.eu ping statistics ---
+10 packets transmitted, 0 received, 100% packet loss, time 113482ms
+
+[ENTER]
+[1]+  Exit 1                  ping -c 10 www.hackthebox.eu
+~~~
+
+Otra opción es configurar automáticamente el proceso con un signo AND (`&`) al final del comando.
+
+~~~
+Juceco@htb[/htb]$ ping -c 10 www.hackthebox.eu &
+
+[1] 10825
+PING www.hackthebox.eu (172.67.1.1) 56(84) bytes of data.
+~~~
+
+Una vez finalice el proceso, veremos los resultados.
+
+~~~
+Juceco@htb[/htb]$ 
+
+--- www.hackthebox.eu ping statistics ---
+10 packets transmitted, 0 received, 100% packet loss, time 9210ms
+
+[ENTER]
+[1]+  Exit 1                  ping -c 10 www.hackthebox.eu
+~~~
 ___
+### PROCESOS A PRIMER PLANO
+
+Después de eso, podemos usar el comando de `jobs` para enumerar todos los procesos en segundo plano. Los procesos en segundo plano no requieren la interacción del usuario, y podemos usar la misma sesión de shell sin esperar hasta que el proceso finalice primero. Una vez que el escaneo o el proceso termine su trabajo, la terminal nos notificará que el proceso ha terminado.
+
+~~~
+Juceco@htb[/htb]$ jobs
+
+[1]+  Running                 ping -c 10 www.hackthebox.eu &
+~~~
+
+Si queremos que el proceso en segundo plano pase al primer plano e interactuar con él nuevamente, podemos usar el comando `fg <ID>`.
+
+~~~
+Juceco@htb[/htb]$ fg 1
+ping -c 10 www.hackthebox.eu
+
+--- www.hackthebox.eu ping statistics ---
+10 packets transmitted, 0 received, 100% packet loss, time 9206ms
+~~~
+___
+### EJECUTAR MULTIPLES COMANDOS
+
+Hay tres posibilidades para ejecutar varios comandos, uno tras otro. Estos están separados por:
++ Punto y coma (`;`)
++ Caracteres dobles de ampersand (`&&`)
++ Pipes (`|`)
+
+La diferencia entre ellos radica en el tratamiento de los procesos anteriores y depende de si el proceso anterior se completó con éxito o con errores. El punto y coma (`;`) es un separador de comandos y ejecuta los comandos ignorando los resultados y errores de los comandos anteriores.
+
+~~~
+Juceco@htb[/htb]$ echo '1'; echo '2'; echo '3'
+
+1
+2
+3
+~~~
+
+Por ejemplo, si ejecutamos el mismo comando pero lo reemplazamos en segundo lugar, el comando `ls` con un archivo que no existe, obtenemos un error y el tercer comando se ejecutará de todos modos.
+
+~~~
+Juceco@htb[/htb]$ echo '1'; ls MISSING_FILE; echo '3'
+
+1
+ls: cannot access 'MISSING_FILE': No such file or directory
+3
+~~~
+
+Sin embargo, se ve diferente si usamos los caracteres AND dobles (`&&`) para ejecutar los comandos uno tras otro. Si hay un error en uno de los comandos, los siguientes no se ejecutarán más y se detendrá todo el proceso.
+
+~~~
+Juceco@htb[/htb]$ echo '1' && ls MISSING_FILE && echo '3'
+
+1
+ls: cannot access 'MISSING_FILE': No such file or directory
+~~~
+
+Pipes (`|`) dependen no solo del funcionamiento correcto y sin errores de los procesos anteriores, sino también de los resultados de los procesos anteriores. Nos ocuparemos de las canalizaciones más adelante en la sección `Descriptores de archivos y redirecciones`.
+___
+### RETO
+
++ Use el comando "systemctl" para enumerar todas las unidades de servicios y envíe el nombre de la unidad con la descripción "Load AppArmor profiles managed internally by snapd" como respuesta.
+
+`R: snapd.apparmor.service`
+
+~~~
+htb-student@nixfund:~$ systemctl
+UNIT                          LOAD   ACTIVE SUB       DESCRIPTION                           
+dev-hugepages.mount           loaded active mounted   Huge Pages File System   
+dev-mqueue.mount              loaded active mounted   POSIX Message Queue File System
+run-user-1002.mount           loaded active mounted   /run/user/1002           
+run-vmblock\x2dfuse.mount     loaded active mounted   VMware vmblock fuse mount
+snap-core-10126.mount         loaded active mounted   Mount unit for core, revision 10126
+snap-core-10185.mount         loaded active mounted   Mount unit for core, revision 10185
+snap-core18-1885.mount        loaded active mounted   Mount unit for core18, revision 1885
+snap-core18-1932.mount        loaded active mounted   Mount unit for core18, revision 1932
+snap-powershell-137.mount     loaded active mounted   Mount unit for powershell, revision 137
+snap-powershell-149.mount     loaded active mounted   Mount unit for powershell, revision 149
+apache2.service               loaded active running   The Apache HTTP Server   
+apparmor.service              loaded active exited    AppArmor initialization  
+apport.service                loaded active exited    LSB: automatic crash report generation
+atd.service                   loaded active running   Deferred execution scheduler
+blk-availability.service      loaded active exited    Availability of block devices
+cloud-config.service          loaded active exited    Apply the settings specified in cloud-config
+cloud-final.service           loaded active exited    Execute cloud user/final scripts
+cloud-init-local.service      loaded active exited    Initial cloud-init job (pre-networking)
+console-setup.service         loaded active exited    Set console font and keymap
+cron.service                  loaded active running   Regular background program processing daemon
+dbus.service                  loaded active running   D-Bus System Message Bus 
+dovecot.service               loaded active running   Dovecot IMAP/POP3 email server
+ebtables.service              loaded active exited    ebtables ruleset management
+getty@tty1.service            loaded active running   Getty on tty1            
+grub-common.service           loaded active exited    LSB: Record successful boot for GRUB
+ifup@ens192.service           loaded active exited    ifup for ens192          
+irqbalance.service            loaded active running   irqbalance daemon        
+keyboard-setup.service        loaded active exited    Set the console keyboard layout
+lxcfs.service                 loaded active running   FUSE filesystem for LXC  
+lxd-containers.service        loaded active exited    LXD - container startup/shutdown
+mysql.service                 loaded active running   MySQL Community Server   
+networkd-dispatcher.service   loaded active running   Dispatcher daemon for systemd-networkd
+networking.service            loaded active exited    Raise network interfaces 
+nmbd.service                  loaded active running   Samba NMB Daemon         
+open-vm-tools.service         loaded active running   Service for virtual machines hosted on VMware
+polkit.service                loaded active running   Authorization Manager    
+postfix.service               loaded active exited    Postfix Mail Transport Agent
+postfix@-.service             loaded active running   Postfix Mail Transport Agent (instance -)
+proftpd.service               loaded active running   LSB: Starts ProFTPD daemon
+rsyslog.service               loaded active running   System Logging Service   
+setvtrgb.service              loaded active exited    Set console scheme       
+smbd.service                  loaded active running   Samba SMB Daemon         
+snapd.apparmor.service        loaded active exited    Load AppArmor profiles managed internally by snapd
+snapd.seeded.service          loaded active exited    Wait until snapd is fully seeded
+snapd.service                 loaded active running   Snap Daemon              
+ssh.service                   loaded active running   OpenBSD Secure Shell server
+~~~___
 #### [Anterior (Gestion de Paquetes)]()
 #### [Siguiente (Trabajar con Servicios Web)]()
