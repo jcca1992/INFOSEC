@@ -301,6 +301,7 @@ snapd.apparmor.service        loaded active exited    Load AppArmor profiles man
 snapd.seeded.service          loaded active exited    Wait until snapd is fully seeded
 snapd.service                 loaded active running   Snap Daemon              
 ssh.service                   loaded active running   OpenBSD Secure Shell server
-~~~___
+~~~
+___
 #### [Anterior (Gestion de Paquetes)]()
 #### [Siguiente (Trabajar con Servicios Web)]()
