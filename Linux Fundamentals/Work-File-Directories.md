@@ -6,24 +6,24 @@ A continuación, trabajemos con archivos y directorios y aprendamos a crear, ren
 
 La sintaxis para esto es la siguiente:
 
-Touch:
+**Touch:**
 ~~~
 Juceco@htb[/htb]$ touch <name>
 ~~~
-___
-mkdir:
+
+**mkdir:**
 ~~~
 Juceco@htb[/htb]$ mkdir <name>
 ~~~
 
 En este ejemplo, llamamos al archivo info.txt y el directorio Storage. Para crearlos, seguimos los comandos y su sintaxis que se muestran arriba.
-___
-Crear un Archivo Vacio:
+
+**Crear un Archivo Vacio:**
 ~~~
 Juceco@htb[/htb]$ touch info.txt
 ~~~
-___
-Crear un Directorio:
+
+**Crear un Directorio:**
 ~~~
 Juceco@htb[/htb]$ mkdir Storage
 ~~~
@@ -77,20 +77,20 @@ Juceco@htb[/htb]$ mv <file/directory> <renamed file/directory>
 ~~~
 
 Primero, cambiemos el nombre del archivo `info.txt` a `information.txt` y luego muévalo al directorio `Storage`.
-___
-Renombrar Archivos:
+
+**Renombrar Archivos:**
 ~~~
 Juceco@htb[/htb]$ mv info.txt information.txt
 ~~~
 
 Ahora vamos a crear un archivo llamado `readme.txt` en el directorio actual y luego copiar los archivos `information.txt` y `readme.txt` en el directorio `Storage/`.
-___
-Crear el readme.txt:
+
+**Crear el readme.txt:**
 ~~~
 Juceco@htb[/htb]$ touch readme.txt 
 ~~~
-___
-Mover el Archivo al Directorio Especifico:
+
+**Mover el Archivo al Directorio Especifico:**
 ~~~
 Juceco@htb[/htb]$ mv information.txt readme.txt Storage/
 ~~~
@@ -111,8 +111,8 @@ Juceco@htb[/htb]$ tree .
 ~~~
 
 Supongamos que queremos tener el archivo `readme.txt` en el directorio `local/`. Luego podemos copiarlos allí con las rutas especificadas.
-___
-Copiar readme.txt:
+
+**Copiar readme.txt:**
 ~~~
 Juceco@htb[/htb]$ cp Storage/readme.txt Storage/local/
 ~~~
