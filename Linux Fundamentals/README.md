@@ -15,6 +15,7 @@
 + Flujo de Trabajo
     + [Navegacion]()
     + [Trabajando con Archivos y Directorios]()
-    + Editando Archivos
-    + 
+    + [Editando Archivos]()
+    + Buscar Archivos y Directorios
+    + Descriptores y Redirecciones de Archivos
 ___
