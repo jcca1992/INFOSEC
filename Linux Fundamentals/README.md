@@ -16,6 +16,9 @@
     + [Navegacion]()
     + [Trabajando con Archivos y Directorios]()
     + [Editando Archivos]()
-    + Buscar Archivos y Directorios
-    + Descriptores y Redirecciones de Archivos
+    + [Buscar Archivos y Directorios]()
+    + [Descriptores y Redirecciones de Archivos]()
+    + Filtro de Contenido
+    + Gestion de permisos
+Tips an trics
 ___

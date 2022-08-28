@@ -47,18 +47,74 @@ Ahora echemos un vistazo más de cerca a las opciones que usamos en el comando a
 |Opcion|Descripcion|
 |--|--|
 |`-type f`|De este modo, definimos el tipo de objeto buscado. En este caso, `'f'` significa `'archivo'`(File).|
-|`-name *.conf`|
+|`-name *.conf`|Con `'-name'` indicamos el nombre del archivo que buscamos. El asterisco (`*`) representa 'todos' los archivos con la extensión `'.conf'`.|
+|`-user root`|Esta opción filtra todos los archivos cuyo propietario es el usuario `root`.|
+|`-size +20k`|Luego podemos filtrar todos los archivos ubicados y especificar que solo queremos ver los archivos que tienen más de 20 KiB.|
+|`-newermt 2020-03-03`|Con esta opción fijamos la fecha. Solo se presentarán archivos posteriores a la fecha especificada.|
+|`-exec ls -al {} \;`|Esta opción ejecuta el comando especificado, utilizando las llaves como marcadores de posición para cada resultado. La barra invertida evita que la shell interprete el siguiente carácter porque, de lo contrario, el punto y coma terminaría el comando y no llegaría a la redirección.|
+|`2>/dev/null`|Esta es una redirección `STDERR` al `'null device'`, al que volveremos en la siguiente sección. Esta redirección asegura que no se muestren errores en la terminal. Esta redirección `no` debe ser una opción del comando `'find'`.|
 ___
 ### LOCATE
 
+Tomará mucho tiempo buscar en todo el sistema nuestros archivos y directorios para realizar muchas búsquedas diferentes. El comando `locate` nos ofrece una forma más rápida de buscar a través del sistema. A diferencia del comando `find`, la ubicación funciona con una base de datos local que contiene toda la información sobre los archivos y carpetas existentes. Podemos actualizar esta base de datos con el siguiente comando.
+
+~~~
+Juceco@htb[/htb]$ sudo updatedb
+~~~
+
+Si ahora buscamos todos los archivos con la extensión "`.conf`", encontrará que esta búsqueda produce resultados mucho más rápidos que usar `find`.
+
+~~~
+Juceco@htb[/htb]$ locate *.conf
+
+/etc/GeoIP.conf
+/etc/NetworkManager/NetworkManager.conf
+/etc/UPower/UPower.conf
+/etc/adduser.conf
+<SNIP>
+~~~
+
+Sin embargo, esta herramienta no tiene tantas opciones de filtro que podamos usar. Por lo tanto, siempre vale la pena considerar si podemos usar el comando `locate` o, en su lugar, usar el comando `find`. Siempre depende de lo que estemos buscando.
+
+Prueba las diferentes utilidades y encuentra todo lo relacionado con la herramienta netcat/nc.
 ___
 ### RETO
 
 + ¿Cuál es el nombre del archivo de configuración que se creó después del 2020-03-03 y tiene menos de 28k pero más de 25k?
 
+`R: 00-mesa-defaults.conf`
+
+~~~
+htb-student@nixfund:~$ find / -type f -name *.conf -user root -size +25k -and -size -28k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null
+-rw-r--r-- 1 root root 27422 Jun 12  2020 /usr/share/drirc.d/00-mesa-defaults.conf
+~~~
+
+~~~
+htb-student@nixfund:~$ find / -type f -name *.conf -user root -size +25k -and -size -28k -newermt 2020-03-03  2>/dev/null
+/usr/share/drirc.d/00-mesa-defaults.conf
+~~~
+
+___
 + ¿Cuántos archivos existen en el sistema que tienen la extensión ".bak"?
 
+`R: 4`
+
+~~~
+htb-student@nixfund:~$ locate *.bak
+/var/backups/group.bak
+/var/backups/gshadow.bak
+/var/backups/passwd.bak
+/var/backups/shadow.bak
+~~~
+___
 + Envíe la ruta completa del binario "xxd".
+
+`R: /usr/bin/xxd`
+
+~~~
+htb-student@nixfund:~$ which xxd
+/usr/bin/xxd
+~~~
 ___
 #### [Anterior (Editando Archivos)]()
 #### [Siguiente (Descriptores y Redirecciones de Archivos)]()
