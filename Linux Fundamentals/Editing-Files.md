@@ -151,5 +151,5 @@ Juceco@htb[/htb]$ vimtutor
 
 
 ___
-#### [Anterior (Trabajando con Archivos y Directorios)]()
-#### [Siguiente (Buscando Archivos y Directorios)]()
+#### [Anterior (Trabajando con Archivos y Directorios)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Work-File-Directories.md)
+#### [Siguiente (Buscar Archivos y Directorios)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Find-Files-Directories.md)

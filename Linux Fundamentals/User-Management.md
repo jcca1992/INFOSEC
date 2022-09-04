@@ -60,5 +60,5 @@ ___
 
 `R: --command`
 ___
-#### [Anterior (Informacion del Sistema)]()
-#### [Siguiente (Administracion de Paquete)]()
+#### [Anterior (Informacion del Sistema)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/System-Info.md)
+#### [Siguiente (Gestion de Paquetes)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Package-Management.md)

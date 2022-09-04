@@ -20,5 +20,5 @@ root@htb[/htb]#
 
 Vemos aquí lo mismo que cuando trabajamos en la GUI de Windows. Estamos registrados como un usuario en una computadora con un nombre específico, y sabemos en qué directorio estamos cuando navegamos a través de nuestro sistema. El prompt de Bash también se puede personalizar y cambiar según nuestras propias necesidades. El ajuste del prompt de bash está fuera del alcance de este módulo. Sin embargo, podemos mirar [bashrcgenerator](http://bashrcgenerator.com/) y [powerline](https://github.com/powerline/powerline), lo que nos da la posibilidad de adaptar nuestro prompt a nuestras necesidades.
 ___
-#### [Anterior (Introduccion a Shell)]()
-#### [Siguiente (Obteniendo Ayuda)]()
+#### [Anterior (Introduccion a Shell)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Intro-Shell.md)
+#### [Siguiente (Obteniendo Ayuda)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Getting-Help.md)

@@ -75,4 +75,4 @@ El sistema operativo Linux está estructurado en una jerarquía similar a un ár
 |`/usr`|Contiene ejecutables, bibliotecas, archivos man, etc.|
 |`/var`|Este directorio contiene archivos de datos variables, como archivos de registro, buzones de correo electrónico, archivos relacionados con aplicaciones web, archivos cron y más.|
 ___
-#### [Siguiente (Introduccion a Shell)]()
+#### [Siguiente (Introduccion a Shell)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Intro-Shell.md)

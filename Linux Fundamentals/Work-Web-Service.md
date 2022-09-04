@@ -154,5 +154,5 @@ $ http-server -p 8080
 $ php -S 127.0.0.1:8000
 ~~~
 ___
-#### [Anterior (Gestion de Servicios y Procesos)]()
-#### [Siguiente (Navegacion)]()
+#### [Anterior (Gestion de Servicios y Procesos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Service-Process-Management.md)
+#### [Siguiente (Navegacion)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Navigation.md)

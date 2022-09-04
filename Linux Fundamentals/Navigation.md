@@ -128,5 +128,5 @@ htb-student@nixfund:/etc$ ls -i
 <SNIP>
 ~~~
 ___
-#### [Anterior (Trabajar con Servicios Web)]()
-#### [Siguiente (Trabajando con Archivos y Directorios)]()
+#### [Anterior (Trabajar con Servicios Web)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Work-Web-Service.md)
+#### [Siguiente (Trabajando con Archivos y Directorios)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Work-File-Directories.md)

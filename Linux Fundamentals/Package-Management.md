@@ -187,5 +187,5 @@ Output format:
 
 >Busque la herramienta "evil-winrm" en Github e instálela en nuestras instancias interactivas. Pruebe todos los diferentes métodos de instalación.
 ___
-#### [Anterior (Gestion de Usuarios)]()
-#### [Siguiente (Gestion de servicios y procesos)]()
+#### [Anterior (Gestion de Usuarios)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/User-Management.md)
+#### [Siguiente (Gestion de servicios y procesos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Service-Process-Management.md)

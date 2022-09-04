@@ -21,5 +21,5 @@ El shell más utilizado en Linux es Bourne-Again Shell (BASH) y forma parte del 
 
 Además de Bash, también existen otros shells como [Tcsh/Csh](https://en.wikipedia.org/wiki/Tcsh), [Ksh](https://en.wikipedia.org/wiki/KornShell), [Zsh](https://en.wikipedia.org/wiki/Z_shell), [Fish shell](https://en.wikipedia.org/wiki/Friendly_interactive_shell) y otros.
 ___
-#### [Anterior (Estructura de Linux)]()
-#### [Siguiente (Descripcion del Prompt)]()
+#### [Anterior (Estructura de Linux)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Estructura-Linux.md)
+#### [Siguiente (Descripcion del Prompt)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Prompt-Description.md)

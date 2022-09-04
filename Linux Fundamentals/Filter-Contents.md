@@ -217,12 +217,34 @@ Puede ser un poco abrumador al principio lidiar con tantas herramientas diferent
 ___
 ### RETO
 
-+ ¿Cuántos servicios están escuchando en el sistema objetivo en todas las interfaces? (No en localhost e IPv4 solamente)
++ ¿Cuántos servicios están escuchando en el sistema en todas las interfaces? (No en localhost e IPv4 solamente)
 
-Determine con qué usuario se está ejecutando el servidor ProFTPd. Envíe el nombre de usuario como respuesta.
+`R: 7`
 
-Use cURL desde su Pwnbox (no desde la máquina de destino) para obtener el código fuente del sitio web "https://www.inlanefreight.com" y filtre todas las rutas únicas de ese dominio. Envíe el número de estas rutas como respuesta
+~~~
+htb-student@nixfund:~$ netstat -ln4 |grep LISTEN| grep -v 127 | wc -l
+7
+~~~
+___
++ Determine con qué usuario se está ejecutando el servidor ProFTPd. Envíe el nombre de usuario como respuesta.
+
+`R: proftpd`
+
+~~~
+htb-student@nixfund:~$ cat /etc/passwd |grep proftpd
+proftpd:x:112:65534::/run/proftpd:/usr/sbin/nologin
+~~~
+
+~~~
+htb-student@nixfund:~$ ps aux | grep proftpd
+proftpd   1616  0.0  0.1 126444  3692 ?        Ss   14:49   0:00 proftpd: (accepting connections)
+htb-stu+  5917  0.0  0.0  14864  1016 pts/0    R+   15:08   0:00 grep --color=auto proftpd
+~~~
+___
++ Use cURL desde su Pwnbox (no desde la máquina de destino) para obtener el código fuente del sitio web "https://www.inlanefreight.com" y filtre todas las rutas únicas de ese dominio. Envíe el número de estas rutas como respuesta
+
+`R: 34`
 
 ___
-#### [Anterior (Descriptores y Redirecciones de Archivos)]()
-#### [Siguiente (Gestion de Permisos)]()
+#### [Anterior (Descriptores y Redirecciones de Archivos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/File-Descriptors-Redireccion.md)
+#### [Siguiente (Gestion de Permisos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Perm-Management.md)

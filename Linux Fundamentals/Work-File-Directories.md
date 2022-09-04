@@ -181,5 +181,5 @@ htb-student@nixfund:/var/backups$ ls -i
 262178 dpkg.diversions.0         262310 dpkg.statoverride.2.gz  262243 dpkg.status.4.gz
 ~~~
 ___
-#### [Anterior (Navegando)]()
-#### [Siguiente (Editando Archivos)]()
+#### [Anterior (Navegando)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Navigation.md)
+#### [Siguiente (Editando Archivos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Editing-Files.md)

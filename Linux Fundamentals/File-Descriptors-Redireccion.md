@@ -128,5 +128,5 @@ htb-student@nixfund:~$ dpkg -l | grep -c '^ii'
 737
 ~~~
 ___
-#### [Anterior (Buscar Archivos y Directorios)]()
-#### [Siguiente (Filtrar Contenidos)]()
+#### [Anterior (Buscar Archivos y Directorios)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Find-Files-Directories.md)
+#### [Siguiente (Filtrar Contenidos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Filter-Contents.md)

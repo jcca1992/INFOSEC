@@ -18,7 +18,9 @@
     + [Editando Archivos](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Editing-Files.md)
     + [Buscar Archivos y Directorios](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Find-Files-Directories.md)
     + [Descriptores y Redirecciones de Archivos](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/File-Descriptors-Redireccion.md)
-    + Filtro de Contenido
-    + Gestion de permisos
-Tips an trics
+    + [Filtrar Contenido](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Filter-Contents.md)
+    + [Gestion de permisos](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Perm-Management.md)
++ Tips and trics
+    + [Atajos](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Shorcuts.md)
+    + [Seguridad Linux](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Linux-Security.md)
 ___

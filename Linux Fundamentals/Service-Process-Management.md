@@ -303,5 +303,5 @@ snapd.service                 loaded active running   Snap Daemon
 ssh.service                   loaded active running   OpenBSD Secure Shell server
 ~~~
 ___
-#### [Anterior (Gestion de Paquetes)]()
-#### [Siguiente (Trabajar con Servicios Web)]()
+#### [Anterior (Gestion de Paquetes)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Package-Management.md)
+#### [Siguiente (Trabajar con Servicios Web)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Work-Web-Service.md)

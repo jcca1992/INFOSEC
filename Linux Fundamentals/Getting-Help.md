@@ -97,5 +97,5 @@ visudo (8)           - edit the sudoers file
 
 Otro recurso útil para obtener ayuda si tenemos problemas para entender un comando largo es: https://explainshell.com/
 ___
-#### [Anterior (Descripcion del Prompt)]()
-#### [Siguiente (Informacion del Sistema)]()
+#### [Anterior (Descripcion del Prompt)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Prompt-Description.md)
+#### [Siguiente (Informacion del Sistema)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/System-Info.md)

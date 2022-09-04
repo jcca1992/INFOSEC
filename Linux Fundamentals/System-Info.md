@@ -256,5 +256,5 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ~~~
 ___
-#### [Anterior (Obteniendo Ayuda)]()
-#### [Siguiente (Administracion de Usuario)]()
+#### [Anterior (Obteniendo Ayuda)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Getting-Help.md)
+#### [Siguiente (Gestion de Usuario)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/User-Management.md)

@@ -116,5 +116,5 @@ htb-student@nixfund:~$ which xxd
 /usr/bin/xxd
 ~~~
 ___
-#### [Anterior (Editando Archivos)]()
-#### [Siguiente (Descriptores y Redirecciones de Archivos)]()
+#### [Anterior (Editando Archivos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Editing-Files.md)
+#### [Siguiente (Descriptores y Redirecciones de Archivos)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/File-Descriptors-Redireccion.md)
