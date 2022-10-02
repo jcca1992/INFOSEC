@@ -116,4 +116,4 @@ ___
 
 Ahora que hemos repasado los tipos de evaluación clave a los que puede someterse una organización, analicemos las evaluaciones de vulnerabilidad más en profundidad para comprender mejor los términos clave y una metodología de muestra.
 ___
-#### [Siguiente (Evaluacion de Vulnerabilidad)](https://github.com/jcca1992/INFOSEC/blob/main/Linux%20Fundamentals/Work-File-Directories.md)
+#### [Siguiente (Evaluacion de Vulnerabilidad)](https://github.com/jcca1992/INFOSEC/blob/main/Evaluacion%20de%20Vulnerabilidad/2-Security-Assessments.md)
