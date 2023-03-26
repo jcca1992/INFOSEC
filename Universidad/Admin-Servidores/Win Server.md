@@ -15,17 +15,17 @@ Componente de la estructura logica del Active Directory
 + Arboles
 + Bosque
 
-![Diagrama-AD.jpg]
+![Diagrama-AD.jpg](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Diagrama-AD.jpg)
 ___
-![Diagrama-AD-2.jpg]
+![Diagrama-AD-2.jpg](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Diagrama-AD-2.jpg)
 
 Objetos: son los componentes basicos de la estructura logica, por ejemplo el usuario, la pc, la impresora
 
-![Ojetos]
+![Ojetos](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Ojetos.jpg)
 
 Unidad organizativa: Son contenedores, que se usan para organizar objetos con propositos administrativos, por ejemplo, dividir la empresa en departamentos, Contabilidad, Finanzas, Recursos Humanos, entre otro. Podriamos tener administradores para cada Unidad Organizativa.
 
-![Uniad-Organizativa]
+![Uniad-Organizativa](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Uniad-Organizativa.jpg)
 
 Dominios: son colecciones de los objetos administrativos definidos que comparten en una base de datos común del directorio políticas de seguridad y relaciones de confianza con otros dominios. Los dominios son las unidades funcionales clave de la estructura lógica de Active Directory.
 
@@ -33,13 +33,13 @@ Arbol de dominios: Son dominios agrupados en estructuras jerarquicas, cuando se 
 
 Bosque: Conjunto de uno o varios dominios que comparten una estructura logica, una configuracion de directorio y un catalogo global.
 
-![Bosque]
+![Bosque](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Bosque.jpg)
 
 ## Configurar Windows 2012 R2
 
 Una ves iniciado windows server en VirtualBox presionamos Windows+R y buscamos CMD para que nos habra la linea de comandos de windows
 
-![CMD]
+![CMD](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/CMD.jpg)
 
 Vamos a anotar los siguientes datos
 
@@ -68,71 +68,71 @@ Tiempos aproximados de ida y vuelta en milisegundos:
 
 Cuando iniciamos sesion en windows server la primera ventana que se abre es la del `Administrador del Servidor`, vamos a presionar en `Administrar` y `Agregar Roles y Caracteristicas`
 
-![AdmServ-Administrar]
+![AdmServ-Administrar](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/AdmServ-Administrar.jpg)
 
 En la seccion de `Antes de comenzar` nos muestra un breve resumen de lo que se puede hacer presionamos `Siguiente` 
 
-![AntesDeComenzar]
+![AntesDeComenzar](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/AntesDeComenzar.jpg)
 
 En Tipo de instalacion dejamos seleccionado `Instalacion basada en caracteristicas o en roles` y presionamos `Siguiente`
 
-![TipoDeInstalacion]
+![TipoDeInstalacion](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/TipoDeInstalacion.jpg)
 
 En Seleccion de Servidor dejamos la configuracion como esta y presionamos `Siguiente`
 
-![SeleccionDeServidor]
+![SeleccionDeServidor](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/SeleccionDeServidor.jpg)
 
 A continuacion vamos a agregar los roles primero seleccionamos `Servicios de dominio de Active Directory` nos abre otra ventana y presionamos `Agregar Caracteristicas`
 
-![RolesDeServidorAD]
+![RolesDeServidorAD](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/RolesDeServidorAD.jpg)
 
-![RolesDeServidorADAgregar]
+![RolesDeServidorADAgregar](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/RolesDeServidorADAgregar.jpg)
 
 Despues agregamos el rol de `Servidor DNS` de la misma forma y presionamos `Siguiente`
 
-![RolesDeServidorDNS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![RolesDeServidorDNS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/RolesDeServidorDNS.jpg)
 
-![RolesDeServidorDNSAgregar](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![RolesDeServidorDNSAgregar](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/RolesDeServidorDNSAgregar.jpg)
 
 Posiblemente nos muestre la siguiente alerta, esto pasa cuando no se ha deshabilitado el DHCP y dejado una IP estatica, presionamos `Continuar` y despues `Siguiente`
 
-![RolesDeServidorAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![RolesDeServidorAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/RolesDeServidorAlerta.jpg)
 
 # En las caracteristicas queda pendiente ya que no recuerdo que procede
 
-![Caracteristicas](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![Caracteristicas](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Caracteristicas.jpg)
 
 En las ventanas AD DS y Servidor DNS Presionamos siguiente
 
-![AD-DS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
-![ServidorDNS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![AD-DS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/AD-DS.jpg)
+![ServidorDNS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ServidorDNS.jpg)
 
 En la ventana de Confirmacion, Destildamos la opcion de `Reiniciar automaticamente el servidor de destino en caso de ser necesario` y presionamos `Instalar`
 
-![ConfirmacionRoles](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ConfirmacionRoles](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfirmacionRoles.jpg)
 
 Despues de instalar presionamos `Cerrar`
 
-![ResultadoAgregarRoles](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ResultadoAgregarRoles](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ResultadoAgregarRoles.jpg)
 
 De nuevo en la ventana de Administrador del Servidor, nos aparece una bandera con una alerta amarilla
 presionamos la bandera y despues en `Promover este servidor a controlador de dominio`
 
-![BanderaAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![BanderaAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/BanderaAlerta.jpg)
 
-![ConfiguracionPosterior](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ConfiguracionPosterior](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfiguracionPosterior.jpg)
 
 Nos aparece una ventana para configurar el dominio, seleccionamos `Agregar un nuevo bosque` y escribimos el Nombre del Dominio Raiz que en este caso sera `curso.ciber` y presionamos `Siguiente`
 
-![ConfigDom](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ConfigDom](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDom.jpg)
 
 Nos pide colocar una contraseña que debe tener minimo 8 caracteres, mayusculas, numeros y simbolos especiales, colocaremos para este lab "Passw0rd_2023" y presionamos `Siguiente`
 
-![ConfigDomPass](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ConfigDomPass](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomPass.jpg)
 
 Puede que nos aparezca una alerta, presionamos `Siguiente`
 
-![ConfigDomAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ConfigDomAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomAlerta.jpg)
 
 
 NetBIOS (del inglés, " Network Basic Input/Output System ") es una especificación de interfaz para acceso a servicios de red, es decir, una capa de software desarrollado para enlazar un sistema operativo de red con hardware específico. El nombre de Netbios es un nombre de 16 bytes para un servicio o función de red en una máquina que ejecuta Microsoft Windows Server. Los nombres de Netbios son una forma más amigable de identificar computadoras en una red que los números de red y son utilizados por servicios y aplicaciones habilitadas para NetBios.
