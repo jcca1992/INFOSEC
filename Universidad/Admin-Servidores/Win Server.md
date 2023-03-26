@@ -90,95 +90,95 @@ A continuacion vamos a agregar los roles primero seleccionamos `Servicios de dom
 
 Despues agregamos el rol de `Servidor DNS` de la misma forma y presionamos `Siguiente`
 
-![RolesDeServidorDNS]
+![RolesDeServidorDNS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
-![RolesDeServidorDNSAgregar]
+![RolesDeServidorDNSAgregar](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 Posiblemente nos muestre la siguiente alerta, esto pasa cuando no se ha deshabilitado el DHCP y dejado una IP estatica, presionamos `Continuar` y despues `Siguiente`
 
-![RolesDeServidorAlerta]
+![RolesDeServidorAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 # En las caracteristicas queda pendiente ya que no recuerdo que procede
 
-![Caracteristicas]
+![Caracteristicas](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 En las ventanas AD DS y Servidor DNS Presionamos siguiente
 
-![AD-DS]
-![ServidorDNS]
+![AD-DS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
+![ServidorDNS](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 En la ventana de Confirmacion, Destildamos la opcion de `Reiniciar automaticamente el servidor de destino en caso de ser necesario` y presionamos `Instalar`
 
-![ConfirmacionRoles]
+![ConfirmacionRoles](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 Despues de instalar presionamos `Cerrar`
 
-![ResultadoAgregarRoles]
+![ResultadoAgregarRoles](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 De nuevo en la ventana de Administrador del Servidor, nos aparece una bandera con una alerta amarilla
 presionamos la bandera y despues en `Promover este servidor a controlador de dominio`
 
-![BanderaAlerta]
+![BanderaAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
-![ConfiguracionPosterior]
+![ConfiguracionPosterior](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 Nos aparece una ventana para configurar el dominio, seleccionamos `Agregar un nuevo bosque` y escribimos el Nombre del Dominio Raiz que en este caso sera `curso.ciber` y presionamos `Siguiente`
 
-![ConfigDom]
+![ConfigDom](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 Nos pide colocar una contraseña que debe tener minimo 8 caracteres, mayusculas, numeros y simbolos especiales, colocaremos para este lab "Passw0rd_2023" y presionamos `Siguiente`
 
-![ConfigDomPass]
+![ConfigDomPass](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 Puede que nos aparezca una alerta, presionamos `Siguiente`
 
-![ConfigDomAlerta]
+![ConfigDomAlerta](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
 
 NetBIOS (del inglés, " Network Basic Input/Output System ") es una especificación de interfaz para acceso a servicios de red, es decir, una capa de software desarrollado para enlazar un sistema operativo de red con hardware específico. El nombre de Netbios es un nombre de 16 bytes para un servicio o función de red en una máquina que ejecuta Microsoft Windows Server. Los nombres de Netbios son una forma más amigable de identificar computadoras en una red que los números de red y son utilizados por servicios y aplicaciones habilitadas para NetBios.
 
 En este caso dejamos "CURSO" y presionamos `Siguiente` hasta `Comprobacion de requisitos previos` donde presionaremos `Instalar` y despues se reiniciará
 
-![ConfigDomNetBios]
+![ConfigDomNetBios](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomNetBios.jpg)
 
-![ConfigDomRutaAcceso]
+![ConfigDomRutaAcceso](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomRutaAcceso.jpg)
 
-![ConfigDomRevision]
+![ConfigDomRevision](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomRevision.jpg)
 
-![ConfigDomComprobacion]
+![ConfigDomComprobacion](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomComprobacion.jpg)
 
-![ConfigDomReinicio]
+![ConfigDomReinicio](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigDomReinicio.jpg)
 
 ## Configurar Active Directory
 
-![ConfigAD1]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD1.jpg)
 
-![ConfigAD2]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD2.jpg)
 
-![ConfigAD3]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD3.jpg)
 
-![ConfigAD4]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD4.jpg)
 
-![ConfigAD5]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD5.jpg)
 
-![ConfigAD6]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD6.jpg)
 
-![ConfigAD7]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD7.jpg)
 
-![ConfigAD8]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD8.jpg)
 
-![ConfigAD9]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD9.jpg)
 
-![ConfigAD10]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD10.jpg)
 
-![ConfigAD11]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD11.jpg)
 
-![ConfigAD12]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD12.jpg)
 
-![ConfigAD13]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD13.jpg)
 
-![ConfigAD14]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD14.jpg)
 
-![ConfigAD15]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD15.jpg)
 
-![ConfigAD16]
+![](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/ConfigAD16.jpg)
