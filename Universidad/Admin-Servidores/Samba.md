@@ -248,12 +248,12 @@ enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 ...
 ~~~
 
-![Explorador de archivos]()
+![Explorador de archivos](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Explo_archivos.jpg)
 
 
 colocamos la ip del servidor con doble barra invertida (`\\`)
 
-![Explorador de archivos IP]()
+![Explorador de archivos IP](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Explo_archivos_ip.jpg)
 
 Aparece la carpeta publica y accedemos con el usuario y la contraseña que habiamos creado
-![credenciales]()
+![credenciales](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Credenciales.jpg)
