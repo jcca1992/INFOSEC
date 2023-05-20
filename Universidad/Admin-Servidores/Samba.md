@@ -30,7 +30,7 @@ Calculando la actualización...
 0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 0 no actualizados.
 ~~~
 
->en este caso ya estan instalados y actualizados
+En este caso ya estan instalados y actualizados
 
 Procedemos a instalar `samba` con el siguiente comando
 
@@ -82,7 +82,7 @@ To                         Action      From
 22/tcp (v6)                ALLOW       Anywhere (v6)             
 ~~~
 
->Solo esta permitido el puerto 22 con protocolo tcp
+Solo esta permitido el puerto 22 con protocolo tcp
 
 ~~~
 ciber@leones:~$sudo ufw allow samba
@@ -256,4 +256,5 @@ colocamos la ip del servidor con doble barra invertida (`\\`)
 ![Explorador de archivos IP](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Explo_archivos_ip.jpg)
 
 Aparece la carpeta publica y accedemos con el usuario y la contraseña que habiamos creado
+
 ![credenciales](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Credenciales.jpg)
