@@ -6,7 +6,7 @@ Nos permite crear un `Servidor de Archivos` y Recursos compartidos, y administra
 
 De esta forma podremos compartir archivos y directorios desde equipos Linux a equipos Windows (y también con equipos Linux, claro). También podremos compartir impresoras.
 ___
-### Configuracion de Samba
+### INSTALACION DE SAMBA
 
 Primero actualizamos e instalamos samba
 
@@ -32,6 +32,7 @@ Calculando la actualización...
 
 En este caso ya estan instalados y actualizados
 
+___
 Procedemos a instalar `samba` con el siguiente comando
 
 ~~~
@@ -69,6 +70,8 @@ may 20 18:27:15 leones smbd[2902]: pam_unix(samba:session): session opened for u
 ~~~
 
 Como podemos observar esta habilitado (`enabled`) y activo (`active running`)
+___
+### UFW (FIREWALL)
 
 Tenemos que revisar el estatus del firewall (`ufw`) y darle permiso a samba
 
@@ -82,8 +85,7 @@ To                         Action      From
 22/tcp (v6)                ALLOW       Anywhere (v6)             
 ~~~
 
-Solo esta permitido el puerto 22 con protocolo tcp
-
+Solo esta permitido el puerto 22 con protocolo tcp asi que damos permiso a `samba`
 ~~~
 ciber@leones:~$sudo ufw allow samba
 Rule added
@@ -119,8 +121,10 @@ To                         Action      From
 137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)             
 139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)             
 ~~~
+___
+### CREACION DE CARPETAS
 
-Ahora tenemos que crear las carpetas `samba`y dentro de samba `public`
+Ahora tenemos que crear las carpetas `samba`y adentro, la carpeta `public`
 ~~~
 ciber@leones:~$ sudo mkdir samba
 ciber@leones:~$ cd samba
@@ -154,6 +158,8 @@ ciber@leones:~/samba$ ls -l
 total 4
 drwxrwxrwx 2 nobody sambashare 4096 may 20 18:24 public
 ~~~
+___
+### CREACION DE USUARIOS EN SAMBA
 
 Crearemos el usuario y la clave para acceder a samba
 
@@ -167,6 +173,7 @@ New SMB password:
 Retype new SMB password:
 added user ciber.
 ~~~
+
 la flag `-L`indica que es en modo local
 la flag `-a`indica que se esta agregando usuario
 
@@ -176,6 +183,8 @@ Habilitamos el usuario
 ciber@leones:~/samba$ sudo smbpasswd -L -e ciber
 Enabled user ciber.
 ~~~
+___
+### CONFIGURACION DE SAMBA
 
 Ahora procedemos a editar el documento de configuracion de samba
 ~~~
@@ -238,6 +247,8 @@ Reiniciamos el servicio `smbd`
 ciber@leones:~/samba$ sudo /etc/init.d/smbd restart
 Restarting smbd (via systemctl): smbd.service.
 ~~~
+___
+### ACCESO DESDE WINDOWS
 
 Ahora solo debemos revisar la `ip` con el comando `ifconfig` e ingresar desde el explorador de archivos
 
@@ -247,11 +258,10 @@ enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 192.168.1.132  netmask 255.255.255.0  broadcast 192.168.1.255
 ...
 ~~~
+colocamos la ip del servidor con doble barra invertida (`\\`)
 
 ![Explorador de archivos](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Explo_archivos.jpg)
 
-
-colocamos la ip del servidor con doble barra invertida (`\\`)
 
 ![Explorador de archivos IP](https://github.com/jcca1992/INFOSEC/blob/main/Universidad/Admin-Servidores/Imagenes/Explo_archivos_ip.jpg)
 
