@@ -36,7 +36,7 @@ aHR0cHM6Ly93d3cuaGFja3RoZWJveC5ldS8K
 
 Si queremos decodificar cualquier cadena codificada en `base64`, podemos usar `base64 -d`, de la siguiente manera:
 ~~~
-Juceco@htb[/htb]$ echo https://www.hackthebox.eu/ | base64
+Juceco@htb[/htb]$ echo https://www.hackthebox.eu/ | base64 -d
 
 aHR0cHM6Ly93d3cuaGFja3RoZWJveC5ldS8K
 ~~~
