@@ -1,4 +1,4 @@
-## EVALUACION DE VULNERABILIDAD
+## SISTEMA DE PUNTUACION DE VULNERABILIDAD COMUN
 
 + Evaluaciones de Seguridad
     + Evaluaciones de Seguridad
